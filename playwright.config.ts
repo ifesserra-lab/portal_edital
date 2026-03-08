@@ -8,7 +8,7 @@ export default defineConfig({
     workers: process.env.CI ? 1 : undefined,
     reporter: 'html',
     use: {
-        baseURL: 'http://localhost:4321',
+        baseURL: 'http://localhost:4321/portal_edital/',
         trace: 'on-first-retry',
     },
     projects: [
@@ -19,9 +19,10 @@ export default defineConfig({
     ],
     webServer: {
         command: 'npm run dev',
-        url: 'http://localhost:4321',
+        url: 'http://localhost:4321/portal_edital/',
         reuseExistingServer: !process.env.CI,
         stdout: 'pipe',
         stderr: 'pipe',
+        timeout: 120000,
     },
 });

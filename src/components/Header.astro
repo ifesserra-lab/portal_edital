@@ -5,7 +5,7 @@
 <header class="sticky top-0 z-50 w-full glass-dark py-1">
     <div class="container flex h-20 items-center justify-between">
         <a
-            href="/"
+            href={import.meta.env.BASE_URL}
             class="group flex items-center space-x-3 focus:outline-none px-2 py-1 rounded-2xl transition-all"
         >
             <div
@@ -34,13 +34,13 @@
 
         <nav class="flex items-center space-x-1 sm:space-x-8">
             <a
-                href="/sobre"
+                href={`${import.meta.env.BASE_URL}/sobre/`}
                 class="text-sm font-bold uppercase tracking-widest text-primary-200 hover:text-white transition-all px-4 py-2 rounded-xl hover:bg-white/5"
             >
                 Sobre
             </a>
             <a
-                href="https://github.com/paulossjunior/edital_portal"
+                href="https://github.com/ifesserra-lab/portal_edital"
                 target="_blank"
                 class="hidden sm:inline-flex h-12 items-center justify-center rounded-2xl bg-cta-700 px-6 text-sm font-black uppercase tracking-widest text-white shadow-xl shadow-cta-500/20 hover:bg-cta-600 hover:-translate-y-1 active:scale-95 transition-all"
             >

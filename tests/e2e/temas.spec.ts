@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Temas (Light e Dark Mode)', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/');
+        await page.goto('./');
     });
 
     test('Deve alternar para Modo Escuro', async ({ page }) => {

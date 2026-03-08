@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Portal de Editais - Listagem', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/');
+        await page.goto('./');
     });
 
     test('Deve exibir a lista de editais em aberto', async ({ page }) => {

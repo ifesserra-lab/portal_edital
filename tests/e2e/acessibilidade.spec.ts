@@ -2,7 +2,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Acessibilidade', () => {
     test.beforeEach(async ({ page }) => {
-        await page.goto('/');
+        await page.goto('./');
     });
 
     test('Deve alternar Alto Contraste', async ({ page }) => {

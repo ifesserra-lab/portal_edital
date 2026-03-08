@@ -33,8 +33,9 @@ const statusColors = {
             <nav
                 class="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400 mb-8 overflow-x-auto whitespace-nowrap pb-2 scrollbar-hide"
             >
-                <a href="/" class="hover:text-primary-600 transition-colors"
-                    >Início</a
+                <a
+                    href={import.meta.env.BASE_URL}
+                    class="hover:text-primary-600 transition-colors">Início</a
                 >
                 <span class="text-slate-300 dark:text-slate-700">/</span>
                 <span
