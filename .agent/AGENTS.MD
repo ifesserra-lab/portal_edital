@@ -396,6 +396,26 @@ npx playwright test --reporter=html
 - **Componentes**: Props documentadas com JSDoc no script Astro.
 - **CHANGELOG.md**: Histórico de mudanças por versão (semver).
 
+## Estratégia de Versionamento (Gitflow)
+
+O portal utiliza uma variação estrita do **Gitflow** para garantir qualidade e previsibilidade nas entregas.
+
+### Branches Principais
+- **`main`**: Branch de produção. Espelha exatamente o que está no ar (GitHub Pages). Nenhum commit direto é permitido.
+- **`developing`**: Branch de desenvolvimento e integração. Todo código novo se consolida aqui antes de ir para produção.
+
+### Branches de Suporte
+- **`feat/*` ou `feature/*`**: Ramificações a partir de `developing` para novas funcionalidades.
+- **`bugfix/*`**: Ramificações a partir de `developing` para correções que não estão em produção.
+- **`hotfix/*`**: Correções emergenciais em produção. Ramificam da `main` e são mescladas de volta na `main` **E** na `developing`.
+- **`release/*`**: Preparação de uma nova versão para produção (ramifica de `developing` e vai para `main`).
+
+### Regras de Versionamento
+1. **Sync obrigatório**: Sempre atualize a branch base (`git pull origin developing` ou `main`) antes de ramificar.
+2. **Nova frente de trabalho**: Sempre crie uma nova branch para atuar em uma issue e nunca comite direto nas branches principais.
+3. Usar commits semânticos em todas as ramificações (`feat:`, `fix:`, `docs:`, etc).
+4. As atualizações no `data/` também devem ocorrer prioritariamente via branch -> PR se modificarem estruturas, ou diretamente dependendo de webhook (desde que acordado e coberto em documentação).
+
 ---
 
 ## Regras do Agente
