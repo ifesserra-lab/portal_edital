@@ -5,7 +5,7 @@ test.describe('Portal de Editais - Listagem', () => {
         await page.goto('./');
     });
 
-    test('Deve exibir a lista de editais em aberto', async ({ page }) => {
+    test('Visualizar editais em aberto', async ({ page }) => {
         const cards = page.locator('[data-testid="edital-card"]');
         await expect(cards).not.toHaveCount(0);
 
@@ -15,7 +15,7 @@ test.describe('Portal de Editais - Listagem', () => {
         await expect(firstCard.locator('[data-testid="edital-status"]')).toContainText('aberto', { ignoreCase: true });
     });
 
-    test('Deve navegar para os detalhes do edital', async ({ page }) => {
+    test('Detalhes do edital', async ({ page }) => {
         const firstTitle = page.locator('[data-testid="edital-titulo"] a').first();
         const titleText = await firstTitle.innerText();
 
@@ -25,7 +25,7 @@ test.describe('Portal de Editais - Listagem', () => {
         await expect(page.locator('h1')).toContainText(titleText.trim());
     });
 
-    test('Deve filtrar editais por busca de texto e refletir na URL', async ({ page }) => {
+    test('Buscar edital por palavra-chave', async ({ page }) => {
         const searchInput = page.locator('#search-input');
 
         // Digitar um termo que provavelmente existe (ex: FAPES)
