@@ -52,4 +52,4 @@ npx playwright test
 
 - [Arquitetura](docs/architecture.md)
 - [Backlog do Projeto](docs/backlog.md)
-- [Funcionalidades (Features)](docs/features/)
+- [Funcionalidades e Features](docs/funcionalidades.md)
