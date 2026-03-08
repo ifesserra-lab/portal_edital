@@ -3,7 +3,6 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import EditalCard from "../components/EditalCard.astro";
-import SearchBar from "../components/SearchBar.astro";
 import FilterBar from "../components/FilterBar.astro";
 import { getCollection } from "astro:content";
 
@@ -114,7 +113,6 @@ const totalCount = editais.length;
 					</p>
 				</div>
 
-				<SearchBar />
 				<FilterBar />
 
 				<div data-pagefind-body>

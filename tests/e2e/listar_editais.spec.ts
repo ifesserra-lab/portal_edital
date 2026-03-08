@@ -24,4 +24,29 @@ test.describe('Portal de Editais - Listagem', () => {
         await expect(page).toHaveURL(/\/editais\/.+/);
         await expect(page.locator('h1')).toContainText(titleText.trim());
     });
+
+    test('Deve filtrar editais por busca de texto e refletir na URL', async ({ page }) => {
+        const searchInput = page.locator('#search-input');
+
+        // Digitar um termo que provavelmente existe (ex: FAPES)
+        await searchInput.fill('fapes');
+
+        // Aguardar o tempo do debounce (300ms) + margem
+        await page.waitForTimeout(500);
+
+        // Verificar se a URL foi atualizada com o query param
+        await expect(page).toHaveURL(/.*q=fapes/i);
+
+        // Verificar se existem cards visíveis e se pelo menos um aparece
+        const visibleCards = page.locator('[data-testid="edital-card"]:visible');
+        await expect(visibleCards.first()).toBeVisible();
+
+        // Limpar a busca
+        await searchInput.clear();
+        await page.waitForTimeout(500);
+
+        // Verificar que o parametro q sumiu
+        await expect(page).not.toHaveURL(/.*q=/);
+    });
 });
+

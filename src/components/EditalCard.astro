@@ -24,6 +24,7 @@ const statusColors = {
     data-testid="edital-card"
     data-status={data.status}
     data-category={data.categoria}
+    data-search-index={`${data.nome} ${data.descrição} ${data.orgão_fomento}`.toLowerCase()}
 >
     <!-- Card Accent Glow -->
     <div

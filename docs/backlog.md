@@ -25,6 +25,9 @@ Este backlog organiza as próximas evoluções do portal em níveis de Epics, Us
   - [x] [Task: Implementar filtros por categoria (Pesquisa, Extensão, etc)](https://github.com/ifesserra-lab/portal_edital/issues/28).
   - [x] [Task: Implementar filtros por status (Aberto, Encerrado)](https://github.com/ifesserra-lab/portal_edital/issues/29).
   - [x] [Task: Garantir que filtros reflitam na URL (Query Params)](https://github.com/ifesserra-lab/portal_edital/issues/30).
+- **[US9: Busca livre por palavra-chave combinada com filtros de categoria](https://github.com/ifesserra-lab/portal_edital/issues/39)**
+  - [ ] [Task: Criar input de busca visual integrado ao FilterBar](https://github.com/ifesserra-lab/portal_edital/issues/40).
+  - [ ] [Task: Implementar lógica de busca livre combinada na listagem de editais](https://github.com/ifesserra-lab/portal_edital/issues/41).
 
 ## 🛠️ [Epic 3: Automação e DevOps](https://github.com/ifesserra-lab/portal_edital/issues/7) (Concluído ✅)
 *Foco na qualidade e entrega contínua.*

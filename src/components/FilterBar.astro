@@ -15,6 +15,35 @@ const statuses = [
 ---
 
 <div class="flex flex-col gap-8 mb-16">
+    <div class="w-full max-w-3xl">
+        <label for="search-input" class="sr-only">Buscar editais</label>
+        <div class="relative group">
+            <div
+                class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-cta-500"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="h-6 w-6 text-primary-400 group-focus-within:text-cta-500 transition-colors"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                    stroke-width="2"
+                >
+                    <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+            </div>
+            <input
+                type="search"
+                id="search-input"
+                class="w-full pl-12 pr-4 py-4 rounded-2xl border-2 border-primary-200 dark:border-white/10 bg-white/80 dark:bg-primary-900/40 backdrop-blur-md text-primary-900 dark:text-white placeholder-primary-400 dark:placeholder-primary-500 focus:outline-none focus:border-cta-500 dark:focus:border-cta-500 focus:ring-4 focus:ring-cta-500/10 transition-all shadow-sm font-medium text-lg"
+                placeholder="Busque por título, descrição ou palavra-chave..."
+            />
+        </div>
+    </div>
+
     <div class="flex flex-wrap items-center gap-4">
         <span
             class="text-[10px] font-black text-primary-400 dark:text-primary-500 uppercase tracking-[0.2em] mr-2"
@@ -55,6 +84,14 @@ const statuses = [
         const url = new URL(window.location.href);
         const category = url.searchParams.get("categoria") || "all";
         const status = url.searchParams.get("status") || "all";
+        const keyword = (url.searchParams.get("q") || "").toLowerCase();
+
+        const searchInput = document.getElementById(
+            "search-input",
+        ) as HTMLInputElement;
+        if (searchInput && searchInput.value.toLowerCase() !== keyword) {
+            searchInput.value = url.searchParams.get("q") || "";
+        }
 
         // Update buttons UI
         document.querySelectorAll("[data-filter-category]").forEach((btn) => {
@@ -96,12 +133,14 @@ const statuses = [
         cards.forEach((card) => {
             const cardCategory = card.getAttribute("data-category");
             const cardStatus = card.getAttribute("data-status");
+            const cardText = card.getAttribute("data-search-index") || "";
 
             const categoryMatch =
                 category === "all" || cardCategory === category;
             const statusMatch = status === "all" || cardStatus === status;
+            const keywordMatch = keyword === "" || cardText.includes(keyword);
 
-            if (categoryMatch && statusMatch) {
+            if (categoryMatch && statusMatch && keywordMatch) {
                 // @ts-ignore
                 card.style.display = "flex";
             } else {
@@ -124,6 +163,27 @@ const statuses = [
             updateFilters();
         });
     });
+
+    const searchInput = document.getElementById("search-input");
+    if (searchInput) {
+        let debounceTimer: ReturnType<typeof setTimeout>;
+        searchInput.addEventListener("input", (e) => {
+            clearTimeout(debounceTimer);
+            debounceTimer = setTimeout(() => {
+                const url = new URL(window.location.href);
+                const val = (e.target as HTMLInputElement).value.trim();
+
+                if (val) {
+                    url.searchParams.set("q", val);
+                } else {
+                    url.searchParams.delete("q");
+                }
+
+                window.history.pushState({}, "", url);
+                updateFilters();
+            }, 300);
+        });
+    }
 
     // Handle browser back/forward
     window.addEventListener("popstate", updateFilters);
