@@ -1,0 +1,108 @@
+---
+
+---
+
+<div id="search" class="w-full max-w-2xl mx-auto mb-12"></div>
+
+<script>
+    window.addEventListener("DOMContentLoaded", (event) => {
+        // @ts-ignore
+        new PagefindUI({
+            element: "#search",
+            showSubResults: true,
+            translations: {
+                placeholder: "Buscar editais...",
+                clear_search: "Limpar",
+                load_more: "Ver mais resultados",
+                search_label: "Buscar neste site",
+                filters_label: "Filtros",
+                zero_results: "Nenhum resultado encontrado para [SEARCH_TERM]",
+                many_results:
+                    "[COUNT] resultados encontrados para [SEARCH_TERM]",
+                one_result: "[COUNT] resultado encontrado para [SEARCH_TERM]",
+                alt_search:
+                    "Nenhum resultado para [SEARCH_TERM]. Mostrando resultados para [DIFFERENT_TERM] em vez disso",
+                search_suggestion:
+                    "Nenhum resultado para [SEARCH_TERM]. Tente um dos seguintes termos:",
+                searching: "Buscando por [SEARCH_TERM]...",
+            },
+        });
+    });
+</script>
+
+<style is:global>
+    :root {
+        --pagefind-ui-primary: #0369a1; /* cta-700 */
+        --pagefind-ui-text: #0f172a; /* primary-900 */
+        --pagefind-ui-background: #ffffff;
+        --pagefind-ui-border: #e2e8f0;
+        --pagefind-ui-tag: #f1f5f9;
+        --pagefind-ui-font: "Open Sans", system-ui, sans-serif;
+    }
+
+    .dark {
+        --pagefind-ui-primary: #0ea5e9; /* cta-500 */
+        --pagefind-ui-text: #f8fafc; /* primary-50 */
+        --pagefind-ui-background: #0f172a; /* primary-900 */
+        --pagefind-ui-border: #334155; /* primary-700 */
+        --pagefind-ui-tag: #1e293b;
+    }
+
+    #search .pagefind-ui__search-input {
+        border-radius: 1.5rem;
+        border-width: 2px;
+        border-color: #e2e8f0;
+        background-color: rgba(255, 255, 255, 0.8);
+        backdrop-filter: blur(24px);
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        padding: 1.25rem 1.75rem;
+        font-size: 1.125rem;
+        font-family: var(--font-sans);
+        font-weight: 500;
+        box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.05);
+    }
+
+    #search .pagefind-ui__search-input:focus {
+        border-color: #0369a1;
+        box-shadow: 0 0 0 4px rgba(3, 105, 161, 0.1);
+    }
+
+    .dark #search .pagefind-ui__search-input {
+        border-color: #334155;
+        background-color: rgba(15, 23, 42, 0.8);
+        color: white;
+    }
+
+    .dark #search .pagefind-ui__search-input:focus {
+        border-color: #0ea5e9;
+        box-shadow: 0 0 0 4px rgba(14, 165, 233, 0.1);
+    }
+
+    #search .pagefind-ui__search-clear {
+        right: 1.25rem;
+        background-color: #f1f5f9;
+        border-radius: 1rem;
+        width: 2.5rem;
+        height: 2.5rem;
+        transition: all 0.2s;
+    }
+
+    #search .pagefind-ui__result-link {
+        font-family: var(--font-heading);
+        font-weight: 800;
+        color: #0f172a;
+        transition: color 0.2s;
+    }
+
+    #search .pagefind-ui__result-link:hover {
+        color: #0369a1;
+    }
+
+    .dark #search .pagefind-ui__result-link {
+        color: #ffffff;
+    }
+
+    .dark #search .pagefind-ui__result-link:hover {
+        color: #0ea5e9;
+    }
+</style>

@@ -1,38 +1,60 @@
 @import "tailwindcss";
 
-@theme {
-    --font-sans: "Inter", system-ui, sans-serif;
+@variant dark (&:where(.dark, .dark *));
 
-    --color-primary-50: #eff6ff;
-    --color-primary-100: #dbeafe;
-    --color-primary-200: #bfdbfe;
-    --color-primary-300: #93c5fd;
-    --color-primary-400: #60a5fa;
-    --color-primary-500: #3b82f6;
-    --color-primary-600: #2563eb;
-    --color-primary-700: #1d4ed8;
-    --color-primary-800: #1e40af;
-    --color-primary-900: #1e3a8a;
-    --color-primary-950: #172554;
+@theme {
+    /* Poppins for Headings, Open Sans for Body */
+    --font-heading: "Poppins", system-ui, sans-serif;
+    --font-sans: "Open Sans", system-ui, sans-serif;
+
+    /* Enterprise Navy Primary Palette (#0F172A) */
+    --color-primary-50: #f8fafc;
+    --color-primary-100: #f1f5f9;
+    --color-primary-200: #e2e8f0;
+    --color-primary-300: #cbd5e1;
+    --color-primary-400: #94a3b8;
+    --color-primary-500: #64748b;
+    --color-primary-600: #475569;
+    --color-primary-700: #334155;
+    --color-primary-800: #1e293b;
+    --color-primary-900: #0f172a;
+    /* Base Navy */
+    --color-primary-950: #020617;
+
+    /* Accent CTA Blue (#0369A1) */
+    --color-cta-50: #f0f9ff;
+    --color-cta-500: #0ea5e9;
+    --color-cta-600: #0284c7;
+    --color-cta-700: #0369a1;
 
     --radius-xl: 1rem;
     --radius-2xl: 1.5rem;
+    --radius-3xl: 2.5rem;
 }
 
 @layer base {
     html {
         @apply antialiased scroll-smooth;
         font-size: 16px;
-        transition: font-size 0.2s ease;
+        transition: font-size 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     }
 
     body {
-        @apply bg-slate-50 text-slate-900 dark:bg-slate-950 dark:text-slate-100 transition-colors duration-300;
+        @apply bg-[#F8FAFC] text-primary-900 font-sans dark:bg-primary-950 dark:text-primary-50 transition-colors duration-500;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        @apply font-heading tracking-tight;
     }
 
     /* Accessibility: High Contrast */
     html.contrast {
-        filter: contrast(1.2) saturate(0);
+        filter: contrast(1.5) saturate(0);
     }
 
     html.contrast body {
@@ -42,8 +64,7 @@
 
     html.contrast a,
     html.contrast button {
-        outline: 2px solid #fbbf24 !important;
-        /* yellow-400 */
+        outline: 3px solid #fbbf24 !important;
         outline-offset: 4px !important;
         background-color: black !important;
         color: #fbbf24 !important;
@@ -55,18 +76,30 @@
         font-size: 125%;
     }
 
-    /* WCAG Focus States */
+    /* WCAG Focus States - Premium Ring */
     :focus-visible {
-        @apply outline-none ring-4 ring-primary-500 ring-offset-2 ring-offset-white dark:ring-offset-slate-950 transition-all;
+        @apply outline-none ring-4 ring-cta-500/50 ring-offset-2 ring-offset-white dark:ring-offset-primary-950 transition-all;
     }
 }
 
 @layer components {
     .container {
-        @apply max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8;
+        @apply max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12;
     }
 
     .glass {
-        @apply bg-white/70 backdrop-blur-md border border-white/20 dark:bg-slate-900/70 dark:border-slate-800/50;
+        @apply bg-white/80 backdrop-blur-xl border border-white/30 shadow-[0_8px_32px_0_rgba(15, 23, 42, 0.08)] dark:bg-primary-900/40 dark:border-white/10 dark:shadow-[0_8px_32px_0_rgba(0, 0, 0, 0.3)];
+    }
+
+    .glass-dark {
+        @apply bg-primary-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl;
+    }
+
+    .btn-premium {
+        @apply px-8 py-4 bg-primary-900 text-white rounded-2xl font-bold hover:bg-primary-800 transition-all duration-300 hover:-translate-y-1 active:scale-95 shadow-[0_10px_20px_-10px_rgba(15, 23, 42, 0.5)];
+    }
+
+    .btn-cta {
+        @apply px-8 py-4 bg-cta-700 text-white rounded-2xl font-bold hover:bg-cta-600 transition-all duration-300 hover:-translate-y-1 active:scale-95 shadow-[0_10px_20px_-10px_rgba(3, 105, 161, 0.5)];
     }
 }

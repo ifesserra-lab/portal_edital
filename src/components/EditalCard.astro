@@ -20,62 +20,86 @@ const statusColors = {
 ---
 
 <article
-    class="group relative flex flex-col p-6 rounded-2xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm hover:shadow-xl hover:border-primary-200 dark:hover:border-primary-500/30 transition-all duration-300 active:scale-[0.98]"
+    class="edital-card group relative flex flex-col p-8 rounded-3xl glass transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(15,23,42,0.15)] active:scale-[0.98] overflow-hidden"
     data-testid="edital-card"
     data-status={data.status}
+    data-category={data.categoria}
 >
-    <div class="flex items-center justify-between mb-4">
+    <!-- Card Accent Glow -->
+    <div
+        class="absolute -top-10 -right-10 w-32 h-32 bg-cta-500/5 rounded-full blur-3xl group-hover:bg-cta-500/10 transition-colors duration-500"
+    >
+    </div>
+
+    <div class="flex items-center justify-between mb-6">
         <span
-            class={`px-2.5 py-0.5 rounded-full text-xs font-bold border uppercase tracking-wider ${statusColors[data.status]}`}
+            class={`px-3 py-1 rounded-full text-[10px] font-black border uppercase tracking-[0.1em] ${statusColors[data.status]}`}
             data-testid="edital-status"
         >
             {data.status}
         </span>
         <span
-            class="text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-tight"
+            class="text-[10px] font-bold text-primary-400 dark:text-primary-500 uppercase tracking-[0.15em] bg-primary-100 dark:bg-primary-900/50 px-2.5 py-1 rounded-md"
         >
             {data.categoria}
         </span>
     </div>
 
     <h3
-        class="text-xl font-bold text-slate-900 dark:text-white mb-3 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors line-clamp-2"
+        class="text-xl font-bold text-primary-900 dark:text-white mb-4 group-hover:text-cta-600 dark:group-hover:text-cta-500 transition-colors duration-300 line-clamp-2 leading-tight"
         data-testid="edital-titulo"
     >
         <a
             href={`/editais/${id}`}
-            class="after:absolute after:inset-0 focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500 rounded-lg"
+            class="after:absolute after:inset-0 focus:outline-none"
         >
             {data.nome}
         </a>
     </h3>
 
     <p
-        class="text-slate-600 dark:text-slate-400 text-sm leading-relaxed mb-6 line-clamp-3 text-pretty"
+        class="text-primary-600 dark:text-primary-400 text-sm leading-relaxed mb-8 line-clamp-3 text-pretty"
     >
         {data.descrição}
     </p>
 
     <div
-        class="mt-auto pt-4 border-t border-slate-100 dark:border-slate-800 flex flex-col gap-2"
+        class="mt-auto pt-6 border-t border-primary-100 dark:border-white/5 flex flex-col gap-3"
     >
         <div
-            class="flex items-center text-xs text-slate-500 dark:text-slate-500 font-medium"
+            class="flex items-center text-[11px] text-primary-500 dark:text-primary-500 font-bold uppercase tracking-wider"
         >
-            <span class="w-20 shrink-0">Órgão:</span>
-            <span class="text-slate-900 dark:text-slate-300"
+            <span class="w-24 shrink-0">Órgão</span>
+            <span class="text-primary-900 dark:text-primary-200"
                 >{data.orgão_fomento}</span
             >
         </div>
         <div
-            class="flex items-center text-xs text-slate-500 dark:text-slate-500 font-medium"
+            class="flex items-center text-[11px] text-primary-500 dark:text-primary-500 font-bold uppercase tracking-wider"
         >
-            <span class="w-20 shrink-0">Encerramento:</span>
-            <span class="text-slate-900 dark:text-slate-300 font-bold"
+            <span class="w-24 shrink-0">Encerramento</span>
+            <span class="text-cta-700 dark:text-cta-500 font-black"
                 >{
                     new Date(data.data_encerramento).toLocaleDateString("pt-BR")
                 }</span
             >
         </div>
+    </div>
+
+    <!-- Hover Arrow Indicator -->
+    <div
+        class="absolute bottom-6 right-8 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-cta-600 pointer-events-none"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
+        >
     </div>
 </article>

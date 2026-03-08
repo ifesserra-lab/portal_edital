@@ -2,45 +2,52 @@
 
 Este backlog organiza as próximas evoluções do portal em níveis de Epics, User Stories e Tasks.
 
-## 🚀 Epic 1: Infraestrutura e Design Base (Concluído ✅)
+## 🚀 [Epic 1: Infraestrutura e Design Base](https://github.com/ifesserra-lab/portal_edital/issues/5) (Concluído ✅)
 *Foco em configurar o ambiente, stack técnica e design responsivo.*
 
-- **US1: Configurar Projeto Astro**
-  - [x] Task: Inicializar Astro com TypeScript.
-  - [x] Task: Integrar Tailwind CSS v4.
-  - [x] Task: Configurar Content Collections para ler JSON de `data/`.
-- **US2: Design System Moderno**
-  - [x] Task: Criar layout base responsivo.
-  - [x] Task: Implementar Dark Mode e Alto Contraste.
-  - [x] Task: Criar a Toolbar de Acessibilidade.
+- **[US1: Configurar Projeto Astro](https://github.com/ifesserra-lab/portal_edital/issues/8)**
+  - [x] [Task: Inicializar Astro com TypeScript](https://github.com/ifesserra-lab/portal_edital/issues/15).
+  - [x] [Task: Integrar Tailwind CSS v4](https://github.com/ifesserra-lab/portal_edital/issues/16).
+  - [x] [Task: Configurar Content Collections para ler JSON de `data/`](https://github.com/ifesserra-lab/portal_edital/issues/18).
+- **[US2: Design System Moderno](https://github.com/ifesserra-lab/portal_edital/issues/9)**
+  - [x] [Task: Criar layout base responsivo](https://github.com/ifesserra-lab/portal_edital/issues/20).
+  - [x] [Task: Implementar Dark Mode e Alto Contraste](https://github.com/ifesserra-lab/portal_edital/issues/22).
+  - [x] [Task: Criar a Toolbar de Acessibilidade](https://github.com/ifesserra-lab/portal_edital/issues/24).
 
-## 📋 Epic 2: Visualização e Consulta de Editais
+## 📋 [Epic 2: Visualização e Consulta de Editais](https://github.com/ifesserra-lab/portal_edital/issues/6) (Concluído ✅)
 *Foco na experiência do usuário ao encontrar e ler editais.*
 
-- **US3: Busca de Editais (Pendente)**
-  - [ ] Task: Integrar Pagefind para busca estática.
-  - [ ] Task: Criar componente visual de Search Bar.
-  - [ ] Task: Testar busca por título e tags.
-- **US4: Filtros Avançados (Pendente)**
-  - [ ] Task: Implementar filtros por categoria (Pesquisa, Extensão, etc).
-  - [ ] Task: Implementar filtros por status (Aberto, Encerrado).
-  - [ ] Task: Garantir que filtros reflitam na URL (Query Params).
+- **[US3: Busca de Editais](https://github.com/ifesserra-lab/portal_edital/issues/10)**
+  - [x] [Task: Integrar Pagefind para busca estática](https://github.com/ifesserra-lab/portal_edital/issues/17).
+  - [x] [Task: Criar componente visual de Search Bar](https://github.com/ifesserra-lab/portal_edital/issues/26).
+  - [x] [Task: Testar busca por título e tags](https://github.com/ifesserra-lab/portal_edital/issues/27).
+- **[US4: Filtros Avançados](https://github.com/ifesserra-lab/portal_edital/issues/11)**
+  - [x] [Task: Implementar filtros por categoria (Pesquisa, Extensão, etc)](https://github.com/ifesserra-lab/portal_edital/issues/28).
+  - [x] [Task: Implementar filtros por status (Aberto, Encerrado)](https://github.com/ifesserra-lab/portal_edital/issues/29).
+  - [x] [Task: Garantir que filtros reflitam na URL (Query Params)](https://github.com/ifesserra-lab/portal_edital/issues/30).
 
-## 🛠️ Epic 3: Automação e DevOps
+## 🛠️ [Epic 3: Automação e DevOps](https://github.com/ifesserra-lab/portal_edital/issues/7) (Concluído ✅)
 *Foco na qualidade e entrega contínua.*
 
-- **US5: Pipeline de CI/CD (Pendente)**
-  - [ ] Task: Configurar GitHub Actions para deploy no GitHub Pages.
-  - [ ] Task: Adicionar step de execução de testes Playwright no CI.
-  - [ ] Task: Configurar linting automático no commit.
-- **US6: Gestão de Projeto (Em Andamento)**
-  - [/] Task: Integrar skill de Gitflow e GitHub Issues.
-  - [ ] Task: Criar labels padrão no repositório (epic, user-story, task).
+- **[US5: Pipeline de CI/CD](https://github.com/ifesserra-lab/portal_edital/issues/12)**
+  - [x] [Task: Configurar GitHub Actions para deploy no GitHub Pages](https://github.com/ifesserra-lab/portal_edital/issues/19).
+  - [x] [Task: Adicionar step de execução de testes Playwright no CI](https://github.com/ifesserra-lab/portal_edital/issues/21).
+  - [x] [Task: Configurar linting automático no commit](https://github.com/ifesserra-lab/portal_edital/issues/31).
+- **[US6: Gestão de Projeto](https://github.com/ifesserra-lab/portal_edital/issues/13)**
+  - [x] [Task: Integrar skill de Gitflow e GitHub Issues](https://github.com/ifesserra-lab/portal_edital/issues/32).
+  - [x] [Task: Criar labels padrão no repositório (epic, user-story, task)](https://github.com/ifesserra-lab/portal_edital/issues/33).
 
-## ♿ Epic 4: Acessibilidade Avançada
+## ♿ [Epic 4: Acessibilidade Avançada](https://github.com/ifesserra-lab/portal_edital/issues/1) (Concluído ✅)
 *Foco em atingir conformidade WCAG máxima.*
 
-- **US7: Auditoria de Baixa Visão**
-  - [ ] Task: Revisar tamanhos de fonte relativos (rem).
-  - [ ] Task: Validar navegação completa por teclado em todas as páginas.
-  - [ ] Task: Adicionar Skip Links para conteúdo principal.
+- **[US7: Auditoria de Baixa Visão](https://github.com/ifesserra-lab/portal_edital/issues/14)**
+  - [x] [Task: Revisar tamanhos de fonte relativos (rem)](https://github.com/ifesserra-lab/portal_edital/issues/23).
+  - [x] [Task: Validar navegação completa por teclado em todas as páginas](https://github.com/ifesserra-lab/portal_edital/issues/25).
+  - [x] [Task: Adicionar Skip Links para conteúdo principal](https://github.com/ifesserra-lab/portal_edital/issues/34).
+
+## 🔄 [Epic 5: Publicação Orientada a Dados](https://github.com/ifesserra-lab/portal_edital/issues/35) (Concluído ✅)
+*Foco em automatizar o deploy sempre que houver novos editais ou atualizações.*
+
+- **[US8: Trigger de Deploy Automático por Dados](https://github.com/ifesserra-lab/portal_edital/issues/36)**
+  - [x] [Task: Configurar disparador do GitHub Actions para a pasta `data/`](https://github.com/ifesserra-lab/portal_edital/issues/37).
+  - [x] [Task: Validar integridade dos arquivos JSON antes do deploy](https://github.com/ifesserra-lab/portal_edital/issues/38).

@@ -30,7 +30,7 @@ const {
 		<link rel="preconnect" href="https://fonts.googleapis.com" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap"
 			rel="stylesheet"
 		/>
 
@@ -38,6 +38,7 @@ const {
 		<script is:inline>
 			const theme = localStorage.getItem("theme");
 			const contrast = localStorage.getItem("contrast");
+			const fontSize = localStorage.getItem("font-size");
 
 			if (
 				theme === "dark" ||
@@ -50,11 +51,21 @@ const {
 			if (contrast === "enabled") {
 				document.documentElement.classList.add("contrast");
 			}
+
+			if (fontSize === "large") {
+				document.documentElement.classList.add("large-text");
+			}
 		</script>
 	</head>
 	<body
 		class="min-h-screen flex flex-col selection:bg-primary-200 selection:text-primary-900 dark:selection:bg-primary-800 dark:selection:text-primary-100"
 	>
+		<a
+			href="#main-content"
+			class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[100] focus:px-6 focus:py-3 focus:bg-primary-600 focus:text-white focus:font-bold focus:rounded-xl focus:shadow-2xl focus:outline-none focus:ring-4 focus:ring-primary-500/50 transition-all"
+		>
+			Pular para o conteúdo principal
+		</a>
 		<slot />
 		<AccessibilityToolbar />
 	</body>

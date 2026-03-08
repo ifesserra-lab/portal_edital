@@ -14,11 +14,12 @@ O objetivo principal é entregar um site estático rápido, acessível e com exc
 |---|---|---|
 | Framework | **Astro** (última versão estável) | SSG + SSR parcial quando necessário |
 | Estilização | **Tailwind CSS v4** | Design System moderno, mobile-first e acessível |
-| Tipografia | **Inter** (Google Fonts) | Moderna e legível |
+| Tipografia | **Poppins / Open Sans** | Moderna e legível |
 | Ícones | **Astro Icon** (`@astrojs/icon`) | |
 | Conteúdo | **Content Collections** (Astro) | Editais em **JSON** na pasta `data/` |
 | Busca | **Pagefind** | Busca estática no lado do cliente |
 | Deploy | **GitHub Pages** | Saída estática com `astro build` |
+| GitHub | [portal_edital](https://github.com/ifesserra-lab/portal_edital) | Repositório oficial |
 | Lint / Format | **ESLint + Prettier** | Com plugin oficial do Astro |
 
 > Só adicionar React/Vue/Svelte se houver necessidade explícita de interatividade complexa que não possa ser resolvida com Astro Islands ou Web Components nativos.
@@ -400,7 +401,7 @@ npx playwright test --reporter=html
 ## Regras do Agente
 
 1. **Gherkin primeiro**: Todo novo caso de uso deve ter um `.feature` escrito em `docs/features/` antes de qualquer código.
-2. **GitHub Issues antes de tudo**: Sempre criar as issues no GitHub (Epic, User Story, Task) antes de começar a implementação, utilizando a skill `github-project-management`.
+2. **MANDATÓRIO: GitHub Issues antes de tudo**: Sempre criar as issues no GitHub (Epic, User Story, Task) ANTES de começar qualquer execução ou implementação. Isso é obrigatório para rastreabilidade.
 3. **Testes baseados nos cenários**: Cada `Scenario` Gherkin deve ter um `test()` correspondente em Playwright.
 4. **`data-testid` obrigatório**: Todo elemento relevante para teste deve ter atributo `data-testid`.
 5. **Dados em JSON**: Todos os editais devem ser mantidos como arquivos JSON individuais na pasta `data/`. Nunca hardcodar conteúdo de edital em componentes.

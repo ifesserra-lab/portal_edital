@@ -1,6 +1,16 @@
 {
   "version": 1,
   "skills": {
+    "astro": {
+      "source": "astrolicious/agent-skills",
+      "sourceType": "github",
+      "computedHash": "597a4587f30f1152d3ab2923e84db842a18604e09e16885ffa067730fb435d9d"
+    },
+    "cucumber-gherkin": {
+      "source": "el-feo/ai-context",
+      "sourceType": "github",
+      "computedHash": "e8b1534c9972c14cb405e882617deff74f7f4220bac22c54b05ba1ab7f42f556"
+    },
     "find-skills": {
       "source": "vercel-labs/skills",
       "sourceType": "github",
@@ -15,6 +25,21 @@
       "source": "ruvnet/claude-flow",
       "sourceType": "github",
       "computedHash": "529b25f3baa2ae1cbe66bf52ae839f3d8f507fe9b32d83e1fa5e25f0525b16d4"
+    },
+    "playwright-bdd-gherkin-syntax": {
+      "source": "thebushidocollective/han",
+      "sourceType": "github",
+      "computedHash": "a70cde008482ca9b4c7074267b0afde6a67beb2e992be130db2e43a9a202d839"
+    },
+    "tdd": {
+      "source": "oimiragieo/agent-studio",
+      "sourceType": "github",
+      "computedHash": "32f46336ba265b3316dce5d07483573d22add017646e490e026ef1ad0422c7f8"
+    },
+    "ui-ux-pro-max": {
+      "source": "sickn33/antigravity-awesome-skills",
+      "sourceType": "github",
+      "computedHash": "d8e1cbc119ea771b4f537a92f8b67eba51a2becdb4de0c7a0e265d101986372e"
     }
   }
 }

@@ -1,0 +1,133 @@
+---
+const categories = [
+    { id: "all", label: "Todos" },
+    { id: "pesquisa", label: "Pesquisa" },
+    { id: "extensão", label: "Extensão" },
+    { id: "inovação", label: "Inovação" },
+    { id: "bolsa", label: "Bolsas" },
+];
+
+const statuses = [
+    { id: "all", label: "Todos os Status" },
+    { id: "aberto", label: "Abertos" },
+    { id: "encerrado", label: "Encerrados" },
+];
+---
+
+<div class="flex flex-col gap-8 mb-16">
+    <div class="flex flex-wrap items-center gap-4">
+        <span
+            class="text-[10px] font-black text-primary-400 dark:text-primary-500 uppercase tracking-[0.2em] mr-2"
+            >Categorias</span
+        >
+        {
+            categories.map((cat) => (
+                <button
+                    data-filter-category={cat.id}
+                    class="filter-btn px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest border-2 transition-all active:scale-95 cursor-pointer"
+                >
+                    {cat.label}
+                </button>
+            ))
+        }
+    </div>
+
+    <div class="flex flex-wrap items-center gap-4">
+        <span
+            class="text-[10px] font-black text-primary-400 dark:text-primary-500 uppercase tracking-[0.2em] mr-2"
+            >Status</span
+        >
+        {
+            statuses.map((status) => (
+                <button
+                    data-filter-status={status.id}
+                    class="filter-btn px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest border-2 transition-all active:scale-95 cursor-pointer"
+                >
+                    {status.label}
+                </button>
+            ))
+        }
+    </div>
+</div>
+
+<script>
+    function updateFilters() {
+        const url = new URL(window.location.href);
+        const category = url.searchParams.get("categoria") || "all";
+        const status = url.searchParams.get("status") || "all";
+
+        // Update buttons UI
+        document.querySelectorAll("[data-filter-category]").forEach((btn) => {
+            const isSelected =
+                btn.getAttribute("data-filter-category") === category;
+            btn.classList.toggle("bg-cta-700", isSelected);
+            btn.classList.toggle("text-white", isSelected);
+            btn.classList.toggle("border-cta-700", isSelected);
+            btn.classList.toggle("shadow-lg", isSelected);
+            btn.classList.toggle("shadow-cta-500/20", isSelected);
+
+            btn.classList.toggle("bg-transparent", !isSelected);
+            btn.classList.toggle("text-primary-600", !isSelected);
+            btn.classList.toggle("dark:text-primary-400", !isSelected);
+            btn.classList.toggle("border-primary-200", !isSelected);
+            btn.classList.toggle("dark:border-white/10", !isSelected);
+        });
+
+        document.querySelectorAll("[data-filter-status]").forEach((btn) => {
+            const isSelected =
+                btn.getAttribute("data-filter-status") === status;
+            btn.classList.toggle("bg-primary-900", isSelected);
+            btn.classList.toggle("dark:bg-white", isSelected);
+            btn.classList.toggle("text-white", isSelected);
+            btn.classList.toggle("dark:text-primary-900", isSelected);
+            btn.classList.toggle("border-primary-900", isSelected);
+            btn.classList.toggle("dark:border-white", isSelected);
+            btn.classList.toggle("shadow-lg", isSelected);
+
+            btn.classList.toggle("bg-transparent", !isSelected);
+            btn.classList.toggle("text-primary-600", !isSelected);
+            btn.classList.toggle("dark:text-primary-400", !isSelected);
+            btn.classList.toggle("border-primary-200", !isSelected);
+            btn.classList.toggle("dark:border-white/10", !isSelected);
+        });
+
+        // Client-side filtering of the list
+        const cards = document.querySelectorAll(".edital-card");
+        cards.forEach((card) => {
+            const cardCategory = card.getAttribute("data-category");
+            const cardStatus = card.getAttribute("data-status");
+
+            const categoryMatch =
+                category === "all" || cardCategory === category;
+            const statusMatch = status === "all" || cardStatus === status;
+
+            if (categoryMatch && statusMatch) {
+                // @ts-ignore
+                card.style.display = "flex";
+            } else {
+                // @ts-ignore
+                card.style.display = "none";
+            }
+        });
+    }
+
+    document.querySelectorAll(".filter-btn").forEach((btn) => {
+        btn.addEventListener("click", () => {
+            const url = new URL(window.location.href);
+            const cat = btn.getAttribute("data-filter-category");
+            const stat = btn.getAttribute("data-filter-status");
+
+            if (cat) url.searchParams.set("categoria", cat);
+            if (stat) url.searchParams.set("status", stat);
+
+            window.history.pushState({}, "", url);
+            updateFilters();
+        });
+    });
+
+    // Handle browser back/forward
+    window.addEventListener("popstate", updateFilters);
+
+    // Initial check
+    updateFilters();
+</script>
