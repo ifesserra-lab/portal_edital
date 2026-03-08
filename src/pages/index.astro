@@ -6,8 +6,9 @@ import EditalCard from "../components/EditalCard.astro";
 import FilterBar from "../components/FilterBar.astro";
 import { getCollection } from "astro:content";
 
-const editais = await getCollection("editais");
-const abertosCount = editais.filter((e) => e.data.status === "aberto").length;
+const todosEditais = await getCollection("editais");
+const editais = todosEditais.filter((e) => e.data.status === "aberto");
+const abertosCount = editais.length;
 const totalCount = editais.length;
 ---
 
@@ -113,7 +114,7 @@ const totalCount = editais.length;
 					</p>
 				</div>
 
-				<FilterBar />
+				<FilterBar hideStatus={true} />
 
 				<div data-pagefind-body>
 					{
