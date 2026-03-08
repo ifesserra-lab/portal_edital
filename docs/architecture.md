@@ -26,7 +26,7 @@ O Portal de Editais é um site estático (SSG - Static Site Generation) constru�
 ### Infraestrutura
 - **Build**: Estático (SSG).
 - **Deploy**: GitHub Pages.
-- **Busca**: Pagefind (estática, indexada no momento do build).
+- **Busca e Filtros**: Filtragem instantânea híbrida (Client-side JS + atributos DOM) sincronizada com Query Params da URL. Evita requisições de servidor e bibliotecas pesadas de terceiros.
 
 ## 📂 Estrutura de Diretórios
 
