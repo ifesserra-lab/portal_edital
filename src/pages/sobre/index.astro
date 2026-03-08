@@ -1,0 +1,199 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+---
+
+<BaseLayout title="Portal de Editais — Sobre">
+    <Header />
+    <main id="main-content" class="flex-grow py-8 sm:py-16" tabindex="-1">
+        <div class="container max-w-4xl mx-auto px-4">
+            <!-- Hero Section -->
+            <section class="text-center mb-20 relative">
+                <div
+                    class="absolute inset-0 bg-cta-500/10 blur-[100px] rounded-full -z-10 w-3/4 mx-auto h-full"
+                >
+                </div>
+                <div
+                    class="inline-flex items-center space-x-2 bg-cta-500/10 border border-cta-500/20 rounded-full px-4 py-1.5 mb-6"
+                >
+                    <span class="flex h-2 w-2 rounded-full bg-cta-500"></span>
+                    <span
+                        class="text-xs font-bold text-cta-500 uppercase tracking-widest"
+                        >Institucional</span
+                    >
+                </div>
+                <h1
+                    class="text-4xl sm:text-6xl font-black text-primary-900 dark:text-white mb-6 leading-tight"
+                >
+                    Sobre o <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-cta-500 to-blue-400"
+                        >Portal de Editais</span
+                    >
+                </h1>
+                <p
+                    class="text-xl sm:text-2xl text-primary-600 dark:text-primary-300 font-medium text-pretty max-w-2xl mx-auto"
+                >
+                    Conectando pesquisadores às oportunidades de fomento para
+                    impulsionar a ciência, tecnologia e inovação no Espírito
+                    Santo.
+                </p>
+            </section>
+
+            <!-- Content Sections -->
+            <div class="space-y-16">
+                <!-- Missão -->
+                <section
+                    class="glass p-8 sm:p-12 rounded-3xl border border-white/10 relative overflow-hidden group hover:border-cta-500/30 transition-colors"
+                >
+                    <div
+                        class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="100"
+                            height="100"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-cta-500"
+                            ><path d="M12 2v20"></path><path d="m17 5-5-3-5 3"
+                            ></path><path d="m17 19-5 3-5-3"></path><path
+                                d="M2 12h20"></path><path d="m5 7-3 5 3 5"
+                            ></path><path d="m19 7 3 5-3 5"></path></svg
+                        >
+                    </div>
+                    <h2
+                        data-testid="sobre-missao"
+                        class="text-2xl font-black text-primary-900 dark:text-white mb-4 uppercase tracking-widest"
+                    >
+                        Nossa Missão
+                    </h2>
+                    <p
+                        class="text-lg text-primary-700 dark:text-primary-300 leading-relaxed text-pretty"
+                    >
+                        O Portal de Editais foi concebido para centralizar e
+                        democratizar o acesso a chamadas públicas, bolsas e
+                        oportunidades de financiamento à pesquisa. Nosso
+                        objetivo é reduzir a burocracia na busca por
+                        informações, permitindo que cientistas e inovadores
+                        foquem no que realmente importa: o desenvolvimento de
+                        soluções para a sociedade.
+                    </p>
+                </section>
+
+                <!-- Como Funciona -->
+                <section
+                    class="glass p-8 sm:p-12 rounded-3xl border border-white/10 relative overflow-hidden group hover:border-cta-500/30 transition-colors"
+                >
+                    <div
+                        class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="100"
+                            height="100"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-cta-500"
+                            ><circle cx="12" cy="12" r="10"></circle><path
+                                d="M12 16v-4"></path><path d="M12 8h.01"
+                            ></path></svg
+                        >
+                    </div>
+                    <h2
+                        data-testid="sobre-como-funciona"
+                        class="text-2xl font-black text-primary-900 dark:text-white mb-4 uppercase tracking-widest"
+                    >
+                        Como Funciona
+                    </h2>
+                    <div class="grid sm:grid-cols-2 gap-8 mt-8">
+                        <div>
+                            <h3
+                                class="font-bold text-xl text-primary-900 dark:text-white mb-2 text-cta-500"
+                            >
+                                Agregação Automática
+                            </h3>
+                            <p class="text-primary-600 dark:text-primary-400">
+                                Monitoramos fontes oficiais e órgãos de fomento
+                                (como a FAPES) para consolidar os editais
+                                abertos e previstos em um banco de dados
+                                unificado e estruturado.
+                            </p>
+                        </div>
+                        <div>
+                            <h3
+                                class="font-bold text-xl text-primary-900 dark:text-white mb-2 text-cta-500"
+                            >
+                                Organização Inteligente
+                            </h3>
+                            <p class="text-primary-600 dark:text-primary-400">
+                                Através da nossa interface, você pode filtrar as
+                                oportunidades por categorias temáticas, status
+                                de vigência e através de buscas avançadas de
+                                texto.
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Impacto -->
+                <section
+                    class="glass p-8 sm:p-12 rounded-3xl border border-white/10 relative overflow-hidden group hover:border-cta-500/30 transition-colors"
+                >
+                    <div
+                        class="absolute top-0 right-0 p-8 opacity-10 group-hover:opacity-20 transition-opacity"
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="100"
+                            height="100"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            class="text-cta-500"
+                            ><path
+                                d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"
+                            ></path><path
+                                d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"
+                            ></path><path
+                                d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"
+                            ></path><path d="M2 7h20"></path><path
+                                d="M22 7v3a2 2 0 0 1-2 2v0a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12v0a2 2 0 0 1-2-2V7"
+                            ></path></svg
+                        >
+                    </div>
+                    <h2
+                        data-testid="sobre-impacto"
+                        class="text-2xl font-black text-primary-900 dark:text-white mb-4 uppercase tracking-widest"
+                    >
+                        Impacto e Transparência
+                    </h2>
+                    <p
+                        class="text-lg text-primary-700 dark:text-primary-300 leading-relaxed text-pretty"
+                    >
+                        Construído com tecnologias modernas (Astro,
+                        TailwindCSS), este projeto é um farol de transparência
+                        ativa. Contribui para a governança na alocação de
+                        recursos públicos e visa aumentar o percentual de
+                        pesquisadores financiados em instituições de todo o
+                        país. É uma ferramenta fundamental de código aberto
+                        mantida no escopo do laboratório do Instituto Federal do
+                        Espírito Santo (Ifes) - Campus Serra.
+                    </p>
+                </section>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</BaseLayout>
