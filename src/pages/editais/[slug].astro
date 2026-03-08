@@ -1,0 +1,198 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+    const editais = await getCollection("editais");
+    return editais.map((edital) => ({
+        params: { slug: edital.id },
+        props: { edital },
+    }));
+}
+
+const { edital } = Astro.props;
+const { data } = edital;
+
+const statusColors = {
+    aberto: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border-emerald-200 dark:border-emerald-500/20",
+    encerrado:
+        "bg-slate-100 text-slate-700 dark:bg-slate-500/10 dark:text-slate-400 border-slate-200 dark:border-slate-500/20",
+    suspenso:
+        "bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400 border-amber-200 dark:border-amber-500/20",
+    resultado:
+        "bg-blue-100 text-blue-700 dark:bg-blue-500/10 dark:text-blue-400 border-blue-200 dark:border-blue-500/20",
+};
+---
+
+<BaseLayout title={`${data.nome} — Portal de Editais`}>
+    <Header />
+    <main class="flex-grow py-8 sm:py-12">
+        <div class="container overflow-x-hidden">
+            <nav
+                class="flex items-center space-x-2 text-sm text-slate-500 dark:text-slate-400 mb-8 overflow-x-auto whitespace-nowrap pb-2 scrollbar-hide"
+            >
+                <a href="/" class="hover:text-primary-600 transition-colors"
+                    >Início</a
+                >
+                <span class="text-slate-300 dark:text-slate-700">/</span>
+                <span
+                    class="text-slate-900 dark:text-slate-200 truncate font-medium"
+                    >{data.nome}</span
+                >
+            </nav>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
+                <!-- Main Content -->
+                <div class="lg:col-span-2 space-y-8 sm:space-y-12">
+                    <header class="space-y-4">
+                        <div class="flex flex-wrap items-center gap-3">
+                            <span
+                                class={`px-3 py-1 rounded-full text-xs font-bold border uppercase tracking-wider ${statusColors[data.status]}`}
+                                data-testid="edital-status"
+                            >
+                                {data.status}
+                            </span>
+                            <span
+                                class="text-sm font-semibold text-primary-600 dark:text-primary-400 uppercase tracking-wide"
+                            >
+                                {data.categoria}
+                            </span>
+                        </div>
+                        <h1
+                            class="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white leading-tight tracking-tight text-balance"
+                            data-testid="edital-titulo-main"
+                        >
+                            {data.nome}
+                        </h1>
+                        <p
+                            class="text-xl text-slate-600 dark:text-slate-400 font-medium"
+                        >
+                            {data.orgão_fomento}
+                        </p>
+                    </header>
+
+                    <section
+                        class="prose prose-slate dark:prose-invert max-w-none"
+                    >
+                        <h2
+                            class="text-2xl font-bold text-slate-900 dark:text-white mb-4"
+                        >
+                            Descrição do Edital
+                        </h2>
+                        <p
+                            class="text-slate-600 dark:text-slate-400 leading-relaxed text-pretty text-lg"
+                            data-testid="edital-descricao"
+                        >
+                            {data.descrição}
+                        </p>
+                    </section>
+
+                    <section
+                        class="p-6 sm:p-8 rounded-3xl bg-primary-50 dark:bg-primary-500/5 border border-primary-100 dark:border-primary-500/10"
+                    >
+                        <h2
+                            class="text-xl font-bold text-slate-900 dark:text-white mb-4"
+                        >
+                            Acesso aos Documentos
+                        </h2>
+                        <p
+                            class="text-slate-600 dark:text-slate-400 mb-6 text-sm"
+                        >
+                            Clique no link abaixo para acessar a documentação
+                            completa, anexos e formulários de inscrição
+                            diretamente no portal oficial do órgão.
+                        </p>
+                        <a
+                            href={data.link}
+                            target="_blank"
+                            class="inline-flex items-center justify-center rounded-xl bg-primary-600 px-8 py-4 text-base font-bold text-white shadow-lg hover:bg-primary-700 hover:scale-105 active:scale-95 transition-all focus-visible:ring-2 focus-visible:ring-primary-500"
+                        >
+                            Acessar Edital Completo
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                class="ml-2 h-5 w-5"
+                                viewBox="0 0 20 20"
+                                fill="currentColor"
+                            >
+                                <path
+                                    d="M11 3a1 1 0 100 2h2.586l-6.293 6.293a1 1 0 101.414 1.414L15 6.414V9a1 1 0 102 0V4a1 1 0 00-1-1h-5z"
+                                ></path>
+                                <path
+                                    d="M5 5a2 2 0 00-2 2v8a2 2 0 002 2h8a2 2 0 002-2v-3a1 1 0 10-2 0v3H5V7h3a1 1 0 000-2H5z"
+                                ></path>
+                            </svg>
+                        </a>
+                    </section>
+                </div>
+
+                <!-- Sidebar -->
+                <aside class="space-y-8">
+                    <div class="sticky top-24 space-y-6">
+                        <div
+                            class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm"
+                        >
+                            <h3
+                                class="text-lg font-bold text-slate-900 dark:text-white mb-6 border-b border-slate-100 dark:border-slate-800 pb-4"
+                            >
+                                Cronograma
+                            </h3>
+                            <ul class="space-y-6">
+                                {
+                                    data.cronograma.map((item, index) => (
+                                        <li
+                                            class="relative pl-6 pb-2 last:pb-0"
+                                            data-testid="cronograma-item"
+                                        >
+                                            {index !==
+                                                data.cronograma.length - 1 && (
+                                                <span class="absolute left-[3px] top-6 bottom-0 w-px bg-slate-200 dark:bg-slate-800" />
+                                            )}
+                                            <span class="absolute left-0 top-1.5 h-2 w-2 rounded-full bg-primary-500" />
+                                            <div class="flex flex-col gap-1">
+                                                <span class="text-xs font-bold text-primary-600 dark:text-primary-400 uppercase tracking-wider">
+                                                    {new Date(
+                                                        item.data,
+                                                    ).toLocaleDateString(
+                                                        "pt-BR",
+                                                        {
+                                                            day: "2-digit",
+                                                            month: "long",
+                                                            year: "numeric",
+                                                        },
+                                                    )}
+                                                </span>
+                                                <span class="text-sm font-medium text-slate-700 dark:text-slate-300 leading-tight">
+                                                    {item.evento}
+                                                </span>
+                                            </div>
+                                        </li>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+
+                        {
+                            data.tags && (
+                                <div class="p-6 sm:p-8 rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 shadow-sm">
+                                    <h3 class="text-sm font-bold text-slate-900 dark:text-white uppercase tracking-widest mb-4">
+                                        Tags
+                                    </h3>
+                                    <div class="flex flex-wrap gap-2">
+                                        {data.tags.map((tag) => (
+                                            <span class="px-3 py-1 bg-slate-100 dark:bg-slate-800 text-slate-600 dark:text-slate-400 text-xs font-medium rounded-lg">
+                                                #{tag}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                            )
+                        }
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</BaseLayout>

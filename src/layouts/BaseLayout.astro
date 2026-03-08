@@ -1,0 +1,61 @@
+---
+import "../styles/global.css";
+import AccessibilityToolbar from "../components/AccessibilityToolbar.astro";
+
+interface Props {
+	title: string;
+	description?: string;
+}
+
+const {
+	title,
+	description = "Portal de Editais — Fomento à Pesquisa e Extensão",
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="pt-BR">
+	<head>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+		/>
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+
+		<title>{title}</title>
+		<meta name="description" content={description} />
+
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+			rel="stylesheet"
+		/>
+
+		<!-- Anti-FOUC Theme Script -->
+		<script is:inline>
+			const theme = localStorage.getItem("theme");
+			const contrast = localStorage.getItem("contrast");
+
+			if (
+				theme === "dark" ||
+				(!theme &&
+					window.matchMedia("(prefers-color-scheme: dark)").matches)
+			) {
+				document.documentElement.classList.add("dark");
+			}
+
+			if (contrast === "enabled") {
+				document.documentElement.classList.add("contrast");
+			}
+		</script>
+	</head>
+	<body
+		class="min-h-screen flex flex-col selection:bg-primary-200 selection:text-primary-900 dark:selection:bg-primary-800 dark:selection:text-primary-100"
+	>
+		<slot />
+		<AccessibilityToolbar />
+	</body>
+</html>
