@@ -3,33 +3,32 @@
 @variant dark (&:where(.dark, .dark *));
 
 @theme {
-    /* Poppins for Headings, Open Sans for Body */
-    --font-heading: "Poppins", system-ui, sans-serif;
-    --font-sans: "Open Sans", system-ui, sans-serif;
+    /* Inter for both Headings and Body - Modern & Minimalist */
+    --font-heading: "Inter", system-ui, sans-serif;
+    --font-sans: "Inter", system-ui, sans-serif;
 
-    /* Enterprise Navy Primary Palette (#0F172A) */
-    --color-primary-50: #f8fafc;
-    --color-primary-100: #f1f5f9;
-    --color-primary-200: #e2e8f0;
-    --color-primary-300: #cbd5e1;
-    --color-primary-400: #94a3b8;
-    --color-primary-500: #64748b;
-    --color-primary-600: #475569;
-    --color-primary-700: #334155;
-    --color-primary-800: #1e293b;
-    --color-primary-900: #0f172a;
-    /* Base Navy */
-    --color-primary-950: #020617;
+    /* Clean & High Contrast Palette */
+    --color-primary-50: #f9fafb;
+    --color-primary-100: #f3f4f6;
+    --color-primary-200: #e5e7eb;
+    --color-primary-300: #d1d5db;
+    --color-primary-400: #9ca3af;
+    --color-primary-500: #6b7280;
+    --color-primary-600: #4b5563;
+    --color-primary-700: #374151;
+    --color-primary-800: #1f2937;
+    --color-primary-900: #111827;
+    --color-primary-950: #030712;
 
-    /* Accent CTA Blue (#0369A1) */
-    --color-cta-50: #f0f9ff;
-    --color-cta-500: #0ea5e9;
-    --color-cta-600: #0284c7;
-    --color-cta-700: #0369a1;
+    /* Indigo Accent (#6366F1) */
+    --color-cta-50: #eef2ff;
+    --color-cta-500: #6366f1;
+    --color-cta-600: #4f46e5;
+    --color-cta-700: #4338ca;
 
-    --radius-xl: 1rem;
-    --radius-2xl: 1.5rem;
-    --radius-3xl: 2.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --radius-3xl: 1.5rem;
 }
 
 @layer base {
@@ -40,7 +39,7 @@
     }
 
     body {
-        @apply bg-[#F8FAFC] text-primary-900 font-sans dark:bg-primary-950 dark:text-primary-50 transition-colors duration-500;
+        @apply bg-white text-primary-900 font-sans dark:bg-primary-950 dark:text-primary-50 transition-colors duration-300;
     }
 
     h1,
@@ -49,12 +48,12 @@
     h4,
     h5,
     h6 {
-        @apply font-heading tracking-tight;
+        @apply font-heading tracking-tight font-semibold;
     }
 
     /* Accessibility: High Contrast */
     html.contrast {
-        filter: contrast(1.5) saturate(0);
+        filter: contrast(1.2) saturate(0);
     }
 
     html.contrast body {
@@ -76,30 +75,35 @@
         font-size: 125%;
     }
 
-    /* WCAG Focus States - Premium Ring */
+    /* WCAG Focus States - Minimalist Ring */
     :focus-visible {
-        @apply outline-none ring-4 ring-cta-500/50 ring-offset-2 ring-offset-white dark:ring-offset-primary-950 transition-all;
+        @apply outline-none ring-2 ring-cta-500 ring-offset-2 ring-offset-white dark:ring-offset-primary-950 transition-all;
     }
 }
 
 @layer components {
     .container {
-        @apply max-w-[1280px] mx-auto px-6 sm:px-8 lg:px-12;
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
     }
 
     .glass {
-        @apply bg-white/80 backdrop-blur-xl border border-white/30 shadow-[0_8px_32px_0_rgba(15,23,42,0.08)] dark:bg-primary-900/40 dark:border-white/10 dark:shadow-[0_8px_32px_0_rgba(0,0,0,0.3)];
+        @apply bg-white/70 backdrop-blur-md border border-primary-200/50 shadow-sm dark:bg-primary-900/40 dark:border-white/5 dark:shadow-none;
     }
 
     .glass-dark {
-        @apply bg-primary-900/90 backdrop-blur-2xl border border-white/10 shadow-2xl;
+        @apply bg-primary-950/80 backdrop-blur-md border border-white/5 shadow-sm;
     }
 
     .btn-premium {
-        @apply px-8 py-4 bg-primary-900 text-white rounded-2xl font-bold hover:bg-primary-800 transition-all duration-300 hover:-translate-y-1 active:scale-95 shadow-[0_10px_20px_-10px_rgba(15,23,42,0.5)];
+        @apply px-6 py-2.5 bg-primary-900 text-white rounded-lg font-medium hover:bg-primary-800 transition-all duration-200 active:scale-95;
     }
 
     .btn-cta {
-        @apply px-8 py-4 bg-cta-700 text-white rounded-2xl font-bold hover:bg-cta-600 transition-all duration-300 hover:-translate-y-1 active:scale-95 shadow-[0_10px_20px_-10px_rgba(3,105,161,0.5)];
+        @apply px-6 py-2.5 bg-cta-600 text-white rounded-lg font-medium hover:bg-cta-700 transition-all duration-200 active:scale-95;
+    }
+
+    /* Minimalist Card */
+    .card-minimal {
+        @apply bg-white dark:bg-primary-900/20 border border-primary-200 dark:border-white/5 rounded-xl overflow-hidden transition-all duration-200 hover:border-cta-500/50 hover:shadow-lg hover:shadow-cta-500/5;
     }
 }
