@@ -28,6 +28,10 @@ Este backlog organiza as próximas evoluções do portal em níveis de Epics, Us
 - **[US9: Busca livre por palavra-chave combinada com filtros de categoria](https://github.com/ifesserra-lab/portal_edital/issues/39)**
   - [ ] [Task: Criar input de busca visual integrado ao FilterBar](https://github.com/ifesserra-lab/portal_edital/issues/40).
   - [ ] [Task: Implementar lógica de busca livre combinada na listagem de editais](https://github.com/ifesserra-lab/portal_edital/issues/41).
+- **US10: Explorar Editais por Tags** (Concluído ✅)
+  - [x] Task: Criar componente de filtro e busca `TagFilterSearch.astro` em Vanilla JS.
+  - [x] Task: Criar a página estática `/tags` agregando edital por tag.
+  - [x] Task: Implementar os testes E2E correspondentes da suíte BDD explorando tags e busca.
 
 ## 🛠️ [Epic 3: Automação e DevOps](https://github.com/ifesserra-lab/portal_edital/issues/7) (Concluído ✅)
 *Foco na qualidade e entrega contínua.*
