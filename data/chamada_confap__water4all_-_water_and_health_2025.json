@@ -1,10 +1,10 @@
 {
     "nome": "CHAMADA CONFAP & WATER4ALL - WATER AND HEALTH 2025",
-    "descrição": "Apoiar projetos colaborativos de pesquisa e inovação voltados aos desafios relacionados à interconexão entre água e saúde humana, incluindo qualidade da água, contaminantes, tecnologias de tratamento, monitoramento inovador, governança e políticas integradas.",
+    "descrição": "Apoiar projetos colaborativos de pesquisa e inovação voltados aos desafios relacionados à interconexão entre água e saúde humana, incluindo qualidade da água, contaminantes, tecnologias de tratamento, monitoramento inovador e governança integrada.",
     "orgão_fomento": "FAPES",
-    "categoria": "pesquisa",
+    "categoria": "chamadas",
     "status": "aberto",
-    "data_abertura": "",
+    "data_abertura": "2025-06-01",
     "data_encerramento": "2025-11-13",
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Diretrizes_Chamada_Water4All_2025%20-%20Water4ALL.pdf",
     "cronograma": [
@@ -18,19 +18,14 @@
         },
         {
             "evento": "Início dos projetos aprovados",
-            "data": "final de 2026 e início de 2027"
+            "data": "2026-12-01"
         }
     ],
     "tags": [
-        "água",
-        "saúde humana",
+        "água e saúde",
         "contaminantes",
-        "qualidade da água",
-        "tecnologias de tratamento",
-        "monitoramento",
+        "inovação tecnológica",
         "governança",
-        "inovação",
-        "pesquisa colaborativa",
-        "transnacional"
+        "pesquisa colaborativa"
     ]
 }

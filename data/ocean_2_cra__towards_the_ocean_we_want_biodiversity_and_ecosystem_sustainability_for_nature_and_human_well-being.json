@@ -1,8 +1,8 @@
 {
     "nome": "OCEAN 2 CRA – TOWARDS THE OCEAN WE WANT: BIODIVERSITY AND ECOSYSTEM SUSTAINABILITY FOR NATURE AND HUMAN WELL-BEING",
-    "descrição": "Edital do Belmont Forum que apoia pesquisa transdisciplinar para enfrentar desafios globais dos oceanos, contribuindo para a Década da Ciência Oceânica para o Desenvolvimento Sustentável. Os projetos devem focar em biodiversidade, integração oceano-biodiversidade-clima ou governança e ética para sustentabilidade.",
+    "descrição": "Edital do Belmont Forum para apoiar pesquisa transdisciplinar sobre desafios globais dos oceanos, contribuindo para a Década da Ciência Oceânica para o Desenvolvimento Sustentável. Projetos devem focar em biodiversidade, soluções baseadas na natureza, integração oceano-biodiversidade-clima ou governança e ética para sustentabilidade.",
     "orgão_fomento": "BELMONT FORUM",
-    "categoria": "pesquisa",
+    "categoria": "chamadas",
     "status": "aberto",
     "data_abertura": "2025-06-11",
     "data_encerramento": "2026-04-30",
@@ -26,11 +26,6 @@
         "biodiversidade",
         "sustentabilidade",
         "pesquisa transdisciplinar",
-        "clima",
-        "governança",
-        "ética",
-        "natureza",
-        "bem-estar humano",
-        "consórcios internacionais"
+        "governança ambiental"
     ]
 }

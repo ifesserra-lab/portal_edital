@@ -1,8 +1,8 @@
 {
     "nome": "2025 JOINT TRANSNATIONAL CALL 'WATER AND HEALTH'",
-    "descrição": "Edital conjunto transnacional focado em pesquisa e inovação para segurança hídrica e saúde humana, abordando desafios críticos relacionados à qualidade da água, contaminantes, tecnologias de tratamento e monitoramento, além de governança e políticas integradas. Inclui modalidade específica para pesquisadores em início de carreira (Early Career Researchers).",
-    "orgão_fomento": "WATER4ALL EUROPEAN PARTNERSHIP (CO-FINANCIADO PELA UNIÃO EUROPEIA)",
-    "categoria": "pesquisa",
+    "descrição": "Edital de fomento à pesquisa e inovação transnacionais focado na relação entre água e saúde humana, incluindo temas como contaminantes hídricos, riscos à saúde, monitoramento de qualidade da água, tecnologias de tratamento e governança. O edital também inclui uma modalidade específica para pesquisadores em início de carreira (Early Career Researchers).",
+    "orgão_fomento": "WATER4ALL (EUROPEAN PARTNERSHIP CO-FINANCIADO PELA UNIÃO EUROPEIA)",
+    "categoria": "outros",
     "status": "aberto",
     "data_abertura": "2025-09-12",
     "data_encerramento": "2025-11-13",
@@ -10,14 +10,14 @@
     "cronograma": [
         {
             "evento": "Pré-anúncio do edital",
-            "data": "Julho 2025"
+            "data": "Julho de 2025"
         },
         {
-            "evento": "Publicação do edital e abertura do 1º passo (pré-propostas)",
+            "evento": "Publicação do edital e abertura do 1º passo (submissão de pré-propostas)",
             "data": "2025-09-12"
         },
         {
-            "evento": "Prazo para submissão de pré-propostas",
+            "evento": "Prazo final para submissão de pré-propostas",
             "data": "2025-11-13"
         },
         {
@@ -25,32 +25,32 @@
             "data": "2026-02-06"
         },
         {
-            "evento": "Período para pedido de reconsideração (redress) do 1º passo",
+            "evento": "Período para pedido de reconsideração (redress)",
             "data": "2026-02-06 a 2026-02-20"
         },
         {
-            "evento": "Abertura do 2º passo (propostas completas)",
+            "evento": "Abertura do 2º passo (submissão de propostas completas)",
             "data": "2026-02-06"
         },
         {
-            "evento": "Prazo para submissão de propostas completas",
+            "evento": "Prazo final para submissão de propostas completas",
             "data": "2026-04-13"
         },
         {
             "evento": "Notificação dos resultados do 2º passo",
-            "data": "Setembro 2026"
+            "data": "Setembro de 2026"
         },
         {
             "evento": "Análise ética",
-            "data": "Setembro/Outubro 2026"
+            "data": "Setembro/Outubro de 2026"
         },
         {
-            "evento": "Período para pedido de reconsideração (redress) do 2º passo",
-            "data": "Setembro/Outubro 2026"
+            "evento": "Período para pedido de reconsideração (redress)",
+            "data": "Setembro/Outubro de 2026"
         },
         {
-            "evento": "Comunicação da decisão após pedido de reconsideração",
-            "data": "Setembro/Outubro 2026"
+            "evento": "Comunicação da decisão final após pedido de reconsideração",
+            "data": "Setembro/Outubro de 2026"
         },
         {
             "evento": "Início dos projetos transnacionais",
@@ -62,20 +62,12 @@
         }
     ],
     "tags": [
-        "água",
-        "saúde",
+        "água e saúde",
         "contaminantes hídricos",
         "tratamento de água",
         "monitoramento de qualidade da água",
-        "One Health",
         "pesquisa transnacional",
-        "inovação",
-        "governança",
-        "políticas públicas",
-        "pesquisadores em início de carreira",
-        "sustentabilidade",
-        "mudanças climáticas",
-        "ODS 6",
-        "União Europeia"
+        "One Health",
+        "inovação"
     ]
 }

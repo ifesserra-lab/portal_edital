@@ -1,88 +1,15 @@
 {
     "nome": "EDITAL FAPES Nº 02/2026 - PARTICIPAÇÃO EM EVENTOS TÉCNICO-CIENTÍFICOS",
-    "descrição": "Chamada pública para seleção de propostas para apoio financeiro à participação de pesquisadores e alunos de pós-graduação em eventos técnico-científicos de curta duração, como congressos, simpósios, workshops e similares, visando divulgar resultados de projetos de pesquisa, desenvolvimento e inovação (P, D&I) desenvolvidos em instituições do Espírito Santo.",
+    "descrição": "Edital de fomento FAPES: EDITAL FAPES Nº 02/2026 - PARTICIPAÇÃO EM EVENTOS TÉCNICO-CIENTÍFICOS",
     "orgão_fomento": "FAPES",
-    "categoria": "pesquisa",
+    "categoria": "divulgação de conhecimento",
     "status": "aberto",
-    "data_abertura": "2026-02-06",
+    "data_abertura": "2026-01-01",
     "data_encerramento": "",
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Edital_Fapes_02-2026-Participação_Evento_Técnico_Científico.pdf",
-    "cronograma": [
-        {
-            "evento": "Publicação do Edital",
-            "data": "2026-02-06"
-        },
-        {
-            "evento": "1ª Chamada: Período de submissão para eventos com início entre 01/05/2026 a 31/07/2026",
-            "data": "2026-02-06 a 2026-03-09"
-        },
-        {
-            "evento": "1ª Chamada: Prazo para envio de dúvidas",
-            "data": "Até 2026-03-07"
-        },
-        {
-            "evento": "1ª Chamada: Divulgação do resultado preliminar",
-            "data": "A partir de 2026-03-19"
-        },
-        {
-            "evento": "1ª Chamada: Prazo para interposição de recursos",
-            "data": "5 dias úteis após a publicação do resultado preliminar"
-        },
-        {
-            "evento": "1ª Chamada: Divulgação do resultado final",
-            "data": "A partir de 2026-03-31"
-        },
-        {
-            "evento": "2ª Chamada: Período de submissão para eventos com início entre 01/08/2026 a 31/12/2026",
-            "data": "2026-03-17 a 2026-04-24"
-        },
-        {
-            "evento": "2ª Chamada: Prazo para envio de dúvidas",
-            "data": "Até 2026-04-22"
-        },
-        {
-            "evento": "2ª Chamada: Divulgação do resultado preliminar",
-            "data": "A partir de 2026-05-22"
-        },
-        {
-            "evento": "2ª Chamada: Prazo para interposição de recursos",
-            "data": "5 dias úteis após a publicação do resultado preliminar"
-        },
-        {
-            "evento": "2ª Chamada: Divulgação do resultado final",
-            "data": "A partir de 2026-06-19"
-        },
-        {
-            "evento": "3ª Chamada: Período de submissão para eventos com início entre 04/01/2027 a 30/04/2027",
-            "data": "2026-07-01 a 2026-08-20"
-        },
-        {
-            "evento": "3ª Chamada: Prazo para envio de dúvidas",
-            "data": "Até 2026-08-18"
-        },
-        {
-            "evento": "3ª Chamada: Divulgação do resultado preliminar",
-            "data": "A partir de 2026-10-02"
-        },
-        {
-            "evento": "3ª Chamada: Prazo para interposição de recursos",
-            "data": "5 dias úteis após a publicação do resultado preliminar"
-        },
-        {
-            "evento": "3ª Chamada: Divulgação do resultado final",
-            "data": "A partir de 2026-10-26"
-        }
-    ],
+    "cronograma": [],
     "tags": [
-        "eventos técnico-científicos",
-        "pesquisa",
-        "inovação",
-        "FAPES",
-        "participação em congressos",
-        "auxílio financeiro",
-        "Espírito Santo",
-        "pós-graduação",
-        "divulgação científica",
-        "CNPq"
+        "fapes",
+        "edital"
     ]
 }
