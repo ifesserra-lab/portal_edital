@@ -9,11 +9,11 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Ocean%20II%202025%20-%20Institution%20Specific%20Annex_FAPES.pdf",
     "cronograma": [
         {
-            "etapa": "Submissão de propostas",
+            "evento": "Submissão de propostas",
             "data": "2026-04-30"
         },
         {
-            "etapa": "Início da mobilidade para pesquisadores com projetos aprovados",
+            "evento": "Início da mobilidade para pesquisadores com projetos aprovados",
             "data": "Primeiro semestre de 2027"
         }
     ],

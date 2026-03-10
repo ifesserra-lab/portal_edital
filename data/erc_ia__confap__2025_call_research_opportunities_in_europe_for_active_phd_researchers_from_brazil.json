@@ -9,15 +9,15 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Chamada-CONFAP-ERC-IA-2025.pdf",
     "cronograma": [
         {
-            "etapa": "Lançamento do edital",
+            "evento": "Lançamento do edital",
             "data": "2025-09-25"
         },
         {
-            "etapa": "Submissão de propostas completas",
+            "evento": "Submissão de propostas completas",
             "data": "2025-11-03"
         },
         {
-            "etapa": "Início das atividades de intercâmbio científico",
+            "evento": "Início das atividades de intercâmbio científico",
             "data": "Primeiro semestre de 2026"
         }
     ],

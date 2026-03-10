@@ -2,26 +2,26 @@
     "nome": "CHAMADA MARIE SKŁODOWSKA-CURIE (INTERCÂMBIO DE PESSOAL) 2026",
     "descrição": "Chamada pública para submissão de propostas de projetos colaborativos de pesquisa e inovação, promovendo intercâmbio de pessoal e compartilhamento de conhecimento entre o Brasil e a União Europeia, no âmbito do programa Horizon Europe.",
     "orgão_fomento": "CONFAP",
-    "categoria": "pesquisa, inovação",
+    "categoria": "pesquisa",
     "status": "aberto",
     "data_abertura": "2025-12-16",
     "data_encerramento": "2026-04-16",
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/CONFAP%20—%20Lançada%20a%20chamada%20Marie%20Skłodowska-Curie%20(Intercâmbio%20de%20Pessoal)%202026.pdf",
     "cronograma": [
         {
-            "etapa": "Lançamento da chamada de propostas pela MSCA",
+            "evento": "Lançamento da chamada de propostas pela MSCA",
             "data": "2025-12-16"
         },
         {
-            "etapa": "Prazo final para submissão de propostas às FAPs participantes (datas a serem informadas pelas FAPs)",
-            "data": null
+            "evento": "Prazo final para submissão de propostas às FAPs participantes (datas a serem informadas pelas FAPs)",
+            "data": ""
         },
         {
-            "etapa": "Prazo final para submissão da proposta geral à chamada MSCA Staff Exchanges 2026 no portal do Horizon Europe",
+            "evento": "Prazo final para submissão da proposta geral à chamada MSCA Staff Exchanges 2026 no portal do Horizon Europe",
             "data": "2026-04-16"
         },
         {
-            "etapa": "Previsão de início dos projetos financiados",
+            "evento": "Previsão de início dos projetos financiados",
             "data": "2027-01 (a confirmar)"
         }
     ],

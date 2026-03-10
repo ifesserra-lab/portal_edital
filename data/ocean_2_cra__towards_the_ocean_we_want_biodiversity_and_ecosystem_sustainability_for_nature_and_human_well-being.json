@@ -9,15 +9,15 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Ocean%202%20–%20Towards%20the%20Ocean%20We%20Want_%20Biodiversity%20and%20Ecosystem%20Sustainability%20for%20Nature%20and%20Human%20Well-being%20-%20Belmont%20Forum.pdf",
     "cronograma": [
         {
-            "etapa": "Abertura do edital",
+            "evento": "Abertura do edital",
             "data": "2025-06-11"
         },
         {
-            "etapa": "Prazo final para registros",
+            "evento": "Prazo final para registros",
             "data": "2026-04-30"
         },
         {
-            "etapa": "Duração esperada dos projetos",
+            "evento": "Duração esperada dos projetos",
             "data": "36 meses"
         }
     ],

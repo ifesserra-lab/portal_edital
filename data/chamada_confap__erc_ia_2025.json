@@ -9,11 +9,11 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Diretrizes_Chamada%20Internacional_ERC%20IA%202024-2.pdf",
     "cronograma": [
         {
-            "etapa": "Data limite para envio de propostas",
+            "evento": "Data limite para envio de propostas",
             "data": "2025-11-03"
         },
         {
-            "etapa": "Início da mobilidade dos pesquisadores com projetos aprovados",
+            "evento": "Início da mobilidade dos pesquisadores com projetos aprovados",
             "data": "a partir do primeiro semestre de 2026"
         }
     ],

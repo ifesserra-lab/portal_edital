@@ -9,23 +9,23 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Diretrizes%20Fapes%20Horizon%20Europe%202021-2027-1.pdf",
     "cronograma": [
         {
-            "etapa": "Consulta de elegibilidade à FAPES antes da submissão da proposta ao Horizonte Europa",
+            "evento": "Consulta de elegibilidade à FAPES antes da submissão da proposta ao Horizonte Europa",
             "data": "A qualquer momento"
         },
         {
-            "etapa": "Submissão da proposta ao Horizonte Europa conforme prazos específicos de cada chamada",
+            "evento": "Submissão da proposta ao Horizonte Europa conforme prazos específicos de cada chamada",
             "data": "Variável (conforme chamada)"
         },
         {
-            "etapa": "Submissão da proposta à FAPES para avaliação",
+            "evento": "Submissão da proposta à FAPES para avaliação",
             "data": "A qualquer momento, após consulta de elegibilidade"
         },
         {
-            "etapa": "Avaliação da proposta pela FAPES",
+            "evento": "Avaliação da proposta pela FAPES",
             "data": "Após submissão"
         },
         {
-            "etapa": "Emissão do Termo de Outorga pela FAPES",
+            "evento": "Emissão do Termo de Outorga pela FAPES",
             "data": "Após aprovação pelo Horizonte Europa"
         }
     ],

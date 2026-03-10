@@ -9,67 +9,67 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Edital_Fapes_02-2026-Participação_Evento_Técnico_Científico.pdf",
     "cronograma": [
         {
-            "etapa": "Publicação do Edital",
+            "evento": "Publicação do Edital",
             "data": "2026-02-06"
         },
         {
-            "etapa": "1ª Chamada: Período de submissão para eventos com início entre 01/05/2026 a 31/07/2026",
+            "evento": "1ª Chamada: Período de submissão para eventos com início entre 01/05/2026 a 31/07/2026",
             "data": "2026-02-06 a 2026-03-09"
         },
         {
-            "etapa": "1ª Chamada: Prazo para envio de dúvidas",
+            "evento": "1ª Chamada: Prazo para envio de dúvidas",
             "data": "Até 2026-03-07"
         },
         {
-            "etapa": "1ª Chamada: Divulgação do resultado preliminar",
+            "evento": "1ª Chamada: Divulgação do resultado preliminar",
             "data": "A partir de 2026-03-19"
         },
         {
-            "etapa": "1ª Chamada: Prazo para interposição de recursos",
+            "evento": "1ª Chamada: Prazo para interposição de recursos",
             "data": "5 dias úteis após a publicação do resultado preliminar"
         },
         {
-            "etapa": "1ª Chamada: Divulgação do resultado final",
+            "evento": "1ª Chamada: Divulgação do resultado final",
             "data": "A partir de 2026-03-31"
         },
         {
-            "etapa": "2ª Chamada: Período de submissão para eventos com início entre 01/08/2026 a 31/12/2026",
+            "evento": "2ª Chamada: Período de submissão para eventos com início entre 01/08/2026 a 31/12/2026",
             "data": "2026-03-17 a 2026-04-24"
         },
         {
-            "etapa": "2ª Chamada: Prazo para envio de dúvidas",
+            "evento": "2ª Chamada: Prazo para envio de dúvidas",
             "data": "Até 2026-04-22"
         },
         {
-            "etapa": "2ª Chamada: Divulgação do resultado preliminar",
+            "evento": "2ª Chamada: Divulgação do resultado preliminar",
             "data": "A partir de 2026-05-22"
         },
         {
-            "etapa": "2ª Chamada: Prazo para interposição de recursos",
+            "evento": "2ª Chamada: Prazo para interposição de recursos",
             "data": "5 dias úteis após a publicação do resultado preliminar"
         },
         {
-            "etapa": "2ª Chamada: Divulgação do resultado final",
+            "evento": "2ª Chamada: Divulgação do resultado final",
             "data": "A partir de 2026-06-19"
         },
         {
-            "etapa": "3ª Chamada: Período de submissão para eventos com início entre 04/01/2027 a 30/04/2027",
+            "evento": "3ª Chamada: Período de submissão para eventos com início entre 04/01/2027 a 30/04/2027",
             "data": "2026-07-01 a 2026-08-20"
         },
         {
-            "etapa": "3ª Chamada: Prazo para envio de dúvidas",
+            "evento": "3ª Chamada: Prazo para envio de dúvidas",
             "data": "Até 2026-08-18"
         },
         {
-            "etapa": "3ª Chamada: Divulgação do resultado preliminar",
+            "evento": "3ª Chamada: Divulgação do resultado preliminar",
             "data": "A partir de 2026-10-02"
         },
         {
-            "etapa": "3ª Chamada: Prazo para interposição de recursos",
+            "evento": "3ª Chamada: Prazo para interposição de recursos",
             "data": "5 dias úteis após a publicação do resultado preliminar"
         },
         {
-            "etapa": "3ª Chamada: Divulgação do resultado final",
+            "evento": "3ª Chamada: Divulgação do resultado final",
             "data": "A partir de 2026-10-26"
         }
     ],

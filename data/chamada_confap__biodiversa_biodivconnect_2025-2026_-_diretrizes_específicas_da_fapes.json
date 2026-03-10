@@ -9,15 +9,15 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Diretrizes_Chamada_Biodiversa_20245-2026.pdf",
     "cronograma": [
         {
-            "etapa": "Prazo para envio de pré-propostas",
+            "evento": "Prazo para envio de pré-propostas",
             "data": "2025-11-07"
         },
         {
-            "etapa": "Prazo para envio de propostas completas convidadas",
+            "evento": "Prazo para envio de propostas completas convidadas",
             "data": "2026-04-14"
         },
         {
-            "etapa": "Início dos projetos aprovados",
+            "evento": "Início dos projetos aprovados",
             "data": "2026-12-01 a 2027-04-01"
         }
     ],

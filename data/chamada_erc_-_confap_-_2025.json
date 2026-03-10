@@ -9,15 +9,15 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Editais%20-%20CONFA_ERC_IA_2025%20(nova%20data%20submissão).pdf",
     "cronograma": [
         {
-            "etapa": "Lançamento da Chamada",
+            "evento": "Lançamento da Chamada",
             "data": "2025-08-25"
         },
         {
-            "etapa": "Data limite para envio de propostas",
+            "evento": "Data limite para envio de propostas",
             "data": "2025-11-24"
         },
         {
-            "etapa": "Início da mobilidade dos pesquisadores com projetos aprovados",
+            "evento": "Início da mobilidade dos pesquisadores com projetos aprovados",
             "data": "a partir do primeiro semestre de 2026"
         }
     ],

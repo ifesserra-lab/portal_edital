@@ -9,55 +9,55 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Water4All_2025JTC_Call_Announcement_draft-0062025%20Third%20version.pdf",
     "cronograma": [
         {
-            "etapa": "Pré-anúncio do edital",
+            "evento": "Pré-anúncio do edital",
             "data": "Julho 2025"
         },
         {
-            "etapa": "Publicação do edital e abertura do 1º passo (pré-propostas)",
+            "evento": "Publicação do edital e abertura do 1º passo (pré-propostas)",
             "data": "2025-09-12"
         },
         {
-            "etapa": "Prazo para submissão de pré-propostas",
+            "evento": "Prazo para submissão de pré-propostas",
             "data": "2025-11-13"
         },
         {
-            "etapa": "Notificação dos resultados do 1º passo",
+            "evento": "Notificação dos resultados do 1º passo",
             "data": "2026-02-06"
         },
         {
-            "etapa": "Período para pedido de reconsideração (redress) do 1º passo",
+            "evento": "Período para pedido de reconsideração (redress) do 1º passo",
             "data": "2026-02-06 a 2026-02-20"
         },
         {
-            "etapa": "Abertura do 2º passo (propostas completas)",
+            "evento": "Abertura do 2º passo (propostas completas)",
             "data": "2026-02-06"
         },
         {
-            "etapa": "Prazo para submissão de propostas completas",
+            "evento": "Prazo para submissão de propostas completas",
             "data": "2026-04-13"
         },
         {
-            "etapa": "Notificação dos resultados do 2º passo",
+            "evento": "Notificação dos resultados do 2º passo",
             "data": "Setembro 2026"
         },
         {
-            "etapa": "Análise ética",
+            "evento": "Análise ética",
             "data": "Setembro/Outubro 2026"
         },
         {
-            "etapa": "Período para pedido de reconsideração (redress) do 2º passo",
+            "evento": "Período para pedido de reconsideração (redress) do 2º passo",
             "data": "Setembro/Outubro 2026"
         },
         {
-            "etapa": "Comunicação da decisão após pedido de reconsideração",
+            "evento": "Comunicação da decisão após pedido de reconsideração",
             "data": "Setembro/Outubro 2026"
         },
         {
-            "etapa": "Início dos projetos transnacionais",
+            "evento": "Início dos projetos transnacionais",
             "data": "Último trimestre de 2026 / 1º trimestre de 2027"
         },
         {
-            "etapa": "Término dos projetos transnacionais",
+            "evento": "Término dos projetos transnacionais",
             "data": "Último trimestre de 2029 / 1º trimestre de 2030"
         }
     ],

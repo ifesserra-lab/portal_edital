@@ -9,27 +9,27 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/BiodivConnect_CallText_FINAL.pdf",
     "cronograma": [
         {
-            "etapa": "Lançamento da chamada (versão final do edital)",
+            "evento": "Lançamento da chamada (versão final do edital)",
             "data": "2025-05-21"
         },
         {
-            "etapa": "Consulta às regras nacionais/regionais de elegibilidade para cada parceiro do consórcio (recomendado)",
+            "evento": "Consulta às regras nacionais/regionais de elegibilidade para cada parceiro do consórcio (recomendado)",
             "data": "A definir pelos proponentes"
         },
         {
-            "etapa": "Submissão de propostas (período a ser definido)",
+            "evento": "Submissão de propostas (período a ser definido)",
             "data": "A definir"
         },
         {
-            "etapa": "Avaliação das propostas",
+            "evento": "Avaliação das propostas",
             "data": "A definir"
         },
         {
-            "etapa": "Divulgação dos resultados",
+            "evento": "Divulgação dos resultados",
             "data": "A definir"
         },
         {
-            "etapa": "Início dos projetos financiados (duração de até 3 anos)",
+            "evento": "Início dos projetos financiados (duração de até 3 anos)",
             "data": "A definir"
         }
     ],

@@ -9,11 +9,11 @@
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Ficha%20Informativa%20%20Horizon%20Europe%20(Em%20inglês)-1.pdf",
     "cronograma": [
         {
-            "etapa": "Lançamento do programa e início das chamadas para propostas",
+            "evento": "Lançamento do programa e início das chamadas para propostas",
             "data": "2021-01-01"
         },
         {
-            "etapa": "Período de implementação do programa e chamadas contínuas para propostas",
+            "evento": "Período de implementação do programa e chamadas contínuas para propostas",
             "data": "2021-2027"
         }
     ],
