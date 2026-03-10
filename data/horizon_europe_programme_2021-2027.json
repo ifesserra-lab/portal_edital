@@ -1,0 +1,36 @@
+{
+    "nome": "HORIZON EUROPE PROGRAMME (2021-2027)",
+    "descrição": "Programa de pesquisa e inovação da União Europeia para promover soluções científicas e tecnológicas que abordem desafios sociais, ecológicos e econômicos, como transição verde, digital, saúde e inclusão. Inclui apoio a pesquisadores, inovação industrial, missões da UE e cooperação internacional.",
+    "orgão_fomento": "EUROPEAN UNION",
+    "categoria": "inovação",
+    "status": "aberto",
+    "data_abertura": "2021-01-01",
+    "data_encerramento": "2027-12-31",
+    "link": "https://fapes.es.gov.br/Media/fapes/Editais/Ficha%20Informativa%20%20Horizon%20Europe%20(Em%20inglês)-1.pdf",
+    "cronograma": [
+        {
+            "etapa": "Lançamento do programa e início das chamadas para propostas",
+            "data": "2021-01-01"
+        },
+        {
+            "etapa": "Período de implementação do programa e chamadas contínuas para propostas",
+            "data": "2021-2027"
+        }
+    ],
+    "tags": [
+        "pesquisa",
+        "inovação",
+        "transição verde",
+        "transformação digital",
+        "saúde",
+        "clima",
+        "cooperação internacional",
+        "Open Science",
+        "startups",
+        "PMEs",
+        "missões da UE",
+        "European Innovation Council",
+        "European Research Council",
+        "Marie Skłodowska-Curie Actions"
+    ]
+}

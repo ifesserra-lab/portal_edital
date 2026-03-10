@@ -1,0 +1,36 @@
+{
+    "nome": "CHAMADA ERC - CONFAP - 2025",
+    "descrição": "Apoio à mobilidade de pesquisadores doutores do Brasil para intercâmbio na Europa em projetos de pesquisa apoiados pelo Conselho Europeu de Pesquisa (ERC), no âmbito do programa Horizon Europe.",
+    "orgão_fomento": "CONFAP",
+    "categoria": "pesquisa",
+    "status": "aberto",
+    "data_abertura": "2025-08-25",
+    "data_encerramento": "2025-11-24",
+    "link": "https://fapes.es.gov.br/Media/fapes/Editais/Editais%20-%20CONFA_ERC_IA_2025%20(nova%20data%20submissão).pdf",
+    "cronograma": [
+        {
+            "etapa": "Lançamento da Chamada",
+            "data": "2025-08-25"
+        },
+        {
+            "etapa": "Data limite para envio de propostas",
+            "data": "2025-11-24"
+        },
+        {
+            "etapa": "Início da mobilidade dos pesquisadores com projetos aprovados",
+            "data": "a partir do primeiro semestre de 2026"
+        }
+    ],
+    "tags": [
+        "mobilidade",
+        "pesquisadores",
+        "doutores",
+        "intercâmbio",
+        "Europa",
+        "ERC",
+        "Horizon Europe",
+        "FAPs",
+        "financiamento",
+        "projetos de pesquisa"
+    ]
+}
