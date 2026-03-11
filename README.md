@@ -7,25 +7,29 @@ Plataforma unificada para publicação, consulta e acompanhamento de editais de 
 ## ✨ Características
 
 - **Design Inovador**: Interface moderna com Tailwind CSS v4 e animações premium.
-- **Acessibilidade de Ponta**: Modos Light/Dark e Alto Contraste integrados.
-- **Alta Performance**: Site estático (SSG) construído com Astro.build.
-- **Mobile-First**: Experiência fluida em qualquer dispositivo.
+- **Acessibilidade Universal**: Menu flutuante com suporte a Alto Contraste, Fontes para Dislexia, Escalonamento de Fonte e Destaque de Links.
+- **Modo Escuro Inteligente**: Toggle de tema com persistência local e prevenção de *flash* visual.
+- **Notificações em Tempo Real**: Alertas automáticos via Telegram sempre que um novo edital é publicado.
+- **Busca e Filtros Avançados**: Filtragem reativa por tags e termos de busca unificada.
+- **Automação de Dados**: Sincronização diária automática com fontes externas e registro de histórico.
 
 ## 🛠️ Stack Tecnológica
 
 - **Framework**: [Astro](https://astro.build/)
 - **Estilização**: [Tailwind CSS v4](https://tailwindcss.com/)
 - **Testes**: [Playwright](https://playwright.dev/)
-- **Dados**: JSON via Astro Content Collections.
+- **Notificações**: Telegram Bot API via Node.js scripts.
+- **Gestão de Dados**: JSON + Registro de Auditoria (`registry/`).
 
 ## 📂 Organização do Projeto
 
 | Pasta | Descrição |
 |---|---|
 | `data/` | Fonte da verdade dos editais (Arquivos JSON). |
+| `registry/` | Registro de histórico e auditoria de downloads. |
 | `docs/` | Documentação técnica, arquitetura e backlog. |
-| `docs/features/` | Especificações Gherkin (BDD). |
-| `src/content/` | Configurações de dados do Astro. |
+| `scripts/` | Utilitários de validação e automação (Notificações, etc). |
+| `src/components/` | Componentes Astro de UI e Acessibilidade. |
 | `tests/e2e/` | Testes automatizados de ponta a ponta. |
 
 ## 🛡️ Fluxo de Desenvolvimento (Obrigatório)
