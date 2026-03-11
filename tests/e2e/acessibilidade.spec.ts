@@ -13,8 +13,8 @@ test.describe('Acessibilidade', () => {
 
     test('Deve alternar Baixa Visão (Fonte Grande)', async ({ page }) => {
         await page.click('#a11y-trigger');
-        await page.click('[data-font-size="lg"]');
-        await expect(page.locator('html')).toHaveClass(/text-lg/);
+        await page.click('[data-font-size="xl"]');
+        await expect(page.locator('html')).toHaveClass(/text-xl/);
 
         // Verificar se o font-size aumentou (baseado no CSS que define 125%)
         // Aguardar a transição se necessário
