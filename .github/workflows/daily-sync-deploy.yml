@@ -25,15 +25,21 @@ jobs:
           cp -r temp_data/data/output/*.json data/
           rm -rf temp_data
           
-      - name: Commit synced data
+      - name: Notify Telegram for New Editals
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: node scripts/notify-telegram.js
+
+      - name: Commit synced data and registry
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/*.json
+          git add data/*.json registry/
           if git diff --staged --quiet; then
             echo "No changes in data to commit"
           else
-            git commit -m "data: daily sync from retrieve_edital"
+            git commit -m "data: daily sync and registry update"
             git push origin main
           fi
 
