@@ -63,3 +63,11 @@ Este backlog organiza as próximas evoluções do portal em níveis de Epics, Us
 - **[US8: Trigger de Deploy Automático por Dados](https://github.com/ifesserra-lab/portal_edital/issues/36)**
   - [x] [Task: Configurar disparador do GitHub Actions para a pasta `data/`](https://github.com/ifesserra-lab/portal_edital/issues/37).
   - [x] [Task: Validar integridade dos arquivos JSON antes do deploy](https://github.com/ifesserra-lab/portal_edital/issues/38).
+
+## 🔔 [Epic 6: Comunicação e Engajamento](https://github.com/ifesserra-lab/portal_edital/issues/53) (Concluído ✅)
+*Foco em manter os usuários informados sobre novos editais.*
+
+- **[US12: Notificações via Telegram](https://github.com/ifesserra-lab/portal_edital/issues/53)**
+  - [x] [Task: Criar script de integração com Telegram Bot API](https://github.com/ifesserra-lab/portal_edital/issues/54).
+  - [x] [Task: Implementar lógica de registro de downloads/novos editais](https://github.com/ifesserra-lab/portal_edital/issues/55).
+  - [x] [Task: Adicionar CTA de inscrição na Home Page](https://github.com/ifesserra-lab/portal_edital/issues/56).
