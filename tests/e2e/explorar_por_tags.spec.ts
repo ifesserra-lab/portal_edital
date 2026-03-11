@@ -86,4 +86,34 @@ test.describe('Explorar Editais por Tags', () => {
         await expect(noResults).toBeVisible();
     });
 
+    // Scenario: Visualização em dispositivos móveis
+    test('Visualização e responsividade em dispositivos móveis', async ({ page }) => {
+        // Redimensionar para tamanho de tela de smartphone (ex: iPhone SE)
+        await page.setViewportSize({ width: 375, height: 667 });
+        await page.goto('tags');
+
+        // Verifica se o campo de busca se adapta ao dispositivo menor
+        const searchInput = page.locator('#search-input');
+        const searchBox = await searchInput.boundingBox();
+        expect(searchBox).not.toBeNull();
+        if (searchBox) {
+            // Em mobile, a caixa de pesquisa normalmente toma a maior parte da largura
+            expect(searchBox.width).toBeLessThanOrEqual(375);
+            expect(searchBox.width).toBeGreaterThan(250);
+        }
+
+        // O link para o GitHub no cabeçalho tem a classe 'hidden sm:inline-flex', então ele deve estar oculto
+        const githubLink = page.locator('nav a[href*="github.com"]');
+        await expect(githubLink).toBeHidden();
+
+        // O botão de limpar filtros e os filtros funcionam mesmo na tela pequena
+        const firstTagBtn = page.locator('.tag-filter-btn').first();
+        await firstTagBtn.click();
+
+        const clearBtn = page.locator('#clear-filters-btn');
+        await expect(clearBtn).toBeVisible();
+        await clearBtn.click();
+        await expect(clearBtn).toBeHidden();
+    });
+
 });

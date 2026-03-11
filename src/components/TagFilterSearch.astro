@@ -19,6 +19,7 @@ const { tags } = Astro.props;
                     class="w-5 h-5 text-slate-400"
                     viewBox="0 0 20 20"
                     fill="currentColor"
+                    aria-hidden="true"
                 >
                     <path
                         fill-rule="evenodd"
@@ -26,6 +27,9 @@ const { tags } = Astro.props;
                         clip-rule="evenodd"></path>
                 </svg>
             </div>
+            <label for="search-input" class="sr-only"
+                >Busca por título ou descrição</label
+            >
             <input
                 type="text"
                 id="search-input"
@@ -35,18 +39,25 @@ const { tags } = Astro.props;
         </div>
         <button
             id="clear-filters-btn"
-            class="hidden text-sm font-medium text-cta-600 dark:text-cta-500 hover:text-cta-700 dark:hover:text-cta-400 transition-colors"
+            class="hidden text-sm font-medium text-cta-600 dark:text-cta-500 hover:text-cta-700 dark:hover:text-cta-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cta-500 rounded px-2 py-1"
+            aria-label="Limpar todos os filtros da busca"
         >
             Limpar filtros
         </button>
     </div>
 
-    <div class="flex flex-wrap gap-2" id="tags-filter-container">
+    <div
+        class="flex flex-wrap gap-2"
+        id="tags-filter-container"
+        role="group"
+        aria-label="Filtrar por tags"
+    >
         {
             tags.map((tag: string) => (
                 <button
-                    class="tag-filter-btn px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:border-primary-500 dark:hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all capitalize"
+                    class="tag-filter-btn px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:border-primary-500 dark:hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all capitalize focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
                     data-tag={tag}
+                    aria-pressed="false"
                 >
                     {tag}
                 </button>
@@ -73,10 +84,11 @@ const { tags } = Astro.props;
             let anySectionVisible = false;
 
             tagSections.forEach((section) => {
-                const sectionTag = section.getAttribute("data-tag");
+                const sectionTag = section.getAttribute("data-tag") || "";
                 const cards = section.querySelectorAll(".tag-edital-card");
                 let hasVisibleCard = false;
 
+                // Se houver uma tag selecionada e não for esta seção, esconde e pula
                 if (currentTag && currentTag !== sectionTag) {
                     (section as HTMLElement).style.display = "none";
                     return;
@@ -104,6 +116,22 @@ const { tags } = Astro.props;
                     anySectionVisible = true;
                 } else {
                     (section as HTMLElement).style.display = "none";
+                }
+
+                // Atualiza visibilidade do Botão de Tag:
+                // visível se a tag em si der match com a busca OU se houver cards visíveis nela
+                const tagBtn = document.querySelector(
+                    `.tag-filter-btn[data-tag="${sectionTag}"]`,
+                ) as HTMLElement;
+                if (tagBtn) {
+                    const tagMatches = sectionTag
+                        .toLowerCase()
+                        .includes(currentSearch);
+                    if (currentSearch === "" || tagMatches || hasVisibleCard) {
+                        tagBtn.style.display = "";
+                    } else {
+                        tagBtn.style.display = "none";
+                    }
                 }
             });
 
@@ -139,6 +167,7 @@ const { tags } = Astro.props;
 
                 if (currentTag === tag) {
                     currentTag = "";
+                    btn.setAttribute("aria-pressed", "false");
                     btn.classList.remove(
                         "bg-primary-50",
                         "dark:bg-primary-900/30",
@@ -147,16 +176,18 @@ const { tags } = Astro.props;
                         "dark:text-primary-300",
                     );
                 } else {
-                    tagBtns.forEach((b) =>
+                    tagBtns.forEach((b) => {
+                        b.setAttribute("aria-pressed", "false");
                         b.classList.remove(
                             "bg-primary-50",
                             "dark:bg-primary-900/30",
                             "border-primary-500",
                             "text-primary-700",
                             "dark:text-primary-300",
-                        ),
-                    );
+                        );
+                    });
                     currentTag = tag || "";
+                    btn.setAttribute("aria-pressed", "true");
                     btn.classList.add(
                         "bg-primary-50",
                         "dark:bg-primary-900/30",
@@ -176,15 +207,16 @@ const { tags } = Astro.props;
                 currentSearch = "";
                 currentTag = "";
 
-                tagBtns.forEach((b) =>
+                tagBtns.forEach((b) => {
+                    b.setAttribute("aria-pressed", "false");
                     b.classList.remove(
                         "bg-primary-50",
                         "dark:bg-primary-900/30",
                         "border-primary-500",
                         "text-primary-700",
                         "dark:text-primary-300",
-                    ),
-                );
+                    );
+                });
 
                 filterEditais();
             });

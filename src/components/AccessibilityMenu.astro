@@ -1,0 +1,289 @@
+---
+/**
+ * AccessibilityMenu.astro
+ * Widget flutuante que oferece controles WCAG para o usuário.
+ */
+---
+
+<div id="a11y-widget" class="fixed bottom-6 right-6 z-[100] print:hidden">
+    <!-- Botão de Gatilho -->
+    <button
+        id="a11y-trigger"
+        class="flex items-center justify-center w-14 h-14 bg-cta-600 text-white rounded-full shadow-lg hover:bg-cta-700 transition-all focus:outline-none focus:ring-4 focus:ring-cta-300 dark:focus:ring-cta-900 active:scale-95"
+        title="Opções de Acessibilidade (Alt + A)"
+        aria-label="Abrir menu de acessibilidade"
+        aria-expanded="false"
+        aria-controls="a11y-menu"
+    >
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-7 h-7"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        >
+            <circle cx="12" cy="12" r="10"></circle>
+            <path d="M12 8v8"></path>
+            <path d="M8 12h8"></path>
+        </svg>
+    </button>
+
+    <!-- Painel do Menu -->
+    <div
+        id="a11y-menu"
+        class="hidden absolute bottom-16 right-0 w-72 bg-white dark:bg-primary-900 border border-primary-200 dark:border-white/10 rounded-2xl shadow-2xl p-5 overflow-hidden animate-in slide-in-from-bottom-4 duration-200"
+        role="dialog"
+        aria-label="Opções de Acessibilidade"
+    >
+        <div class="flex items-center justify-between mb-4">
+            <h2 class="text-lg font-bold text-primary-900 dark:text-white">
+                Acessibilidade
+            </h2>
+            <button
+                id="a11y-close"
+                class="p-1 hover:bg-primary-100 dark:hover:bg-white/5 rounded-md transition-colors"
+                aria-label="Fechar menu"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5 text-primary-500"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    ><path d="M18 6 6 18"></path><path d="m6 6 12 12"
+                    ></path></svg
+                >
+            </button>
+        </div>
+
+        <div class="space-y-4">
+            <!-- Filtros de Visualização -->
+            <div class="grid grid-cols-2 gap-2">
+                <button
+                    id="toggle-dark"
+                    class="a11y-btn"
+                    title="Alternar Modo Escuro"
+                >
+                    <span class="text-xs font-semibold">Tema</span>
+                </button>
+                <button
+                    id="toggle-contrast"
+                    class="a11y-btn"
+                    data-a11y-type="contrast"
+                >
+                    <span class="text-xs font-semibold">Contraste</span>
+                </button>
+                <button
+                    id="toggle-dyslexia"
+                    class="a11y-btn"
+                    data-a11y-type="dyslexia"
+                >
+                    <span class="text-xs font-semibold">Dislexia</span>
+                </button>
+                <button
+                    id="toggle-links"
+                    class="a11y-btn"
+                    data-a11y-type="links"
+                >
+                    <span class="text-xs font-semibold">Links</span>
+                </button>
+                <button
+                    id="toggle-animation"
+                    class="a11y-btn"
+                    data-a11y-type="animations"
+                >
+                    <span class="text-xs font-semibold">Sem Anim.</span>
+                </button>
+            </div>
+
+            <!-- Tamanho de Fonte -->
+            <div class="pt-2 border-t border-primary-100 dark:border-white/5">
+                <span
+                    class="block text-xs font-bold text-primary-500 uppercase tracking-widest mb-2"
+                    >Tamanho do Texto</span
+                >
+                <div class="flex items-center justify-between gap-1">
+                    <button class="font-btn active" data-font-size="base"
+                        >A</button
+                    >
+                    <button class="font-btn" data-font-size="lg">A+</button>
+                    <button class="font-btn" data-font-size="xl">A++</button>
+                    <button class="font-btn" data-font-size="2xl">A+++</button>
+                </div>
+            </div>
+
+            <!-- Resetar -->
+            <button
+                id="a11y-reset"
+                class="w-full mt-2 py-2 text-xs font-medium text-primary-500 hover:text-red-500 transition-colors uppercase tracking-wider"
+            >
+                Resetar Padrões
+            </button>
+        </div>
+    </div>
+</div>
+
+<style>
+    @reference "../styles/global.css";
+    .a11y-btn {
+        @apply flex flex-col items-center justify-center p-3 rounded-xl border border-primary-100 dark:border-white/5 bg-primary-50 dark:bg-white/5 text-primary-600 dark:text-primary-400 hover:border-cta-500 hover:text-cta-600 transition-all active:scale-95;
+    }
+    .a11y-btn.active {
+        @apply bg-cta-50 border-cta-500 text-cta-600 dark:bg-cta-900/30;
+    }
+    .font-btn {
+        @apply flex-1 py-2 rounded-lg border border-primary-100 dark:border-white/5 text-sm font-bold transition-all hover:border-cta-500 hover:text-cta-600;
+    }
+    .font-btn.active {
+        @apply bg-cta-600 border-cta-600 text-white shadow-sm;
+    }
+</style>
+
+<script>
+    function initA11y() {
+        const trigger = document.getElementById("a11y-trigger");
+        const menu = document.getElementById("a11y-menu");
+        const closeBtn = document.getElementById("a11y-close");
+        const resetBtn = document.getElementById("a11y-reset");
+        const html = document.documentElement;
+
+        const toggleMenu = () => {
+            const isOpen = !menu?.classList.contains("hidden");
+            if (isOpen) {
+                menu?.classList.add("hidden");
+                trigger?.setAttribute("aria-expanded", "false");
+            } else {
+                menu?.classList.remove("hidden");
+                trigger?.setAttribute("aria-expanded", "true");
+                // Focus first button in menu for accessibility
+                menu?.querySelector("button")?.focus();
+            }
+        };
+
+        trigger?.addEventListener("click", toggleMenu);
+        closeBtn?.addEventListener("click", toggleMenu);
+
+        // Keyboard Shortcut (Alt + A)
+        window.addEventListener("keydown", (e) => {
+            if (e.altKey && e.key.toLowerCase() === "a") {
+                e.preventDefault();
+                toggleMenu();
+            }
+            if (e.key === "Escape" && !menu?.classList.contains("hidden")) {
+                toggleMenu();
+                trigger?.focus();
+            }
+        });
+
+        // Feature Toggles
+        const settings = {
+            contrast: "contrast",
+            dyslexia: "dyslexia-font",
+            links: "highlight-links",
+            animations: "stop-animations",
+        };
+
+        Object.entries(settings).forEach(([type, className]) => {
+            const btn = document.querySelector(`[data-a11y-type="${type}"]`);
+
+            // Initial state from localStorage
+            if (localStorage.getItem(`a11y-${type}`) === "true") {
+                html.classList.add(className);
+                btn?.classList.add("active");
+            }
+
+            btn?.addEventListener("click", () => {
+                const isActive = html.classList.toggle(className);
+                localStorage.setItem(
+                    `a11y-${type}`,
+                    isActive ? "true" : "false",
+                );
+                btn.classList.toggle("active", isActive);
+            });
+        });
+
+        // Dark Mode Logic
+        const darkBtn = document.getElementById("toggle-dark");
+        if (html.classList.contains("dark")) {
+            darkBtn?.classList.add("active");
+        }
+
+        darkBtn?.addEventListener("click", () => {
+            const isDark = html.classList.toggle("dark");
+            localStorage.setItem("theme", isDark ? "dark" : "light");
+            darkBtn.classList.toggle("active", isDark);
+        });
+
+        // Font Size Logic
+        const fontBtns = document.querySelectorAll("[data-font-size]");
+        const currentFontSize =
+            localStorage.getItem("a11y-font-size") || "base";
+
+        // Apply initial font size
+        if (currentFontSize !== "base") {
+            html.classList.add(`text-${currentFontSize}`);
+            fontBtns.forEach((b) => {
+                if (b.getAttribute("data-font-size") === currentFontSize) {
+                    b.classList.add("active");
+                } else {
+                    b.classList.remove("active");
+                }
+            });
+        }
+
+        fontBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const size = btn.getAttribute("data-font-size");
+
+                // Remove old classes
+                fontBtns.forEach((b) => {
+                    b.classList.remove("active");
+                    const s = b.getAttribute("data-font-size");
+                    if (s !== "base") html.classList.remove(`text-${s}`);
+                });
+
+                // Apply new
+                btn.classList.add("active");
+                if (size !== "base" && size) {
+                    html.classList.add(`text-${size}`);
+                    localStorage.setItem("a11y-font-size", size);
+                } else {
+                    localStorage.removeItem("a11y-font-size");
+                }
+            });
+        });
+
+        // Reset Logic
+        resetBtn?.addEventListener("click", () => {
+            Object.entries(settings).forEach(([type, className]) => {
+                html.classList.remove(className);
+                localStorage.removeItem(`a11y-${type}`);
+                document
+                    .querySelector(`[data-a11y-type="${type}"]`)
+                    ?.classList.remove("active");
+            });
+
+            // Reset Dark Mode
+            html.classList.remove("dark");
+            localStorage.removeItem("theme");
+            darkBtn?.classList.remove("active");
+
+            fontBtns.forEach((b) => {
+                const s = b.getAttribute("data-font-size");
+                if (s !== "base") html.classList.remove(`text-${s}`);
+                b.classList.toggle("active", s === "base");
+            });
+            localStorage.removeItem("a11y-font-size");
+        });
+    }
+
+    // Initialize on page load and swaps
+    document.addEventListener("DOMContentLoaded", initA11y);
+    document.addEventListener("astro:after-swap", initA11y);
+</script>

@@ -54,8 +54,12 @@ const sortedTags = Array.from(uniqueTags).sort();
                                 <h2 class="text-2xl font-bold text-primary-900 dark:text-white capitalize">
                                     {tag}
                                 </h2>
-                                <span class="bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-300 text-xs font-semibold px-2.5 py-0.5 rounded-full">
+                                <span
+                                    class="bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-300 text-xs font-semibold px-2.5 py-0.5 rounded-full"
+                                    aria-label={`${editaisByTag[tag].length} editais nesta tag`}
+                                >
                                     {editaisByTag[tag].length}
+                                    <span class="sr-only">editais</span>
                                 </span>
                             </div>
                             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -77,6 +81,8 @@ const sortedTags = Array.from(uniqueTags).sort();
             <div
                 id="no-results-message"
                 class="hidden flex-col items-center justify-center py-24 px-6 glass rounded-3xl border-dashed border-2 border-slate-300 dark:border-slate-800"
+                aria-live="polite"
+                aria-atomic="true"
             >
                 <div
                     class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-4"
