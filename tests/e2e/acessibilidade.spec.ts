@@ -13,8 +13,8 @@ test.describe('Acessibilidade', () => {
 
     test('Deve alternar Baixa Visão (Fonte Grande)', async ({ page }) => {
         await page.click('#a11y-trigger');
-        await page.click('#toggle-font');
-        await expect(page.locator('html')).toHaveClass(/large-text/);
+        await page.click('[data-font-size="lg"]');
+        await expect(page.locator('html')).toHaveClass(/text-lg/);
 
         // Verificar se o font-size aumentou (baseado no CSS que define 125%)
         // Aguardar a transição se necessário
@@ -27,12 +27,12 @@ test.describe('Acessibilidade', () => {
     test('Deve persistir configurações após recarregar', async ({ page }) => {
         await page.click('#a11y-trigger');
         await page.click('#toggle-contrast');
-        await page.click('#toggle-font');
+        await page.click('[data-font-size="lg"]');
 
         await page.reload();
 
         await expect(page.locator('html')).toHaveClass(/contrast/);
-        await expect(page.locator('html')).toHaveClass(/large-text/);
+        await expect(page.locator('html')).toHaveClass(/text-lg/);
     });
 
     test('Deve ser responsivo em dispositivos móveis', async ({ page }) => {

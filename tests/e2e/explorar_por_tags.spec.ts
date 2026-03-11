@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe('Explorar Editais por Tags', () => {
+test.describe('Tags', () => {
 
     // Scenario: Visualizar a página de tags com os agrupamentos
     test('Visualizar a página de tags com os agrupamentos', async ({ page }) => {
