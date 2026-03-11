@@ -1,4 +1,10 @@
 ---
+interface Props {
+    hideStatus?: boolean;
+}
+
+const { hideStatus = false } = Astro.props;
+
 const categories = [
     { id: "all", label: "Todos" },
     { id: "pesquisa", label: "Pesquisa" },
@@ -62,22 +68,23 @@ const statuses = [
         }
     </div>
 
-    <div class="flex flex-wrap items-center gap-2">
-        <span
-            class="text-[10px] font-bold text-primary-400 uppercase tracking-widest mr-2"
-            >Status</span
-        >
-        {
-            statuses.map((status) => (
-                <button
-                    data-filter-status={status.id}
-                    class="filter-btn px-4 py-1.5 rounded-md text-[11px] font-semibold uppercase tracking-wider border transition-all active:scale-95 cursor-pointer"
-                >
-                    {status.label}
-                </button>
-            ))
-        }
-    </div>
+    {
+        !hideStatus && (
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-[10px] font-bold text-primary-400 uppercase tracking-widest mr-2">
+                    Status
+                </span>
+                {statuses.map((status) => (
+                    <button
+                        data-filter-status={status.id}
+                        class="filter-btn px-4 py-1.5 rounded-md text-[11px] font-semibold uppercase tracking-wider border transition-all active:scale-95 cursor-pointer"
+                    >
+                        {status.label}
+                    </button>
+                ))}
+            </div>
+        )
+    }
 </div>
 
 <script>

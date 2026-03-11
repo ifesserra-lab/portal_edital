@@ -16,3 +16,8 @@ Feature: Listagem de Editais
     When clico no título de um edital
     Then devo ser redirecionado para a página de detalhes do edital
     And devo ver a descrição completa e o cronograma
+
+  Scenario: Buscar edital por palavra-chave
+    When digito "pesquisa" na barra de busca
+    Then a lista de editais deve ser atualizada para mostrar apenas os resultados que contêm "pesquisa" no título, descrição ou órgão
+    And a URL deve ser atualizada para conter o parâmetro de busca correspondente

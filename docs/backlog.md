@@ -25,10 +25,15 @@ Este backlog organiza as próximas evoluções do portal em níveis de Epics, Us
   - [x] [Task: Implementar filtros por categoria (Pesquisa, Extensão, etc)](https://github.com/ifesserra-lab/portal_edital/issues/28).
   - [x] [Task: Implementar filtros por status (Aberto, Encerrado)](https://github.com/ifesserra-lab/portal_edital/issues/29).
   - [x] [Task: Garantir que filtros reflitam na URL (Query Params)](https://github.com/ifesserra-lab/portal_edital/issues/30).
-- **[US9: Busca livre por palavra-chave combinada com filtros de categoria](https://github.com/ifesserra-lab/portal_edital/issues/39)**
-  - [ ] [Task: Criar input de busca visual integrado ao FilterBar](https://github.com/ifesserra-lab/portal_edital/issues/40).
-  - [ ] [Task: Implementar lógica de busca livre combinada na listagem de editais](https://github.com/ifesserra-lab/portal_edital/issues/41).
-- **US10: Explorar Editais por Tags** (Concluído ✅)
+- **[US9: Busca livre por palavra-chave combinada com filtros de categoria](https://github.com/ifesserra-lab/portal_edital/issues/39)** (Concluído ✅)
+  - [x] [Task: Criar input de busca visual integrado ao FilterBar](https://github.com/ifesserra-lab/portal_edital/issues/40).
+  - [x] [Task: Implementar lógica de busca livre combinada na listagem de editais](https://github.com/ifesserra-lab/portal_edital/issues/41).
+  - [x] [Task: Sincronizar nomenclaturas E2E com BDD (Listar Editais)](https://github.com/ifesserra-lab/portal_edital/issues/42).
+- **[US10: Página de listagem de editais agrupados por categoria e ordem alfabética](https://github.com/ifesserra-lab/portal_edital/issues/44)** (Concluído ✅)
+  - [x] [Task: Documentar cenários BDD para listagem hierárquica por categoria](https://github.com/ifesserra-lab/portal_edital/issues/45).
+  - [x] [Task: Construir interface Astro para agrupar e ordenar editais](https://github.com/ifesserra-lab/portal_edital/issues/46).
+  - [x] [Task: Implementar testes automatizados E2E (Playwright) para organização por categoria](https://github.com/ifesserra-lab/portal_edital/issues/47).
+- **US11: Explorar Editais por Tags** (Concluído ✅)
   - [x] Task: Criar componente de filtro e busca `TagFilterSearch.astro` em Vanilla JS.
   - [x] Task: Criar a página estática `/tags` agregando edital por tag.
   - [x] Task: Implementar os testes E2E correspondentes da suíte BDD explorando tags e busca.
