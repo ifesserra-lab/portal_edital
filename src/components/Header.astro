@@ -34,35 +34,128 @@
             </span>
         </a>
 
-        <nav
-            aria-label="Navegação Principal"
-            class="flex items-center space-x-1 sm:space-x-6"
-        >
+        <div class="flex items-center space-x-4">
+            <nav
+                aria-label="Navegação Principal"
+                class="hidden md:flex items-center space-x-6"
+            >
+                <a
+                    href={`${import.meta.env.BASE_URL}/tags/`}
+                    class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-cta-600 dark:hover:text-cta-500 transition-colors px-3 py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                >
+                    Editais por Tags
+                </a>
+                <a
+                    href={`${import.meta.env.BASE_URL}/categorias/`}
+                    class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-cta-600 dark:hover:text-cta-500 transition-colors px-3 py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                >
+                    Categorias
+                </a>
+                <a
+                    href={`${import.meta.env.BASE_URL}/sobre/`}
+                    class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-cta-600 dark:hover:text-cta-500 transition-colors px-3 py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                >
+                    Sobre
+                </a>
+                <a
+                    href="https://github.com/ifesserra-lab/portal_edital"
+                    target="_blank"
+                    class="inline-flex items-center justify-center rounded-lg bg-primary-100 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-primary-900 dark:text-white hover:bg-primary-200 dark:hover:bg-white/10 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                >
+                    GitHub
+                </a>
+            </nav>
+
+            <button
+                id="mobile-menu-button"
+                class="md:hidden flex items-center justify-center p-2 rounded-lg text-primary-600 dark:text-primary-400 hover:bg-primary-100 dark:hover:bg-white/5 transition-colors focus:outline-none"
+                aria-label="Abrir menu"
+            >
+                <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-6 h-6"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                >
+                    <path
+                        id="menu-icon"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M4 6h16M4 12h16M4 18h16"></path>
+                    <path
+                        id="close-icon"
+                        class="hidden"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menu Mobile (Drawer) -->
+    <div
+        id="mobile-menu"
+        class="hidden md:hidden border-t border-primary-100 dark:border-white/5 bg-white/95 dark:bg-primary-950/95 backdrop-blur-md overflow-hidden transition-all duration-300 ease-in-out"
+    >
+        <div class="container py-4 flex flex-col space-y-2">
             <a
                 href={`${import.meta.env.BASE_URL}/tags/`}
-                class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-cta-600 dark:hover:text-cta-500 transition-colors px-3 py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                class="px-4 py-3 text-base font-medium text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-white/5 rounded-lg transition-colors"
             >
                 Editais por Tags
             </a>
             <a
                 href={`${import.meta.env.BASE_URL}/categorias/`}
-                class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-cta-600 dark:hover:text-cta-500 transition-colors px-3 py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                class="px-4 py-3 text-base font-medium text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-white/5 rounded-lg transition-colors"
             >
                 Categorias
             </a>
             <a
                 href={`${import.meta.env.BASE_URL}/sobre/`}
-                class="text-sm font-medium text-primary-600 dark:text-primary-400 hover:text-cta-600 dark:hover:text-cta-500 transition-colors px-3 py-2 rounded-md focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                class="px-4 py-3 text-base font-medium text-primary-600 dark:text-primary-400 hover:bg-primary-50 dark:hover:bg-white/5 rounded-lg transition-colors"
             >
                 Sobre
             </a>
             <a
                 href="https://github.com/ifesserra-lab/portal_edital"
                 target="_blank"
-                class="hidden sm:inline-flex items-center justify-center rounded-lg bg-primary-100 dark:bg-white/5 px-4 py-2 text-sm font-semibold text-primary-900 dark:text-white hover:bg-primary-200 dark:hover:bg-white/10 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                class="px-4 py-3 text-base font-medium text-cta-600 dark:text-cta-500 hover:bg-primary-50 dark:hover:bg-white/5 rounded-lg transition-colors"
             >
-                GitHub
+                GitHub Repo
             </a>
-        </nav>
+        </div>
     </div>
 </header>
+
+<script>
+    const setupMobileMenu = () => {
+        const button = document.getElementById("mobile-menu-button");
+        const menu = document.getElementById("mobile-menu");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        if (!button || !menu || !menuIcon || !closeIcon) return;
+
+        button.addEventListener("click", () => {
+            const isExpanded = button.getAttribute("aria-expanded") === "true";
+
+            // Toggle state
+            button.setAttribute("aria-expanded", String(!isExpanded));
+            menu.classList.toggle("hidden");
+
+            // Toggle icons
+            menuIcon.classList.toggle("hidden");
+            closeIcon.classList.toggle("hidden");
+        });
+    };
+
+    // Initialize on page load
+    setupMobileMenu();
+
+    // Re-initialize after view transitions (if any)
+    document.addEventListener("astro:after-swap", setupMobileMenu);
+</script>
