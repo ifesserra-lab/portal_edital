@@ -25,6 +25,8 @@
     --color-cta-500: #6366f1;
     --color-cta-600: #4f46e5;
     --color-cta-700: #4338ca;
+    --color-cta-800: #3730a3;
+    --color-cta-900: #312e81;
 
     --radius-xl: 0.75rem;
     --radius-2xl: 1rem;
@@ -70,14 +72,54 @@
         border: 2px solid #fbbf24 !important;
     }
 
-    /* Accessibility: Large Text */
-    html.large-text {
+    /* Accessibility: Large Text Variants */
+    html.text-lg {
+        font-size: 112.5%;
+    }
+
+    /* 18px */
+    html.text-xl {
         font-size: 125%;
+    }
+
+    /* 20px */
+    html.text-2xl {
+        font-size: 150%;
+    }
+
+    /* 24px */
+
+    /* Accessibility: Dyslexia Friendly */
+    html.dyslexia-font {
+        --font-sans: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+        --font-heading: "Comic Sans MS", "Chalkboard SE", "Comic Neue", sans-serif;
+    }
+
+    html.dyslexia-font * {
+        letter-spacing: 0.05em !important;
+        line-height: 1.6 !important;
+    }
+
+    /* Accessibility: Stop Animations */
+    html.stop-animations *,
+    html.stop-animations *::before,
+    html.stop-animations *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Accessibility: Highlight Links */
+    html.highlight-links a {
+        text-decoration: underline !important;
+        text-decoration-thickness: 2px !important;
+        text-underline-offset: 4px !important;
     }
 
     /* WCAG Focus States - Minimalist Ring */
     :focus-visible {
-        @apply outline-none ring-2 ring-cta-500 ring-offset-2 ring-offset-white dark:ring-offset-primary-950 transition-all;
+        @apply outline-none ring-3 ring-cta-500 ring-offset-3 ring-offset-white dark:ring-offset-primary-950 transition-all;
     }
 }
 

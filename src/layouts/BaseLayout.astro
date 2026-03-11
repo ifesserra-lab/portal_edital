@@ -1,6 +1,6 @@
 ---
 import "../styles/global.css";
-import AccessibilityToolbar from "../components/AccessibilityToolbar.astro";
+import AccessibilityMenu from "../components/AccessibilityMenu.astro";
 
 interface Props {
 	title: string;
@@ -41,24 +41,28 @@ const {
 		<!-- Anti-FOUC Theme Script -->
 		<script is:inline>
 			const theme = localStorage.getItem("theme");
-			const contrast = localStorage.getItem("contrast");
-			const fontSize = localStorage.getItem("font-size");
+			const contrast = localStorage.getItem("a11y-contrast");
+			const dyslexia = localStorage.getItem("a11y-dyslexia");
+			const links = localStorage.getItem("a11y-links");
+			const animations = localStorage.getItem("a11y-animations");
+			const fontSize = localStorage.getItem("a11y-font-size");
+
+			const doc = document.documentElement;
 
 			if (
 				theme === "dark" ||
 				(!theme &&
 					window.matchMedia("(prefers-color-scheme: dark)").matches)
 			) {
-				document.documentElement.classList.add("dark");
+				doc.classList.add("dark");
 			}
 
-			if (contrast === "enabled") {
-				document.documentElement.classList.add("contrast");
-			}
-
-			if (fontSize === "large") {
-				document.documentElement.classList.add("large-text");
-			}
+			if (contrast === "true") doc.classList.add("contrast");
+			if (dyslexia === "true") doc.classList.add("dyslexia-font");
+			if (links === "true") doc.classList.add("highlight-links");
+			if (animations === "true") doc.classList.add("stop-animations");
+			if (fontSize && fontSize !== "base")
+				doc.classList.add(`text-${fontSize}`);
 		</script>
 	</head>
 	<body
@@ -71,6 +75,6 @@ const {
 			Pular para o conteúdo principal
 		</a>
 		<slot />
-		<AccessibilityToolbar />
+		<AccessibilityMenu />
 	</body>
 </html>

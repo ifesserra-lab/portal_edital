@@ -1,0 +1,106 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import EditalCard from "../../components/EditalCard.astro";
+import TagFilterSearch from "../../components/TagFilterSearch.astro";
+import { getCollection } from "astro:content";
+
+const allEditais = await getCollection("editais");
+
+// Pre-processamento: agrupar editais por tag diretamente extraída dos JSONs
+const editaisByTag: Record<string, typeof allEditais> = {};
+const uniqueTags = new Set<string>();
+
+allEditais.forEach((edital) => {
+    const tags = edital.data.tags || [];
+    tags.forEach((tag) => {
+        uniqueTags.add(tag);
+        if (!editaisByTag[tag]) {
+            editaisByTag[tag] = [];
+        }
+        editaisByTag[tag].push(edital);
+    });
+});
+
+const sortedTags = Array.from(uniqueTags).sort();
+---
+
+<BaseLayout title="Portal de Editais — Explorar por Tags">
+    <Header />
+    <main id="main-content" class="flex-grow py-12 sm:py-24" tabindex="-1">
+        <div class="container">
+            <section class="mb-12">
+                <h1
+                    class="text-4xl sm:text-5xl font-bold text-primary-900 dark:text-white tracking-tight mb-4"
+                >
+                    Explorar por Tags
+                </h1>
+                <p
+                    class="text-lg text-primary-600 dark:text-primary-400 max-w-2xl"
+                >
+                    Encontre oportunidades previamente agrupadas pelas tags
+                    informadas nos editais.
+                </p>
+            </section>
+
+            <TagFilterSearch tags={sortedTags} />
+
+            <div id="tags-container" class="space-y-16 mt-12">
+                {
+                    sortedTags.map((tag) => (
+                        <section class="tag-section" data-tag={tag}>
+                            <div class="flex items-center gap-3 mb-6">
+                                <h2 class="text-2xl font-bold text-primary-900 dark:text-white capitalize">
+                                    {tag}
+                                </h2>
+                                <span
+                                    class="bg-primary-100 text-primary-800 dark:bg-primary-900/50 dark:text-primary-300 text-xs font-semibold px-2.5 py-0.5 rounded-full"
+                                    aria-label={`${editaisByTag[tag].length} editais nesta tag`}
+                                >
+                                    {editaisByTag[tag].length}
+                                    <span class="sr-only">editais</span>
+                                </span>
+                            </div>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                                {editaisByTag[tag].map((edital) => (
+                                    <div
+                                        class="tag-edital-card"
+                                        data-title={edital.data.nome.toLowerCase()}
+                                        data-desc={edital.data.descrição.toLowerCase()}
+                                    >
+                                        <EditalCard edital={edital} />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    ))
+                }
+            </div>
+
+            <div
+                id="no-results-message"
+                class="hidden flex-col items-center justify-center py-24 px-6 glass rounded-3xl border-dashed border-2 border-slate-300 dark:border-slate-800"
+                aria-live="polite"
+                aria-atomic="true"
+            >
+                <div
+                    class="w-16 h-16 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-4"
+                >
+                    <span class="text-2xl text-slate-400">🔍</span>
+                </div>
+                <h3
+                    class="text-xl font-bold text-slate-900 dark:text-white mb-2"
+                >
+                    Nenhum edital encontrado
+                </h3>
+                <p
+                    class="text-slate-500 dark:text-slate-400 text-center max-w-sm"
+                >
+                    Tente ajustar sua busca ou limpar o filtro selecionado.
+                </p>
+            </div>
+        </div>
+    </main>
+    <Footer />
+</BaseLayout>

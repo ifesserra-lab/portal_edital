@@ -1,0 +1,225 @@
+---
+export interface Props {
+    tags: string[];
+}
+const { tags } = Astro.props;
+---
+
+<div
+    class="bg-surface-card dark:bg-slate-900/50 border border-surface-border dark:border-slate-800 rounded-2xl p-4 sm:p-6 mb-8"
+>
+    <div
+        class="flex flex-col md:flex-row gap-4 items-start md:items-center justify-between mb-6"
+    >
+        <div class="relative w-full md:max-w-md">
+            <div
+                class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none"
+            >
+                <svg
+                    class="w-5 h-5 text-slate-400"
+                    viewBox="0 0 20 20"
+                    fill="currentColor"
+                    aria-hidden="true"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z"
+                        clip-rule="evenodd"></path>
+                </svg>
+            </div>
+            <label for="search-input" class="sr-only"
+                >Busca por título ou descrição</label
+            >
+            <input
+                type="text"
+                id="search-input"
+                placeholder="Buscar por título ou descrição..."
+                class="block w-full pl-10 pr-3 py-2 border border-slate-300 dark:border-slate-700 rounded-xl leading-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white placeholder-slate-500 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 sm:text-sm transition-colors"
+            />
+        </div>
+        <button
+            id="clear-filters-btn"
+            class="hidden text-sm font-medium text-cta-600 dark:text-cta-500 hover:text-cta-700 dark:hover:text-cta-400 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cta-500 rounded px-2 py-1"
+            aria-label="Limpar todos os filtros da busca"
+        >
+            Limpar filtros
+        </button>
+    </div>
+
+    <div
+        class="flex flex-wrap gap-2"
+        id="tags-filter-container"
+        role="group"
+        aria-label="Filtrar por tags"
+    >
+        {
+            tags.map((tag: string) => (
+                <button
+                    class="tag-filter-btn px-3 py-1.5 text-sm font-medium rounded-lg border border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 hover:border-primary-500 dark:hover:border-primary-500 hover:text-primary-600 dark:hover:text-primary-400 transition-all capitalize focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-500"
+                    data-tag={tag}
+                    aria-pressed="false"
+                >
+                    {tag}
+                </button>
+            ))
+        }
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const searchInput = document.getElementById(
+            "search-input",
+        ) as HTMLInputElement;
+        const tagBtns = document.querySelectorAll(".tag-filter-btn");
+        const clearBtn = document.getElementById("clear-filters-btn");
+
+        const tagSections = document.querySelectorAll(".tag-section");
+        const noResultsMsg = document.getElementById("no-results-message");
+
+        let currentSearch = "";
+        let currentTag = "";
+
+        function filterEditais() {
+            let anySectionVisible = false;
+
+            tagSections.forEach((section) => {
+                const sectionTag = section.getAttribute("data-tag") || "";
+                const cards = section.querySelectorAll(".tag-edital-card");
+                let hasVisibleCard = false;
+
+                // Se houver uma tag selecionada e não for esta seção, esconde e pula
+                if (currentTag && currentTag !== sectionTag) {
+                    (section as HTMLElement).style.display = "none";
+                    return;
+                }
+
+                cards.forEach((card) => {
+                    const title = card.getAttribute("data-title") || "";
+                    const desc = card.getAttribute("data-desc") || "";
+
+                    const matchesSearch =
+                        currentSearch === "" ||
+                        title.includes(currentSearch) ||
+                        desc.includes(currentSearch);
+
+                    if (matchesSearch) {
+                        (card as HTMLElement).style.display = "";
+                        hasVisibleCard = true;
+                    } else {
+                        (card as HTMLElement).style.display = "none";
+                    }
+                });
+
+                if (hasVisibleCard) {
+                    (section as HTMLElement).style.display = "";
+                    anySectionVisible = true;
+                } else {
+                    (section as HTMLElement).style.display = "none";
+                }
+
+                // Atualiza visibilidade do Botão de Tag:
+                // visível se a tag em si der match com a busca OU se houver cards visíveis nela
+                const tagBtn = document.querySelector(
+                    `.tag-filter-btn[data-tag="${sectionTag}"]`,
+                ) as HTMLElement;
+                if (tagBtn) {
+                    const tagMatches = sectionTag
+                        .toLowerCase()
+                        .includes(currentSearch);
+                    if (currentSearch === "" || tagMatches || hasVisibleCard) {
+                        tagBtn.style.display = "";
+                    } else {
+                        tagBtn.style.display = "none";
+                    }
+                }
+            });
+
+            if (!anySectionVisible) {
+                if (noResultsMsg) noResultsMsg.classList.remove("hidden");
+                if (noResultsMsg) noResultsMsg.classList.add("flex");
+            } else {
+                if (noResultsMsg) noResultsMsg.classList.add("hidden");
+                if (noResultsMsg) noResultsMsg.classList.remove("flex");
+            }
+
+            if (clearBtn) {
+                if (currentSearch || currentTag) {
+                    clearBtn.classList.remove("hidden");
+                } else {
+                    clearBtn.classList.add("hidden");
+                }
+            }
+        }
+
+        if (searchInput) {
+            searchInput.addEventListener("input", (e) => {
+                currentSearch = (
+                    e.target as HTMLInputElement
+                ).value.toLowerCase();
+                filterEditais();
+            });
+        }
+
+        tagBtns.forEach((btn) => {
+            btn.addEventListener("click", () => {
+                const tag = btn.getAttribute("data-tag");
+
+                if (currentTag === tag) {
+                    currentTag = "";
+                    btn.setAttribute("aria-pressed", "false");
+                    btn.classList.remove(
+                        "bg-primary-50",
+                        "dark:bg-primary-900/30",
+                        "border-primary-500",
+                        "text-primary-700",
+                        "dark:text-primary-300",
+                    );
+                } else {
+                    tagBtns.forEach((b) => {
+                        b.setAttribute("aria-pressed", "false");
+                        b.classList.remove(
+                            "bg-primary-50",
+                            "dark:bg-primary-900/30",
+                            "border-primary-500",
+                            "text-primary-700",
+                            "dark:text-primary-300",
+                        );
+                    });
+                    currentTag = tag || "";
+                    btn.setAttribute("aria-pressed", "true");
+                    btn.classList.add(
+                        "bg-primary-50",
+                        "dark:bg-primary-900/30",
+                        "border-primary-500",
+                        "text-primary-700",
+                        "dark:text-primary-300",
+                    );
+                }
+
+                filterEditais();
+            });
+        });
+
+        if (clearBtn) {
+            clearBtn.addEventListener("click", () => {
+                if (searchInput) searchInput.value = "";
+                currentSearch = "";
+                currentTag = "";
+
+                tagBtns.forEach((b) => {
+                    b.setAttribute("aria-pressed", "false");
+                    b.classList.remove(
+                        "bg-primary-50",
+                        "dark:bg-primary-900/30",
+                        "border-primary-500",
+                        "text-primary-700",
+                        "dark:text-primary-300",
+                    );
+                });
+
+                filterEditais();
+            });
+        }
+    });
+</script>
