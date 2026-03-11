@@ -14,103 +14,64 @@ const totalCount = editais.length;
 
 <BaseLayout title="Portal de Editais — Início">
 	<Header />
-	<main id="main-content" class="flex-grow py-8 sm:py-16" tabindex="-1">
+	<main id="main-content" class="flex-grow py-12 sm:py-24" tabindex="-1">
 		<div class="container">
-			<!-- Innovative Hero -->
-			<section
-				class="relative overflow-hidden rounded-3xl bg-primary-950 border border-white/10 px-6 py-12 sm:px-16 sm:py-24 shadow-2xl mb-20 group"
-			>
-				<!-- Animated background glow -->
+			<!-- Minimalist Hero -->
+			<section class="max-w-4xl mb-24">
 				<div
-					class="absolute -top-40 -right-40 w-[40rem] h-[40rem] bg-cta-600/20 rounded-full blur-[120px] animate-pulse pointer-events-none group-hover:scale-110 transition-transform duration-1000"
+					class="inline-flex items-center space-x-2 bg-cta-50 dark:bg-cta-500/10 rounded-full px-3 py-1 mb-6 animate-in fade-in slide-in-from-left-4 duration-500"
 				>
-				</div>
-				<div
-					class="absolute top-20 left-10 w-80 h-80 bg-primary-500/10 rounded-full blur-[100px] pointer-events-none"
-				>
+					<span class="flex h-1.5 w-1.5 rounded-full bg-cta-600"
+					></span>
+					<span
+						class="text-[10px] font-bold text-cta-600 uppercase tracking-widest"
+						>Transparência & Ciência</span
+					>
 				</div>
 
-				<div class="relative z-10 max-w-3xl">
+				<h1
+					class="text-5xl sm:text-7xl font-bold text-primary-900 dark:text-white tracking-tight leading-[1.1] mb-8 animate-in fade-in slide-in-from-bottom-4 delay-100 duration-500"
+				>
+					Simplicidade no acesso ao <span class="text-cta-600"
+						>fomento</span
+					>.
+				</h1>
+
+				<p
+					class="text-lg sm:text-xl text-primary-600 dark:text-primary-400 font-normal leading-relaxed mb-10 animate-in fade-in slide-in-from-bottom-4 delay-200 duration-500 max-w-2xl"
+				>
+					Acompanhe editais de pesquisa, inovação e extensão de forma
+					direta e organizada. Informação clara para quem constrói o
+					futuro.
+				</p>
+
+				<div
+					class="flex items-center gap-4 animate-in fade-in slide-in-from-bottom-4 delay-300 duration-500"
+				>
+					<a href="#editais" class="btn-cta"> Ver Oportunidades </a>
 					<div
-						class="inline-flex items-center space-x-2 bg-cta-500/10 border border-cta-500/20 rounded-full px-4 py-1.5 mb-8 animate-in fade-in slide-in-from-left-4 duration-700"
+						class="h-1 w-12 bg-primary-100 dark:bg-white/10 rounded-full hidden sm:block"
 					>
-						<span class="flex h-2 w-2 rounded-full bg-cta-500"
-						></span>
-						<span
-							class="text-xs font-bold text-cta-500 uppercase tracking-widest"
-							>Plataforma de Fomento</span
-						>
 					</div>
-
-					<h1
-						class="text-5xl sm:text-7xl font-black text-white tracking-tight leading-[1.05] mb-8 animate-in fade-in slide-in-from-bottom-4 delay-100 duration-700 text-balance"
-					>
-						Transformando <span
-							class="text-transparent bg-clip-text bg-gradient-to-r from-cta-500 to-blue-400"
-							>Ciência</span
-						> em Impacto Real
-					</h1>
-
-					<p
-						class="text-xl sm:text-2xl text-primary-300/80 font-medium leading-relaxed mb-12 animate-in fade-in slide-in-from-bottom-4 delay-200 duration-700 text-pretty max-w-xl"
-					>
-						Acesse as melhores oportunidades de fomento e impulsione
-						seus projetos de pesquisa e inovação.
-					</p>
-
-					<div
-						class="flex flex-wrap items-center gap-6 animate-in fade-in slide-in-from-bottom-4 delay-300 duration-700"
-					>
-						<a
-							href="#editais"
-							class="btn-cta overflow-hidden group relative"
-						>
-							<span class="relative z-10">Explorar Editais</span>
-							<div
-								class="absolute inset-0 bg-gradient-to-r from-white/0 via-white/20 to-white/0 translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000"
-							>
-							</div>
-						</a>
-
-						<div class="flex -space-x-3 items-center">
-							<div
-								class="w-10 h-10 rounded-full border-2 border-primary-950 bg-primary-900 flex items-center justify-center text-xs font-bold text-white shadow-lg"
-							>
-								+
-							</div>
-							<div
-								class="w-10 h-10 rounded-full border-2 border-primary-950 bg-cta-600 flex items-center justify-center text-xs font-bold text-white shadow-lg"
-							>
-								F
-							</div>
-							<div
-								class="pl-6 text-sm font-semibold text-primary-400"
-							>
-								<span class="text-white"
-									>{abertosCount} Ativos</span
-								> hoje
-							</div>
-						</div>
+					<div class="text-sm font-medium text-primary-500">
+						<span class="text-primary-900 dark:text-white font-bold"
+							>{abertosCount} Ativos</span
+						> atualmente
 					</div>
 				</div>
 			</section>
 
-			<section id="editais" class="scroll-mt-24">
-				<div
-					class="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4"
-				>
-					<div class="space-y-2">
-						<h2
-							class="text-3xl sm:text-4xl font-extrabold text-primary-900 dark:text-white leading-none"
-						>
-							Explore Oportunidades
-						</h2>
-						<div class="h-1.5 w-20 bg-cta-600 rounded-full"></div>
-					</div>
-					<p
-						class="text-primary-500 dark:text-primary-400 font-medium sm:text-lg"
+			<section id="editais" class="scroll-mt-20">
+				<div class="flex flex-col mb-10">
+					<h2
+						class="text-2xl sm:text-3xl font-bold text-primary-900 dark:text-white mb-2"
 					>
-						Oportunidades atualizadas em tempo real.
+						Oportunidades
+					</h2>
+					<p
+						class="text-primary-500 dark:text-primary-400 font-medium"
+					>
+						Role para explorar os editais disponíveis.
 					</p>
 				</div>
 

@@ -2,6 +2,8 @@
 
 Plataforma unificada para publicação, consulta e acompanhamento de editais de fomento à pesquisa, extensão e inovação.
 
+🔗 **Acesse o portal:** [https://ifesserra-lab.github.io/portal_edital/](https://ifesserra-lab.github.io/portal_edital/)
+
 ## ✨ Características
 
 - **Design Inovador**: Interface moderna com Tailwind CSS v4 e animações premium.
@@ -52,4 +54,4 @@ npx playwright test
 
 - [Arquitetura](docs/architecture.md)
 - [Backlog do Projeto](docs/backlog.md)
-- [Funcionalidades (Features)](docs/features/)
+- [Funcionalidades e Features](docs/funcionalidades.md)

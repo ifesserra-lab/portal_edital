@@ -11,6 +11,7 @@ const categories = [
     { id: "extensão", label: "Extensão" },
     { id: "inovação", label: "Inovação" },
     { id: "bolsa", label: "Bolsas" },
+    { id: "outros", label: "Outros" },
 ];
 
 const statuses = [
@@ -20,16 +21,16 @@ const statuses = [
 ];
 ---
 
-<div class="flex flex-col gap-8 mb-16">
-    <div class="w-full max-w-3xl">
+<div class="flex flex-col gap-6 mb-12">
+    <div class="w-full max-w-2xl">
         <label for="search-input" class="sr-only">Buscar editais</label>
         <div class="relative group">
             <div
-                class="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none transition-colors group-focus-within:text-cta-500"
+                class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none transition-colors group-focus-within:text-cta-600"
             >
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-6 w-6 text-primary-400 group-focus-within:text-cta-500 transition-colors"
+                    class="h-5 w-5 text-primary-400 group-focus-within:text-cta-600 transition-colors"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -44,22 +45,22 @@ const statuses = [
             <input
                 type="search"
                 id="search-input"
-                class="w-full pl-12 pr-4 py-4 rounded-2xl border-2 border-primary-200 dark:border-white/10 bg-white/80 dark:bg-primary-900/40 backdrop-blur-md text-primary-900 dark:text-white placeholder-primary-400 dark:placeholder-primary-500 focus:outline-none focus:border-cta-500 dark:focus:border-cta-500 focus:ring-4 focus:ring-cta-500/10 transition-all shadow-sm font-medium text-lg"
-                placeholder="Busque por título, descrição ou palavra-chave..."
+                class="w-full pl-11 pr-4 py-3 rounded-lg border border-primary-200 dark:border-white/10 bg-white dark:bg-primary-900/40 text-primary-900 dark:text-white placeholder-primary-400 focus:outline-none focus:border-cta-500 focus:ring-4 focus:ring-cta-500/5 transition-all text-sm font-medium"
+                placeholder="Busque por título ou palavra-chave..."
             />
         </div>
     </div>
 
-    <div class="flex flex-wrap items-center gap-4">
+    <div class="flex flex-wrap items-center gap-2">
         <span
-            class="text-[10px] font-black text-primary-400 dark:text-primary-500 uppercase tracking-[0.2em] mr-2"
+            class="text-[10px] font-bold text-primary-400 uppercase tracking-widest mr-2"
             >Categorias</span
         >
         {
             categories.map((cat) => (
                 <button
                     data-filter-category={cat.id}
-                    class="filter-btn px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest border-2 transition-all active:scale-95 cursor-pointer"
+                    class="filter-btn px-4 py-1.5 rounded-md text-[11px] font-semibold uppercase tracking-wider border transition-all active:scale-95 cursor-pointer"
                 >
                     {cat.label}
                 </button>
@@ -69,14 +70,14 @@ const statuses = [
 
     {
         !hideStatus && (
-            <div class="flex flex-wrap items-center gap-4">
-                <span class="text-[10px] font-black text-primary-400 dark:text-primary-500 uppercase tracking-[0.2em] mr-2">
+            <div class="flex flex-wrap items-center gap-2">
+                <span class="text-[10px] font-bold text-primary-400 uppercase tracking-widest mr-2">
                     Status
                 </span>
                 {statuses.map((status) => (
                     <button
                         data-filter-status={status.id}
-                        class="filter-btn px-6 py-2.5 rounded-xl text-xs font-black uppercase tracking-widest border-2 transition-all active:scale-95 cursor-pointer"
+                        class="filter-btn px-4 py-1.5 rounded-md text-[11px] font-semibold uppercase tracking-wider border transition-all active:scale-95 cursor-pointer"
                     >
                         {status.label}
                     </button>
@@ -104,13 +105,12 @@ const statuses = [
         document.querySelectorAll("[data-filter-category]").forEach((btn) => {
             const isSelected =
                 btn.getAttribute("data-filter-category") === category;
-            btn.classList.toggle("bg-cta-700", isSelected);
+            btn.classList.toggle("bg-cta-600", isSelected);
             btn.classList.toggle("text-white", isSelected);
-            btn.classList.toggle("border-cta-700", isSelected);
-            btn.classList.toggle("shadow-lg", isSelected);
-            btn.classList.toggle("shadow-cta-500/20", isSelected);
+            btn.classList.toggle("border-cta-600", isSelected);
 
-            btn.classList.toggle("bg-transparent", !isSelected);
+            btn.classList.toggle("bg-white", !isSelected);
+            btn.classList.toggle("dark:bg-transparent", !isSelected);
             btn.classList.toggle("text-primary-600", !isSelected);
             btn.classList.toggle("dark:text-primary-400", !isSelected);
             btn.classList.toggle("border-primary-200", !isSelected);
@@ -126,9 +126,9 @@ const statuses = [
             btn.classList.toggle("dark:text-primary-900", isSelected);
             btn.classList.toggle("border-primary-900", isSelected);
             btn.classList.toggle("dark:border-white", isSelected);
-            btn.classList.toggle("shadow-lg", isSelected);
 
-            btn.classList.toggle("bg-transparent", !isSelected);
+            btn.classList.toggle("bg-white", !isSelected);
+            btn.classList.toggle("dark:bg-transparent", !isSelected);
             btn.classList.toggle("text-primary-600", !isSelected);
             btn.classList.toggle("dark:text-primary-400", !isSelected);
             btn.classList.toggle("border-primary-200", !isSelected);
@@ -136,7 +136,7 @@ const statuses = [
         });
 
         // Client-side filtering of the list
-        const cards = document.querySelectorAll(".edital-card");
+        const cards = document.querySelectorAll(".card-minimal");
         cards.forEach((card) => {
             const cardCategory = card.getAttribute("data-category");
             const cardStatus = card.getAttribute("data-status");

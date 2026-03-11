@@ -7,15 +7,15 @@ const editais = defineCollection({
     nome: z.string(),
     descrição: z.string(),
     orgão_fomento: z.string(),
-    categoria: z.enum(['pesquisa', 'extensão', 'inovação', 'bolsa', 'outro']),
+    categoria: z.enum(['pesquisa', 'extensão', 'inovação', 'bolsa', 'outro', 'outros']),
     status: z.enum(['aberto', 'encerrado', 'suspenso', 'resultado']),
-    data_abertura: z.string(),
-    data_encerramento: z.string(),
+    data_abertura: z.string().or(z.literal("")),
+    data_encerramento: z.string().or(z.literal("")),
     link: z.string().url(),
     cronograma: z.array(z.object({
       evento: z.string(),
       data: z.string()
-    })),
+    })).optional().default([]),
     tags: z.array(z.string()).optional(),
   })
 });

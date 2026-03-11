@@ -20,34 +20,28 @@ const statusColors = {
 ---
 
 <article
-    class="edital-card group relative flex flex-col p-8 rounded-3xl glass transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_20px_40px_-15px_rgba(15,23,42,0.15)] active:scale-[0.98] overflow-hidden"
+    class="card-minimal group relative flex flex-col p-6 h-full"
     data-testid="edital-card"
     data-status={data.status}
     data-category={data.categoria}
     data-search-index={`${data.nome} ${data.descrição} ${data.orgão_fomento}`.toLowerCase()}
 >
-    <!-- Card Accent Glow -->
-    <div
-        class="absolute -top-10 -right-10 w-32 h-32 bg-cta-500/5 rounded-full blur-3xl group-hover:bg-cta-500/10 transition-colors duration-500"
-    >
-    </div>
-
-    <div class="flex items-center justify-between mb-6">
+    <div class="flex items-center justify-between mb-4">
         <span
-            class={`px-3 py-1 rounded-full text-[10px] font-black border uppercase tracking-[0.1em] ${statusColors[data.status]}`}
+            class={`px-2 py-0.5 rounded text-[10px] font-bold border uppercase tracking-wider ${statusColors[data.status]}`}
             data-testid="edital-status"
         >
             {data.status}
         </span>
         <span
-            class="text-[10px] font-bold text-primary-400 dark:text-primary-500 uppercase tracking-[0.15em] bg-primary-100 dark:bg-primary-900/50 px-2.5 py-1 rounded-md"
+            class="text-[10px] font-medium text-primary-500 uppercase tracking-widest bg-primary-100 dark:bg-white/5 px-2 py-0.5 rounded"
         >
             {data.categoria}
         </span>
     </div>
 
     <h3
-        class="text-xl font-bold text-primary-900 dark:text-white mb-4 group-hover:text-cta-600 dark:group-hover:text-cta-500 transition-colors duration-300 line-clamp-2 leading-tight"
+        class="text-lg font-semibold text-primary-900 dark:text-white mb-3 group-hover:text-cta-600 transition-colors duration-200 line-clamp-2 leading-snug"
         data-testid="edital-titulo"
     >
         <a
@@ -59,48 +53,31 @@ const statusColors = {
     </h3>
 
     <p
-        class="text-primary-600 dark:text-primary-400 text-sm leading-relaxed mb-8 line-clamp-3 text-pretty"
+        class="text-primary-600 dark:text-primary-400 text-sm leading-relaxed mb-6 line-clamp-3"
     >
         {data.descrição}
     </p>
 
     <div
-        class="mt-auto pt-6 border-t border-primary-100 dark:border-white/5 flex flex-col gap-3"
+        class="mt-auto pt-4 border-t border-primary-100 dark:border-white/5 flex flex-col gap-2"
     >
         <div
-            class="flex items-center text-[11px] text-primary-500 dark:text-primary-500 font-bold uppercase tracking-wider"
+            class="flex items-center justify-between text-[11px] font-medium uppercase tracking-tight"
         >
-            <span class="w-24 shrink-0">Órgão</span>
-            <span class="text-primary-900 dark:text-primary-200"
+            <span class="text-primary-400">Órgão</span>
+            <span class="text-primary-700 dark:text-primary-300"
                 >{data.orgão_fomento}</span
             >
         </div>
         <div
-            class="flex items-center text-[11px] text-primary-500 dark:text-primary-500 font-bold uppercase tracking-wider"
+            class="flex items-center justify-between text-[11px] font-medium uppercase tracking-tight"
         >
-            <span class="w-24 shrink-0">Encerramento</span>
-            <span class="text-cta-700 dark:text-cta-500 font-black"
+            <span class="text-primary-400">Encerramento</span>
+            <span class="text-cta-600 font-bold"
                 >{
                     new Date(data.data_encerramento).toLocaleDateString("pt-BR")
                 }</span
             >
         </div>
-    </div>
-
-    <!-- Hover Arrow Indicator -->
-    <div
-        class="absolute bottom-6 right-8 opacity-0 translate-x-4 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 text-cta-600 pointer-events-none"
-    >
-        <svg
-            xmlns="http://www.w3.org/2000/svg"
-            class="w-5 h-5"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            ><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg
-        >
     </div>
 </article>
