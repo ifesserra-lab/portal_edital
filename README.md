@@ -4,14 +4,18 @@ Plataforma unificada para publicação, consulta e acompanhamento de editais de 
 
 🔗 **Acesse o portal:** [https://ifesserra-lab.github.io/portal_edital/](https://ifesserra-lab.github.io/portal_edital/)
 
-## ✨ Características
+## ✨ Funcionalidades
 
-- **Design Inovador**: Interface moderna com Tailwind CSS v4 e animações premium.
-- **Acessibilidade Universal**: Menu flutuante com suporte a Alto Contraste, Fontes para Dislexia, Escalonamento de Fonte e Destaque de Links.
-- **Modo Escuro Inteligente**: Toggle de tema com persistência local e prevenção de *flash* visual.
-- **Notificações em Tempo Real**: Alertas automáticos via Telegram sempre que um novo edital é publicado.
-- **Busca e Filtros Avançados**: Filtragem reativa por tags e termos de busca unificada.
-- **Automação de Dados**: Sincronização diária automática com fontes externas e registro de histórico.
+| Funcionalidade | Descrição | Status |
+| :--- | :--- | :--- |
+| **Acessibilidade WCAG** | Menu flutuante com alto contraste, fontes para dislexia e escala de texto. | ✅ Concluído |
+| **Modo Escuro** | Suporte nativo a temas Dark/Light com persistência em `localStorage`. | ✅ Concluído |
+| **Notificações Telegram** | Alertas automáticos via bot sempre que novos editais são detectados. | ✅ Concluído |
+| **Busca e Filtros** | Busca por texto e filtragem reativa por categorias e tags. | ✅ Concluído |
+| **Automação de Dados** | Sync diário via GitHub Actions com fontes externas (FAPES). | ✅ Concluído |
+| **Mobile Responsive** | Design otimizado para celulares, tablets e desktops. | ✅ Concluído |
+| **Histórico de Downloads** | Registro em JSON (`registry/`) para auditoria de novas postagens. | ✅ Concluído |
+
 
 ## 🛠️ Stack Tecnológica
 
