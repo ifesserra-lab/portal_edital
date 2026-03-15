@@ -23,10 +23,20 @@ describe('schedule-reminders.js Unit Tests', () => {
         mkdirSync(registryDir);
 
         // Mock fetch globally
-        global.fetch = async () => ({
-            ok: true,
-            text: async () => 'OK'
-        });
+        global.fetch = async (url) => {
+            if (url.includes('createForumTopic')) {
+                return {
+                    ok: true,
+                    json: async () => ({ ok: true, result: { message_thread_id: 123 } }),
+                    text: async () => JSON.stringify({ ok: true, result: { message_thread_id: 123 } })
+                };
+            }
+            return { 
+                ok: true, 
+                text: async () => 'ok',
+                json: async () => ({ ok: true })
+            };
+        };
     });
 
     afterEach(() => {
@@ -44,9 +54,19 @@ describe('schedule-reminders.js Unit Tests', () => {
         
         let fetchMessage = '';
         global.fetch = async (url, options) => {
+            if (url.includes('createForumTopic')) {
+                return {
+                    ok: true,
+                    json: async () => ({ ok: true, result: { message_thread_id: 123 } })
+                };
+            }
             const body = JSON.parse(options.body);
             fetchMessage = body.text;
-            return { ok: true };
+            return { 
+                ok: true, 
+                text: async () => 'ok',
+                json: async () => ({ ok: true })
+            };
         };
 
         await run(dataDir, registryFile);
@@ -76,9 +96,19 @@ describe('schedule-reminders.js Unit Tests', () => {
         writeFileSync(join(dataDir, 'repetido.json'), JSON.stringify(testEdital));
         
         let fetchCalls = 0;
-        global.fetch = async () => {
+        global.fetch = async (url) => {
+            if (url.includes('createForumTopic')) {
+                return {
+                    ok: true,
+                    json: async () => ({ ok: true, result: { message_thread_id: 123 } })
+                };
+            }
             fetchCalls++;
-            return { ok: true };
+            return { 
+                ok: true, 
+                text: async () => 'ok',
+                json: async () => ({ ok: true })
+            };
         };
 
         await run(dataDir, registryFile);

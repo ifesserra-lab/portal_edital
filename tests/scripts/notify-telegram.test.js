@@ -24,10 +24,18 @@ describe('notify-telegram.js Unit Tests', () => {
         mkdirSync(registryDir);
 
         // Mock fetch globally
-        global.fetch = async (url, options) => {
-            return {
-                ok: true,
-                text: async () => 'OK'
+        global.fetch = async (url) => {
+            if (url.includes('createForumTopic')) {
+                return {
+                    ok: true,
+                    json: async () => ({ ok: true, result: { message_thread_id: 123 } }),
+                    text: async () => JSON.stringify({ ok: true, result: { message_thread_id: 123 } })
+                };
+            }
+            return { 
+                ok: true, 
+                text: async () => 'ok',
+                json: async () => ({ ok: true })
             };
         };
     });
@@ -66,9 +74,13 @@ describe('notify-telegram.js Unit Tests', () => {
         
         // Mock fetch to track calls
         let fetchCalled = false;
-        global.fetch = async () => {
+        global.fetch = async (url) => {
             fetchCalled = true;
-            return { ok: true };
+            return { 
+                ok: true, 
+                text: async () => 'ok',
+                json: async () => ({ ok: true })
+            };
         };
 
         await run(dataDir, registryFile);

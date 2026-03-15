@@ -7,9 +7,51 @@ const __dirname = dirname(__filename);
 
 const DEFAULT_DATA_DIR = 'data';
 const DEFAULT_REGISTRY_FILE = join('registry', 'downloads_registry.json');
+const TOPICS_REGISTRY = join('registry', 'topics_registry.json');
 const PORTAL_URL = 'https://ifesserra-lab.github.io/portal_edital';
 
-async function sendTelegramMessage(text) {
+async function getOrCreateTopicId(category) {
+    const token = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
+    
+    if (!token || !chatId) return null;
+
+    let topics = {};
+    if (existsSync(TOPICS_REGISTRY)) {
+        topics = JSON.parse(readFileSync(TOPICS_REGISTRY, 'utf-8'));
+    }
+
+    if (topics[category]) return topics[category];
+
+    // Create new topic
+    console.log(`🏗️ Creating new Telegram topic for category: ${category}`);
+    const url = `https://api.telegram.org/bot${token}/createForumTopic`;
+    try {
+        const response = await fetch(url, {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({
+                chat_id: chatId,
+                name: category.charAt(0).toUpperCase() + category.slice(1)
+            })
+        });
+        const result = await response.json();
+        if (result.ok) {
+            const topicId = result.result.message_thread_id;
+            topics[category] = topicId;
+            writeFileSync(TOPICS_REGISTRY, JSON.stringify(topics, null, 4));
+            return topicId;
+        } else {
+            console.error(`❌ Failed to create topic: ${result.description}`);
+            return null;
+        }
+    } catch (err) {
+        console.error(`❌ Error creating topic: ${err.message}`);
+        return null;
+    }
+}
+
+async function sendTelegramMessage(text, topicId = null) {
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
 
@@ -25,6 +67,7 @@ async function sendTelegramMessage(text) {
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
                 chat_id: chatId,
+                message_thread_id: topicId,
                 text: text,
                 parse_mode: 'HTML',
                 disable_web_page_preview: false
@@ -100,7 +143,8 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                                         `<b>🌐 Ver mais no portal:</b> <a href="${PORTAL_URL}">Acessar site</a>\n` +
                                         `<b>🔗 Link direto:</b> <a href="${editalLink}">Abrir documento</a>`;
 
-                        await sendTelegramMessage(message);
+                        const topicId = await getOrCreateTopicId(category);
+                        await sendTelegramMessage(message, topicId);
                         registry[file].notificacoes_enviadas.push(notificationKey);
                         stateChanged = true;
                     }
