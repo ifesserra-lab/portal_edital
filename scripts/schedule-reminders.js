@@ -144,7 +144,6 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                 registry[file] = {
                     data_entrada: new Date().toISOString(),
                     categoria: category,
-                    orgão_fomento: content.orgão_fomento || 'N/A',
                     cronograma: cronograma
                 };
             }

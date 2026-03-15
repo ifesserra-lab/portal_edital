@@ -138,7 +138,8 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                 const link = content.link || '';
                 const description = content.descrição || 'Sem descrição disponível.';
                 const category = content.categoria || 'N/A';
-                
+                const orgaoFomento = content.orgão_fomento || 'N/A';
+
                 // Get the first event if available
                 let eventInfo = 'N/A';
                 if (content.cronograma && content.cronograma.length > 0) {
@@ -154,6 +155,7 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                 const message = `🔔 <b>Novo Edital Detectado!</b>\n\n` +
                                 `<b>📌 Título:</b> ${title}\n` +
                                 `<b>📁 Categoria:</b> ${category}\n` +
+                                `<b>🏛️ Órgão de Fomento:</b> ${orgaoFomento}\n` +
                                 `<b>📅 Próximo Evento:</b> ${eventInfo}\n\n` +
                                 `<b>📝 Descrição:</b> <i>${shortDescription}</i>\n\n` +
                                 `<b>🔗 Link do Edital:</b> <a href="${link}">Acessar Documento</a>\n` +
@@ -166,7 +168,6 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                     registry[file] = {
                         data_entrada: now,
                         categoria: content.categoria || 'N/A',
-                        orgão_fomento: content.orgão_fomento || 'N/A',
                         cronograma: content.cronograma || []
                     };
                     newItemsFound = true;

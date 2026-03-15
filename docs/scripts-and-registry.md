@@ -8,7 +8,7 @@ O diretório `registry/` contém dois arquivos JSON versionados:
 
 | Arquivo | Descrição |
 |--------|-----------|
-| `downloads_registry.json` | Um objeto cuja chave é o nome do arquivo do edital (ex.: `edital_fapes_052026__visita_técnico-científica.json`). Cada valor contém: `data_entrada`, `categoria`, `orgão_fomento`, `cronograma` e `notificacoes_enviadas` (lista de chaves de lembretes já enviados). |
+| `downloads_registry.json` | Um objeto cuja chave é o nome do arquivo do edital (ex.: `edital_fapes_052026__visita_técnico-científica.json`). Cada valor contém: `data_entrada`, `categoria`, `cronograma` e `notificacoes_enviadas` (lista de chaves de lembretes já enviados). |
 | `topics_registry.json` | Mapeamento da categoria normalizada (minúscula) para o ID numérico do tópico no fórum do grupo Telegram. Ex.: `"chamadas": 12345`. Valores `null` indicam que o tópico ainda será criado na próxima execução. |
 
 Os scripts **notify-telegram.js** e **schedule-reminders.js** leem e atualizam esses arquivos. O **build-registry.js** apenas (re)constrói o `downloads_registry` e cria `topics_registry` vazio ou com categorias em `null`, sem enviar mensagens.
