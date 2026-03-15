@@ -76,5 +76,36 @@ const {
 		</a>
 		<slot />
 		<AccessibilityMenu />
+		<script is:inline>
+			(function () {
+				function applyFechandoStatus() {
+					var hoje = new Date();
+					hoje.setHours(0, 0, 0, 0);
+					var badges = document.querySelectorAll("[data-edital-status-badge]");
+					var fechandoClassCard =
+						"px-2 py-0.5 rounded text-[10px] font-bold border uppercase tracking-wider bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400 border-amber-200 dark:border-amber-500/20";
+					var fechandoClassPage =
+						"px-3 py-1 rounded-full text-xs font-bold border uppercase tracking-wider bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400 border-amber-200 dark:border-amber-500/20";
+					badges.forEach(function (badge) {
+						var parent = badge.closest("[data-encerramento]");
+						if (!parent || !parent.dataset.encerramento || parent.dataset.status !== "aberto") return;
+						var dataFim = new Date(parent.dataset.encerramento);
+						dataFim.setHours(0, 0, 0, 0);
+						if (dataFim >= hoje) return;
+						parent.dataset.status = "fechando";
+						badge.textContent = "fechando";
+						badge.className =
+							badge.getAttribute("data-edital-status-size") === "page"
+								? fechandoClassPage
+								: fechandoClassCard;
+					});
+				}
+				if (document.readyState === "loading") {
+					document.addEventListener("DOMContentLoaded", applyFechandoStatus);
+				} else {
+					applyFechandoStatus();
+				}
+			})();
+		</script>
 	</body>
 </html>

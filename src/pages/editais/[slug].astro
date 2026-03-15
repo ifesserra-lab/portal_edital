@@ -15,8 +15,10 @@ export async function getStaticPaths() {
 const { edital } = Astro.props;
 const { data } = edital;
 
-const statusColors = {
+const statusColors: Record<string, string> = {
     aberto: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border-emerald-200 dark:border-emerald-500/20",
+    fechando:
+        "bg-amber-100 text-amber-700 dark:bg-amber-500/10 dark:text-amber-400 border-amber-200 dark:border-amber-500/20",
     encerrado:
         "bg-slate-100 text-slate-700 dark:bg-slate-500/10 dark:text-slate-400 border-slate-200 dark:border-slate-500/20",
     suspenso:
@@ -47,11 +49,13 @@ const statusColors = {
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 sm:gap-12">
                 <!-- Main Content -->
                 <div class="lg:col-span-2 space-y-8 sm:space-y-12">
-                    <header class="space-y-4">
+                    <header class="space-y-4" data-encerramento={data.data_encerramento || ""} data-status={data.status}>
                         <div class="flex flex-wrap items-center gap-3">
                             <span
-                                class={`px-3 py-1 rounded-full text-xs font-bold border uppercase tracking-wider ${statusColors[data.status]}`}
+                                class={`px-3 py-1 rounded-full text-xs font-bold border uppercase tracking-wider ${statusColors[data.status] ?? statusColors.encerrado}`}
                                 data-testid="edital-status"
+                                data-edital-status-badge
+                                data-edital-status-size="page"
                             >
                                 {data.status}
                             </span>
