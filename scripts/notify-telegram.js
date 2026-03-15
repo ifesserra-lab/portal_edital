@@ -7,7 +7,11 @@ const TOPICS_REGISTRY = join('registry', 'topics_registry.json');
 
 const PORTAL_URL = 'https://ifesserra-lab.github.io/portal_edital';
 
+const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
+
 async function getOrCreateTopicId(category) {
+    if (!category || category === 'N/A' || category.toLowerCase() === 'sem categoria') return null;
+    
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
     
@@ -18,7 +22,8 @@ async function getOrCreateTopicId(category) {
         topics = JSON.parse(readFileSync(TOPICS_REGISTRY, 'utf-8'));
     }
 
-    if (topics[category]) return topics[category];
+    const normalizedCategory = category.trim().toLowerCase();
+    if (topics[normalizedCategory]) return topics[normalizedCategory];
 
     // Create new topic
     console.log(`🏗️ Creating new Telegram topic for category: ${category}`);
@@ -32,12 +37,18 @@ async function getOrCreateTopicId(category) {
                 name: category.charAt(0).toUpperCase() + category.slice(1)
             })
         });
+        
         const result = await response.json();
         if (result.ok) {
             const topicId = result.result.message_thread_id;
-            topics[category] = topicId;
+            topics[normalizedCategory] = topicId;
             writeFileSync(TOPICS_REGISTRY, JSON.stringify(topics, null, 4));
             return topicId;
+        } else if (result.error_code === 429) {
+            const waitTime = (result.parameters?.retry_after || 5) * 1000;
+            console.warn(`🛑 Rate limited while creating topic. Waiting ${waitTime/1000}s...`);
+            await sleep(waitTime);
+            return getOrCreateTopicId(category); // Retry
         } else {
             console.error(`❌ Failed to create topic: ${result.description}`);
             return null;
@@ -54,7 +65,7 @@ async function sendTelegramMessage(text, topicId = null) {
 
     if (!token || !chatId) {
         console.warn('⚠️ Telegram credentials not found. Skipping notification.');
-        return;
+        return false;
     }
 
     const url = `https://api.telegram.org/bot${token}/sendMessage`;
@@ -70,14 +81,25 @@ async function sendTelegramMessage(text, topicId = null) {
                 disable_web_page_preview: false
             })
         });
-        if (!response.ok) {
-            const err = await response.text();
-            console.error(`❌ Failed to send Telegram message: ${err}`);
-        } else {
+        
+        if (response.ok) {
             console.log('✅ Telegram notification sent!');
+            return true;
+        }
+
+        const result = await response.json();
+        if (result.error_code === 429) {
+            const waitTime = (result.parameters?.retry_after || 5) * 1000;
+            console.warn(`🛑 Rate limited. Waiting ${waitTime/1000}s...`);
+            await sleep(waitTime);
+            return sendTelegramMessage(text, topicId); // Retry
+        } else {
+            console.error(`❌ Failed to send Telegram message: ${result.description}`);
+            return false;
         }
     } catch (err) {
         console.error(`❌ Error sending Telegram message: ${err.message}`);
+        return false;
     }
 }
 
@@ -135,13 +157,20 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                                 `<b>🌐 Portal de Editais:</b> <a href="${PORTAL_URL}">Ver todos os editais</a>`;
 
                 const topicId = await getOrCreateTopicId(category);
-                await sendTelegramMessage(message, topicId);
-                registry[file] = {
-                    data_entrada: now,
-                    categoria: content.categoria || 'N/A',
-                    cronograma: content.cronograma || []
-                };
-                newItemsFound = true;
+                const success = await sendTelegramMessage(message, topicId);
+                
+                if (success) {
+                    registry[file] = {
+                        data_entrada: now,
+                        categoria: content.categoria || 'N/A',
+                        cronograma: content.cronograma || []
+                    };
+                    newItemsFound = true;
+                    // Add delay to avoid rate limits
+                    await sleep(2000);
+                } else {
+                    console.warn(`🛑 Skipping registry update for ${file} due to failure.`);
+                }
             } catch (err) {
                 console.error(`❌ Error processing ${file}: ${err.message}`);
             }
