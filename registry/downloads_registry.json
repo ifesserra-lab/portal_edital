@@ -1,63 +1,4 @@
 {
-    "2025_joint_transnational_call_water_and_health.json": {
-        "data_entrada": "2026-03-11T03:16:59.171Z",
-        "categoria": "chamadas",
-        "cronograma": [
-            {
-                "evento": "Pré-anúncio da chamada",
-                "data": "Julho 2025"
-            },
-            {
-                "evento": "Publicação do edital e abertura do 1º passo (submissão de pré-propostas)",
-                "data": "2025-09-12"
-            },
-            {
-                "evento": "Prazo para submissão de pré-propostas",
-                "data": "2025-11-13"
-            },
-            {
-                "evento": "Notificação dos resultados do 1º passo",
-                "data": "2026-02-06"
-            },
-            {
-                "evento": "Período para pedido de reconsideração (redress)",
-                "data": "2026-02-06 a 2026-02-20"
-            },
-            {
-                "evento": "Abertura do 2º passo (submissão de propostas completas)",
-                "data": "2026-02-06"
-            },
-            {
-                "evento": "Prazo para submissão de propostas completas",
-                "data": "2026-04-13"
-            },
-            {
-                "evento": "Notificação dos resultados do 2º passo",
-                "data": "Setembro 2026"
-            },
-            {
-                "evento": "Liberação ética",
-                "data": "Setembro/Outubro 2026"
-            },
-            {
-                "evento": "Período para pedido de reconsideração (redress) após 2º passo",
-                "data": "Setembro/Outubro 2026"
-            },
-            {
-                "evento": "Comunicação da decisão final após pedido de reconsideração",
-                "data": "Setembro/Outubro 2026"
-            },
-            {
-                "evento": "Início dos projetos transnacionais",
-                "data": "Último trimestre de 2026 / 1º trimestre de 2027"
-            },
-            {
-                "evento": "Término dos projetos transnacionais",
-                "data": "Último trimestre de 2029 / 1º trimestre de 2030"
-            }
-        ],
-        "notificacoes_enviadas": []
-    },
     "3ª_chamada_trsnacional_conjunta_-_parceria_economia_azul_sustentável.json": {
         "data_entrada": "2026-03-11T03:16:59.171Z",
         "categoria": "chamadas",
@@ -319,65 +260,6 @@
         ],
         "notificacoes_enviadas": []
     },
-    "edital_fapes_052026__visita_técnico-científica.json": {
-        "data_entrada": "2026-03-11T03:16:59.171Z",
-        "categoria": "divulgação de conhecimento",
-        "cronograma": [
-            {
-                "evento": "Publicação do Edital",
-                "data": "2026-02-06"
-            },
-            {
-                "evento": "1ª Chamada - Período de submissão",
-                "data": "2026-02-09 a 2026-03-12"
-            },
-            {
-                "evento": "1ª Chamada - Divulgação do resultado preliminar",
-                "data": "A partir de 2026-03-19"
-            },
-            {
-                "evento": "1ª Chamada - Prazo para interposição de recursos",
-                "data": "5 dias úteis após a publicação do resultado preliminar"
-            },
-            {
-                "evento": "1ª Chamada - Divulgação do resultado final",
-                "data": "A partir de 2026-03-31"
-            },
-            {
-                "evento": "2ª Chamada - Período de submissão",
-                "data": "2026-03-17 a 2026-04-24"
-            },
-            {
-                "evento": "2ª Chamada - Divulgação do resultado preliminar",
-                "data": "A partir de 2026-05-22"
-            },
-            {
-                "evento": "2ª Chamada - Prazo para interposição de recursos",
-                "data": "5 dias úteis após a publicação do resultado preliminar"
-            },
-            {
-                "evento": "2ª Chamada - Divulgação do resultado final",
-                "data": "A partir de 2026-06-19"
-            },
-            {
-                "evento": "3ª Chamada - Período de submissão",
-                "data": "2026-07-01 a 2026-08-20"
-            },
-            {
-                "evento": "3ª Chamada - Divulgação do resultado preliminar",
-                "data": "A partir de 2026-10-02"
-            },
-            {
-                "evento": "3ª Chamada - Prazo para interposição de recursos",
-                "data": "5 dias úteis após a publicação do resultado preliminar"
-            },
-            {
-                "evento": "3ª Chamada - Divulgação do resultado final",
-                "data": "A partir de 2026-10-26"
-            }
-        ],
-        "notificacoes_enviadas": []
-    },
     "edital_fapes_n_032026_-_organização_de_eventos_técnico-científicos.json": {
         "data_entrada": "2026-03-11T03:16:59.171Z",
         "categoria": "divulgação de conhecimento",
@@ -498,77 +380,6 @@
             {
                 "evento": "Previsão para divulgação do resultado homologado (3ª Chamada)",
                 "data": "A partir de 2026-10-30"
-            }
-        ],
-        "notificacoes_enviadas": []
-    },
-    "edital_fapes_nº_012026__tcc_empreendedor_inovador.json": {
-        "data_entrada": "2026-03-11T03:16:59.171Z",
-        "categoria": "extensão",
-        "cronograma": [
-            {
-                "evento": "Publicação do Edital",
-                "data": "2026-01-26"
-            },
-            {
-                "evento": "Primeira Chamada - Período de submissão das propostas",
-                "data": "2026-02-02 até 2026-03-30"
-            },
-            {
-                "evento": "Primeira Chamada - Divulgação do resultado preliminar da habilitação e mérito",
-                "data": "A partir de 2026-05-26"
-            },
-            {
-                "evento": "Primeira Chamada - Prazo para interposição de recursos administrativos",
-                "data": "5 dias úteis a partir da publicação do resultado de seleção"
-            },
-            {
-                "evento": "Primeira Chamada - Divulgação da homologação da seleção",
-                "data": "A partir de 2026-06-22"
-            },
-            {
-                "evento": "Primeira Chamada - Prazo de contratação",
-                "data": "Até 5 dias úteis da publicação do resultado homologado"
-            },
-            {
-                "evento": "Segunda Chamada - Período de submissão das propostas",
-                "data": "2026-09-02 até 2026-10-27"
-            },
-            {
-                "evento": "Segunda Chamada - Divulgação do resultado preliminar da habilitação e mérito",
-                "data": "A partir de 2026-12-22"
-            },
-            {
-                "evento": "Segunda Chamada - Prazo para interposição de recursos administrativos",
-                "data": "5 dias úteis a partir da publicação do resultado de seleção"
-            },
-            {
-                "evento": "Segunda Chamada - Divulgação da homologação da seleção",
-                "data": "A partir de 2027-01-27"
-            },
-            {
-                "evento": "Segunda Chamada - Prazo de contratação",
-                "data": "Até 5 dias úteis da publicação do resultado homologado"
-            },
-            {
-                "evento": "Terceira Chamada - Período de submissão das propostas",
-                "data": "2027-02-02 até 2027-03-30"
-            },
-            {
-                "evento": "Terceira Chamada - Divulgação do resultado preliminar da habilitação e mérito",
-                "data": "A partir de 2027-05-24"
-            },
-            {
-                "evento": "Terceira Chamada - Prazo para interposição de recursos administrativos",
-                "data": "5 dias úteis a partir da publicação do resultado de seleção"
-            },
-            {
-                "evento": "Terceira Chamada - Divulgação da homologação da seleção",
-                "data": "A partir de 2027-06-22"
-            },
-            {
-                "evento": "Terceira Chamada - Prazo de contratação",
-                "data": "Até 5 dias úteis da publicação do resultado homologado"
             }
         ],
         "notificacoes_enviadas": []
@@ -807,6 +618,197 @@
             {
                 "evento": "Duração esperada dos projetos",
                 "data": "36 meses a partir da aprovação"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "2025_joint_transnational_call_water_and_health.json": {
+        "data_entrada": "2026-03-15T21:02:11.773Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Pré-anúncio da chamada",
+                "data": "Julho 2025"
+            },
+            {
+                "evento": "Publicação do edital e abertura do 1º passo (submissão de pré-propostas)",
+                "data": "2025-09-12"
+            },
+            {
+                "evento": "Prazo para submissão de pré-propostas",
+                "data": "2025-11-13"
+            },
+            {
+                "evento": "Notificação dos resultados do 1º passo",
+                "data": "2026-03-15"
+            },
+            {
+                "evento": "Período para pedido de reconsideração (redress)",
+                "data": "2026-02-06 a 2026-02-20"
+            },
+            {
+                "evento": "Abertura do 2º passo (submissão de propostas completas)",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "Prazo para submissão de propostas completas",
+                "data": "2026-04-13"
+            },
+            {
+                "evento": "Notificação dos resultados do 2º passo",
+                "data": "Setembro 2026"
+            },
+            {
+                "evento": "Liberação ética",
+                "data": "Setembro/Outubro 2026"
+            },
+            {
+                "evento": "Período para pedido de reconsideração (redress) após 2º passo",
+                "data": "Setembro/Outubro 2026"
+            },
+            {
+                "evento": "Comunicação da decisão final após pedido de reconsideração",
+                "data": "Setembro/Outubro 2026"
+            },
+            {
+                "evento": "Início dos projetos transnacionais",
+                "data": "Último trimestre de 2026 / 1º trimestre de 2027"
+            },
+            {
+                "evento": "Término dos projetos transnacionais",
+                "data": "Último trimestre de 2029 / 1º trimestre de 2030"
+            }
+        ],
+        "notificacoes_enviadas": [
+            "Notificação dos resultados do 1º passo_2026-03-15"
+        ]
+    },
+    "edital_fapes_052026__visita_técnico-científica.json": {
+        "data_entrada": "2026-03-15T21:02:11.773Z",
+        "categoria": "divulgação de conhecimento",
+        "cronograma": [
+            {
+                "evento": "Publicação do Edital",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "1ª Chamada - Período de submissão",
+                "data": "2026-02-09 a 2026-03-12"
+            },
+            {
+                "evento": "1ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-03-19"
+            },
+            {
+                "evento": "1ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "1ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-03-31"
+            },
+            {
+                "evento": "2ª Chamada - Período de submissão",
+                "data": "2026-03-17 a 2026-04-24"
+            },
+            {
+                "evento": "2ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-05-22"
+            },
+            {
+                "evento": "2ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "2ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-06-19"
+            },
+            {
+                "evento": "3ª Chamada - Período de submissão",
+                "data": "2026-07-01 a 2026-08-20"
+            },
+            {
+                "evento": "3ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-10-02"
+            },
+            {
+                "evento": "3ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "3ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-10-26"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_nº_012026__tcc_empreendedor_inovador.json": {
+        "data_entrada": "2026-03-15T21:02:11.773Z",
+        "categoria": "extensão",
+        "cronograma": [
+            {
+                "evento": "Publicação do Edital",
+                "data": "2026-01-26"
+            },
+            {
+                "evento": "Primeira Chamada - Período de submissão das propostas",
+                "data": "2026-02-02 até 2026-03-30"
+            },
+            {
+                "evento": "Primeira Chamada - Divulgação do resultado preliminar da habilitação e mérito",
+                "data": "A partir de 2026-05-26"
+            },
+            {
+                "evento": "Primeira Chamada - Prazo para interposição de recursos administrativos",
+                "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            },
+            {
+                "evento": "Primeira Chamada - Divulgação da homologação da seleção",
+                "data": "A partir de 2026-06-22"
+            },
+            {
+                "evento": "Primeira Chamada - Prazo de contratação",
+                "data": "Até 5 dias úteis da publicação do resultado homologado"
+            },
+            {
+                "evento": "Segunda Chamada - Período de submissão das propostas",
+                "data": "2026-09-02 até 2026-10-27"
+            },
+            {
+                "evento": "Segunda Chamada - Divulgação do resultado preliminar da habilitação e mérito",
+                "data": "A partir de 2026-12-22"
+            },
+            {
+                "evento": "Segunda Chamada - Prazo para interposição de recursos administrativos",
+                "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            },
+            {
+                "evento": "Segunda Chamada - Divulgação da homologação da seleção",
+                "data": "A partir de 2027-01-27"
+            },
+            {
+                "evento": "Segunda Chamada - Prazo de contratação",
+                "data": "Até 5 dias úteis da publicação do resultado homologado"
+            },
+            {
+                "evento": "Terceira Chamada - Período de submissão das propostas",
+                "data": "2027-02-02 até 2027-03-30"
+            },
+            {
+                "evento": "Terceira Chamada - Divulgação do resultado preliminar da habilitação e mérito",
+                "data": "A partir de 2027-05-24"
+            },
+            {
+                "evento": "Terceira Chamada - Prazo para interposição de recursos administrativos",
+                "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            },
+            {
+                "evento": "Terceira Chamada - Divulgação da homologação da seleção",
+                "data": "A partir de 2027-06-22"
+            },
+            {
+                "evento": "Terceira Chamada - Prazo de contratação",
+                "data": "Até 5 dias úteis da publicação do resultado homologado"
             }
         ],
         "notificacoes_enviadas": []
