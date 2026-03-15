@@ -1,0 +1,99 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import EditalCard from "../../components/EditalCard.astro";
+import { getCollection } from "astro:content";
+
+const editais = await getCollection("editais");
+
+// Agrupar por órgão de fomento e ordenar
+const orgaosUnicos = [
+    ...new Set(editais.map((e) => e.data.orgão_fomento)),
+].sort((a, b) => a.localeCompare(b, "pt-BR"));
+
+const editaisAgrupados = orgaosUnicos.map((orgao) => {
+    return {
+        orgao,
+        editais: editais
+            .filter((e) => e.data.orgão_fomento === orgao)
+            .sort((a, b) => a.data.nome.localeCompare(b.data.nome)),
+    };
+});
+---
+
+<BaseLayout title="Portal de Editais — Órgãos de Fomento">
+    <Header />
+    <main id="main-content" class="flex-grow py-8 sm:py-16" tabindex="-1">
+        <div class="container">
+            <section class="max-w-4xl mx-auto mb-16 px-4">
+                <div
+                    class="inline-flex items-center space-x-2 bg-cta-500/10 border border-cta-500/20 rounded-full px-4 py-1.5 mb-6"
+                >
+                    <span class="flex h-2 w-2 rounded-full bg-cta-500"></span>
+                    <span
+                        class="text-xs font-bold text-cta-500 uppercase tracking-widest"
+                        >Catálogo Completo</span
+                    >
+                </div>
+                <h1
+                    class="text-4xl sm:text-5xl font-black text-primary-900 dark:text-white mb-6 leading-tight"
+                >
+                    Editais por <span
+                        class="text-transparent bg-clip-text bg-gradient-to-r from-cta-500 to-blue-400"
+                        >Órgão de Fomento</span
+                    >
+                </h1>
+                <p
+                    class="text-xl sm:text-2xl text-primary-600 dark:text-primary-300 font-medium"
+                >
+                    Explore as oportunidades agrupadas por instituição de fomento
+                    (FAPES, FINEP, Belmont Forum e outras).
+                </p>
+            </section>
+
+            <div class="space-y-24 max-w-5xl mx-auto px-4">
+                {
+                    editaisAgrupados.map((grupo) => (
+                        <section>
+                            <div class="flex items-center gap-6 mb-10">
+                                <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-900 dark:text-white uppercase tracking-[0.15em]">
+                                    {grupo.orgao}
+                                </h2>
+                                <div class="h-1 flex-grow bg-primary-100 dark:bg-white/10 rounded-full" />
+                            </div>
+
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                                {grupo.editais.map((edital) => (
+                                    <div class="edital-item">
+                                        <EditalCard edital={edital} />
+                                    </div>
+                                ))}
+                            </div>
+                        </section>
+                    ))
+                }
+
+                {
+                    editaisAgrupados.length === 0 && (
+                        <div class="flex flex-col items-center justify-center py-24 px-6 glass rounded-[2.5rem] border-dashed border-2 border-slate-300 dark:border-slate-800">
+                            <div class="w-20 h-20 bg-slate-100 dark:bg-slate-800 rounded-2xl flex items-center justify-center mb-6 rotate-3">
+                                <span class="text-3xl font-serif italic text-slate-400">
+                                    ?
+                                </span>
+                            </div>
+                            <h3 class="text-2xl font-bold text-slate-900 dark:text-white mb-2">
+                                Sem editais disponíveis
+                            </h3>
+                            <p class="text-slate-500 dark:text-slate-400 text-center max-w-xs">
+                                Nossas bases de dados não possuem editais no
+                                momento.
+                            </p>
+                        </div>
+                    )
+                }
+            </div>
+        </div>
+    </main>
+    <Footer />
+</BaseLayout>
