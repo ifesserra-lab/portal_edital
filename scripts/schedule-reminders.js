@@ -20,7 +20,7 @@ async function getOrCreateTopicId(category) {
 
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
-    
+
     if (!token || !chatId) return null;
 
     let topics = {};
@@ -141,7 +141,12 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
 
             // Initialize notification tracking if not present
             if (!registry[file]) {
-                registry[file] = { data_entrada: new Date().toISOString(), categoria: category, cronograma: cronograma };
+                registry[file] = {
+                    data_entrada: new Date().toISOString(),
+                    categoria: category,
+                    orgão_fomento: content.orgão_fomento || 'N/A',
+                    cronograma: cronograma
+                };
             }
             if (!registry[file].notificacoes_enviadas) {
                 registry[file].notificacoes_enviadas = [];

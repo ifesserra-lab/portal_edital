@@ -16,7 +16,8 @@
                 "data": "2026-12-01"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "chamada_confap__marie_skłodowska-curie_msca_2026_-_intercâmbio_de_pessoal_2026.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -39,7 +40,8 @@
                 "data": "2027-01-01"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "chamada_confap__water4all_-_water_and_health_2025.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -58,7 +60,8 @@
                 "data": "2026-12-31"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "digitalisation_and_innovation_for_resilient_marine_ecosystems_businesses_and_communities_to_strengthen_the_eu_blue_economys_competitiveness.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -99,7 +102,8 @@
         ],
         "notificacoes_enviadas": [
             "Comunicação dos resultados das pré-propostas e convite para submissão de propostas completas_2026-03-15"
-        ]
+        ],
+        "orgão_fomento": "SUSTAINABLE BLUE ECONOMY PARTNERSHIP (SBEP)"
     },
     "diretrizes_da_fundação_de_amparo_à_pesquisa_e_inovação_do_estado_do_espírito_santo_-_fapes_para_a_preparação_de_propostas_com_participação_d_4a7500.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -118,7 +122,8 @@
                 "data": "Após submissão do Acordo de Subvenção da UE"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "edital_fapes_052026__visita_técnico-científica.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -189,7 +194,8 @@
                 "data": "2026-10-26"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "edital_fapes_n_072026_espaços_científicos_culturais.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -220,7 +226,8 @@
                 "data": "2026-05-25"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "edital_fapes_n_252025_-_participação_de_equipes_de_estudantes_em_mostras_e_competições_técnico-científicas.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -279,7 +286,8 @@
                 "data": "2026-10-30"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "edital_fapes_nº_012026__tcc_empreendedor_inovador.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -350,7 +358,8 @@
                 "data": "2026-06-29"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "edital_fapes_nº_042026_-_estágio_técnico_científico.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -409,7 +418,8 @@
                 "data": "2026-10-26"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "edital_fapes_nº_062026_-_apoio_aos_clusters_de_inovação_capixaba.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -456,7 +466,8 @@
                 "data": "No 1º dia útil do mês subsequente à data de assinatura do Termo de Outorga"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "FAPES"
     },
     "ocean_2_cra__towards_the_ocean_we_want_biodiversity_and_ecosystem_sustainability_for_nature_and_human_well-being.json": {
         "data_entrada": "2026-03-15T22:32:42.369Z",
@@ -471,6 +482,7 @@
                 "data": "2026-04-30"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [],
+        "orgão_fomento": "BELMONT FORUM"
     }
 }

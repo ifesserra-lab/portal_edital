@@ -14,10 +14,10 @@ const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
 async function getOrCreateTopicId(category) {
     if (!category || category === 'N/A' || category.toLowerCase() === 'sem categoria') return null;
-    
+
     const token = process.env.TELEGRAM_BOT_TOKEN;
     const chatId = process.env.TELEGRAM_CHAT_ID;
-    
+
     if (!token || !chatId) return null;
 
     let topics = {};
@@ -40,7 +40,7 @@ async function getOrCreateTopicId(category) {
                 name: category.charAt(0).toUpperCase() + category.slice(1)
             })
         });
-        
+
         const result = await response.json();
         if (result.ok) {
             const topicId = result.result.message_thread_id;
@@ -166,6 +166,7 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                     registry[file] = {
                         data_entrada: now,
                         categoria: content.categoria || 'N/A',
+                        orgão_fomento: content.orgão_fomento || 'N/A',
                         cronograma: content.cronograma || []
                     };
                     newItemsFound = true;

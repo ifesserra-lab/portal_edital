@@ -41,19 +41,22 @@ export function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REGISTRY_
             const content = JSON.parse(readFileSync(filePath, 'utf-8'));
             const category = content.categoria || 'N/A';
             const cronograma = content.cronograma || [];
+            const orgaoFomento = content.orgão_fomento || 'N/A';
 
             if (!registry[file]) {
                 registry[file] = {
                     data_entrada: now,
                     categoria: category,
+                    orgão_fomento: orgaoFomento,
                     cronograma: cronograma,
                     notificacoes_enviadas: []
                 };
                 console.log(`📋 Registered: ${file}`);
                 updated = true;
             } else {
-                // Keep existing data_entrada and notificacoes_enviadas, update categoria/cronograma
+                // Keep existing data_entrada and notificacoes_enviadas, update categoria/orgão_fomento/cronograma
                 registry[file].categoria = category;
+                registry[file].orgão_fomento = orgaoFomento;
                 registry[file].cronograma = cronograma;
             }
         } catch (err) {
@@ -69,6 +72,8 @@ export function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REGISTRY_
     console.log(`💾 Wrote ${registryFile} (${Object.keys(registry).length} entries).`);
 
     if (!existsSync(TOPICS_REGISTRY)) {
+        const topicsDir = dirname(TOPICS_REGISTRY);
+        if (!existsSync(topicsDir)) mkdirSync(topicsDir, { recursive: true });
         writeFileSync(TOPICS_REGISTRY, JSON.stringify({}, null, 4));
         console.log(`💾 Created empty ${TOPICS_REGISTRY}.`);
     }

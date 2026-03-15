@@ -34,7 +34,7 @@ O Portal de Editais é um site estático (SSG - Static Site Generation) constru�
 edital_portal/
 ├── data/                 # Fonte da verdade: Editais em JSON (um arquivo por edital)
 ├── registry/             # Estado das notificações e tópicos Telegram
-│   ├── downloads_registry.json   # Histórico: edital → data_entrada, categoria, cronograma, notificacoes_enviadas
+│   ├── downloads_registry.json   # Histórico: edital → data_entrada, categoria, orgão_fomento, cronograma, notificacoes_enviadas
 │   └── topics_registry.json     # Categoria → ID do tópico no fórum do grupo Telegram
 ├── docs/                 # Documentação técnica e de funcionalidades (Features)
 │   ├── features/         # Especificações Gherkin (BDD)
