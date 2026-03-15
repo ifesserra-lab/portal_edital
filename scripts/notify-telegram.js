@@ -1,26 +1,30 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 import { join } from 'path';
 
-const DATA_DIR = 'data';
-const REGISTRY_FILE = join('registry', 'downloads_registry.json');
-const TELEGRAM_BOT_TOKEN = process.env.TELEGRAM_BOT_TOKEN;
-const TELEGRAM_CHAT_ID = process.env.TELEGRAM_CHAT_ID;
+const DEFAULT_DATA_DIR = 'data';
+const DEFAULT_REGISTRY_FILE = join('registry', 'downloads_registry.json');
+
+const PORTAL_URL = 'https://ifesserra-lab.github.io/portal_edital';
 
 async function sendTelegramMessage(text) {
-    if (!TELEGRAM_BOT_TOKEN || !TELEGRAM_CHAT_ID) {
+    const token = process.env.TELEGRAM_BOT_TOKEN;
+    const chatId = process.env.TELEGRAM_CHAT_ID;
+
+    if (!token || !chatId) {
         console.warn('⚠️ Telegram credentials not found. Skipping notification.');
         return;
     }
 
-    const url = `https://api.telegram.org/bot${TELEGRAM_BOT_TOKEN}/sendMessage`;
+    const url = `https://api.telegram.org/bot${token}/sendMessage`;
     try {
         const response = await fetch(url, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                chat_id: TELEGRAM_CHAT_ID,
+                chat_id: chatId,
                 text: text,
-                parse_mode: 'HTML'
+                parse_mode: 'HTML',
+                disable_web_page_preview: false
             })
         });
         if (!response.ok) {
@@ -34,10 +38,10 @@ async function sendTelegramMessage(text) {
     }
 }
 
-function getRegistry() {
-    if (existsSync(REGISTRY_FILE)) {
+function getRegistry(registryPath) {
+    if (existsSync(registryPath)) {
         try {
-            return JSON.parse(readFileSync(REGISTRY_FILE, 'utf-8'));
+            return JSON.parse(readFileSync(registryPath, 'utf-8'));
         } catch (e) {
             console.error(`❌ Error reading registry: ${e.message}`);
             return {};
@@ -46,29 +50,53 @@ function getRegistry() {
     return {};
 }
 
-async function run() {
-    const registry = getRegistry();
-    const files = readdirSync(DATA_DIR).filter(file =>
+export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REGISTRY_FILE) {
+    const registry = getRegistry(registryFile);
+    const files = existsSync(dataDir) ? readdirSync(dataDir).filter(file =>
         file.endsWith('.json') &&
-        file !== 'downloads_registry.json' &&
+        !file.includes('downloads_registry') &&
         !file.includes('backup')
-    );
+    ) : [];
     const now = new Date().toISOString();
     let newItemsFound = false;
 
     for (const file of files) {
         if (!registry[file]) {
             console.log(`🆕 New edital detected: ${file}`);
-            const filePath = join(DATA_DIR, file);
+            const filePath = join(dataDir, file);
             try {
                 const content = JSON.parse(readFileSync(filePath, 'utf-8'));
                 const title = content.nome || file;
                 const link = content.link || '';
+                const description = content.descrição || 'Sem descrição disponível.';
+                const category = content.categoria || 'N/A';
+                
+                // Get the first event if available
+                let eventInfo = 'N/A';
+                if (content.cronograma && content.cronograma.length > 0) {
+                    const firstEvent = content.cronograma[0];
+                    eventInfo = `${firstEvent.evento} (${firstEvent.data})`;
+                }
+                
+                // Truncate description if too long
+                const shortDescription = description.length > 300 
+                    ? description.substring(0, 297) + '...' 
+                    : description;
 
-                const message = `🔔 <b>Novo Edital Detectado!</b>\n\n<b>Título:</b> ${title}\n<b>Link:</b> <a href="${link}">Clique aqui para acessar</a>`;
+                const message = `🔔 <b>Novo Edital Detectado!</b>\n\n` +
+                                `<b>📌 Título:</b> ${title}\n` +
+                                `<b>📁 Categoria:</b> ${category}\n` +
+                                `<b>📅 Próximo Evento:</b> ${eventInfo}\n\n` +
+                                `<b>📝 Descrição:</b> <i>${shortDescription}</i>\n\n` +
+                                `<b>🔗 Link do Edital:</b> <a href="${link}">Acessar Documento</a>\n` +
+                                `<b>🌐 Portal de Editais:</b> <a href="${PORTAL_URL}">Ver todos os editais</a>`;
 
                 await sendTelegramMessage(message);
-                registry[file] = now;
+                registry[file] = {
+                    data_entrada: now,
+                    categoria: content.categoria || 'N/A',
+                    cronograma: content.cronograma || []
+                };
                 newItemsFound = true;
             } catch (err) {
                 console.error(`❌ Error processing ${file}: ${err.message}`);
@@ -77,11 +105,20 @@ async function run() {
     }
 
     if (newItemsFound) {
-        writeFileSync(REGISTRY_FILE, JSON.stringify(registry, null, 4));
+        if (!existsSync(dirname(registryFile))) {
+             // Create registry dir if not exists (for tests)
+             // fs.mkdirSync(dirname(registryFile), { recursive: true });
+        }
+        writeFileSync(registryFile, JSON.stringify(registry, null, 4));
         console.log('💾 Registry updated.');
     } else {
         console.log('✨ No new editals found.');
     }
 }
 
-run();
+// Auto-run if executed directly
+import { fileURLToPath } from 'url';
+import { dirname } from 'path';
+if (process.argv[1] && (process.argv[1].endsWith('notify-telegram.js') || fileURLToPath(import.meta.url) === process.argv[1])) {
+    run();
+}

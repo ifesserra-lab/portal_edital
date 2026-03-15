@@ -1,4 +1,5 @@
 Feature: Explorar Editais por Tags
+
   Como um usuário do portal
   Quero poder visualizar e explorar os editais agrupados por tags extraídas dinamicamente
   Para que eu possa encontrar rapidamente oportunidades relevantes para o meu perfil e interesses

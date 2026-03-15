@@ -1,31 +1,814 @@
 {
-    "2025_joint_transnational_call_water_and_health.json": "2026-03-11T03:16:59.171Z",
-    "3ª_chamada_trsnacional_conjunta_-_parceria_economia_azul_sustentável.json": "2026-03-11T03:16:59.171Z",
-    "arranjo_administrativo_para_cooperação_ue-brasil_em_pesquisa_e_inovação_no_contexto_do_horizonte_europa.json": "2026-03-11T03:16:59.171Z",
-    "belmont_forum__ocean_2_institution-specific_annex_for_fapes.json": "2026-03-11T03:16:59.171Z",
-    "biodiversa_joint_research_call_2025_restoration_of_ecosystem_functioning_integrity_and_connectivity_biodivconnect.json": "2026-03-11T03:16:59.171Z",
-    "chamada_belmont_forum_cra_ocean_2_-_2025.json": "2026-03-11T03:16:59.171Z",
-    "chamada_confap__biodiversa_biodivconnect_2025-2026_-_diretrizes_específicas_da_fapes.json": "2026-03-11T03:16:59.171Z",
-    "chamada_confap__erc_ia_2025_-_apoio_a_mobilidade_de_pesquisadores_do_brasil_para_intercâmbio_na_europa.json": "2026-03-11T03:16:59.171Z",
-    "chamada_confap__marie_skłodowska-curie_msca_2026_-_intercâmbio_de_pessoal_2026.json": "2026-03-11T03:16:59.171Z",
-    "chamada_confap__water4all_-_water_and_health_2025.json": "2026-03-11T03:16:59.171Z",
-    "chamada_erc_-_confap_-_2025.json": "2026-03-11T03:16:59.171Z",
-    "chamada_marie_skłodowska-curie_intercâmbio_de_pessoal_2026.json": "2026-03-11T03:16:59.171Z",
-    "chamada_transnacional_conjunta_parceria_de_economia_azul_sustentável_sustainable_blue_economy_partnership_2025-2026.json": "2026-03-11T03:16:59.171Z",
-    "diretrizes_da_fundação_de_amparo_à_pesquisa_e_inovação_do_estado_do_espírito_santo_-_fapes_para_participação_em_propostas_do_horizonte_europa.json": "2026-03-11T03:16:59.171Z",
-    "diretrizes_fapes_para_apoio_à_participação_de_proponente_do_estado_do_espírito_santo_como_co-pi_em_projetos_de_pesquisa_e_inovação_no_âmbito_970d2d.json": "2026-03-11T03:16:59.171Z",
-    "edital_fapes_052026__visita_técnico-científica.json": "2026-03-11T03:16:59.171Z",
-    "edital_fapes_n_032026_-_organização_de_eventos_técnico-científicos.json": "2026-03-11T03:16:59.171Z",
-    "edital_fapes_n_072026_-_espaços_científicos_culturais_ecc.json": "2026-03-11T03:16:59.171Z",
-    "edital_fapes_n_252025_-_participação_de_equipes_de_estudantes_em_mostras_e_competições_técnico-científicas.json": "2026-03-11T03:16:59.171Z",
-    "edital_fapes_nº_012026__tcc_empreendedor_inovador.json": "2026-03-11T03:16:59.171Z",
-    "edital_fapes_nº_022026_-_participação_em_eventos_técnico-científicos.json": "2026-03-11T03:16:59.171Z",
-    "edital_fapes_nº_042026_-_estágio_técnico_científico.json": "2026-03-11T03:16:59.171Z",
-    "edital_fapes_nº_062026_-_apoio_aos_clusters_de_inovação_capixaba.json": "2026-03-11T03:16:59.171Z",
-    "erc__confap__2025_call_research_opportunities_in_europe_for_active_phd_researchers_from_brazil_2025.json": "2026-03-11T03:16:59.171Z",
-    "erc_ia__confap__2025_call_research_opportunities_in_europe_for_active_phd_researchers_from_brazil.json": "2026-03-11T03:16:59.171Z",
-    "horizon_europe_-_cooperação_ue-brasil_em_pesquisa_desenvolvimento__inovação.json": "2026-03-11T03:16:59.171Z",
-    "horizon_europe_programme_2021-2027.json": "2026-03-11T03:16:59.171Z",
-    "msca_staff_exchanges_2026_call_horizon-msca-2026-se-01.json": "2026-03-11T03:16:59.171Z",
-    "ocean_2_cra__towards_the_ocean_we_want_biodiversity_and_ecosystem_sustainability_for_nature_and_human_well-being.json": "2026-03-11T03:16:59.171Z"
+    "2025_joint_transnational_call_water_and_health.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Pré-anúncio da chamada",
+                "data": "Julho 2025"
+            },
+            {
+                "evento": "Publicação do edital e abertura do 1º passo (submissão de pré-propostas)",
+                "data": "2025-09-12"
+            },
+            {
+                "evento": "Prazo para submissão de pré-propostas",
+                "data": "2025-11-13"
+            },
+            {
+                "evento": "Notificação dos resultados do 1º passo",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "Período para pedido de reconsideração (redress)",
+                "data": "2026-02-06 a 2026-02-20"
+            },
+            {
+                "evento": "Abertura do 2º passo (submissão de propostas completas)",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "Prazo para submissão de propostas completas",
+                "data": "2026-04-13"
+            },
+            {
+                "evento": "Notificação dos resultados do 2º passo",
+                "data": "Setembro 2026"
+            },
+            {
+                "evento": "Liberação ética",
+                "data": "Setembro/Outubro 2026"
+            },
+            {
+                "evento": "Período para pedido de reconsideração (redress) após 2º passo",
+                "data": "Setembro/Outubro 2026"
+            },
+            {
+                "evento": "Comunicação da decisão final após pedido de reconsideração",
+                "data": "Setembro/Outubro 2026"
+            },
+            {
+                "evento": "Início dos projetos transnacionais",
+                "data": "Último trimestre de 2026 / 1º trimestre de 2027"
+            },
+            {
+                "evento": "Término dos projetos transnacionais",
+                "data": "Último trimestre de 2029 / 1º trimestre de 2030"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "3ª_chamada_trsnacional_conjunta_-_parceria_economia_azul_sustentável.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [],
+        "notificacoes_enviadas": []
+    },
+    "arranjo_administrativo_para_cooperação_ue-brasil_em_pesquisa_e_inovação_no_contexto_do_horizonte_europa.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Assinatura do Arranjo Administrativo",
+                "data": "2021-11-19 (Brasil) / 2021-12-16 (Bruxelas)"
+            },
+            {
+                "evento": "Início da cooperação sob o Horizonte Europa",
+                "data": "A partir da assinatura"
+            },
+            {
+                "evento": "Reuniões técnicas de trabalho (mínimo duas por ano)",
+                "data": "Periódico (a definir)"
+            },
+            {
+                "evento": "Identificação conjunta de tópicos ou chamadas para financiamento",
+                "data": "A definir durante reuniões técnicas"
+            },
+            {
+                "evento": "Publicação de chamadas coordenadas para propostas",
+                "data": "A definir durante reuniões técnicas"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "belmont_forum__ocean_2_institution-specific_annex_for_fapes.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Prazo para submissão de propostas",
+                "data": "2026-04-30"
+            },
+            {
+                "evento": "Início da mobilidade para pesquisadores com projetos aprovados",
+                "data": "2027-01-01 (primeiro semestre de 2027)"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "biodiversa_joint_research_call_2025_restoration_of_ecosystem_functioning_integrity_and_connectivity_biodivconnect.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Lançamento do edital (versão final)",
+                "data": "2025-05-21"
+            },
+            {
+                "evento": "Período de submissão de propostas (datas não especificadas no texto)",
+                "data": ""
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_belmont_forum_cra_ocean_2_-_2025.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Data limite para envio de propostas",
+                "data": "2026-04-30"
+            },
+            {
+                "evento": "Início da mobilidade dos pesquisadores com projetos aprovados",
+                "data": "2027-01-01 (primeiro semestre de 2027)"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_confap__biodiversa_biodivconnect_2025-2026_-_diretrizes_específicas_da_fapes.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Prazo para envio de pré-propostas",
+                "data": "2025-11-07"
+            },
+            {
+                "evento": "Prazo para envio de propostas completas convidadas",
+                "data": "2026-04-14"
+            },
+            {
+                "evento": "Início dos projetos aprovados",
+                "data": "2026-12-01 a 2027-04-01"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_confap__erc_ia_2025_-_apoio_a_mobilidade_de_pesquisadores_do_brasil_para_intercâmbio_na_europa.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Data limite para envio de propostas",
+                "data": "2025-11-03"
+            },
+            {
+                "evento": "Início da mobilidade dos pesquisadores com projetos aprovados",
+                "data": "Primeiro semestre de 2026"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_confap__marie_skłodowska-curie_msca_2026_-_intercâmbio_de_pessoal_2026.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Lançamento da chamada de propostas pela MSCA",
+                "data": "2025-12-16"
+            },
+            {
+                "evento": "Prazo final para submissão de propostas no SigFapes",
+                "data": "2026-04-16"
+            },
+            {
+                "evento": "Prazo final para submissão da proposta geral à chamada MSCA Staff Exchanges no portal do Horizon Europe",
+                "data": "2026-04-16"
+            },
+            {
+                "evento": "Prazo previsto para início dos projetos financiados",
+                "data": "2027-01"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_confap__water4all_-_water_and_health_2025.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Prazo para envio de pré-propostas",
+                "data": "2025-11-13"
+            },
+            {
+                "evento": "Prazo para envio de propostas completas convidadas",
+                "data": "2026-04-13"
+            },
+            {
+                "evento": "Início dos projetos aprovados",
+                "data": "2026-12-01"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_erc_-_confap_-_2025.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Lançamento da Chamada",
+                "data": "2025-08-25"
+            },
+            {
+                "evento": "Data limite para envio de propostas",
+                "data": "2025-11-24"
+            },
+            {
+                "evento": "Início da mobilidade dos pesquisadores com projetos aprovados",
+                "data": "2026-01-01 (primeiro semestre de 2026)"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_marie_skłodowska-curie_intercâmbio_de_pessoal_2026.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Lançamento da chamada de propostas pela MSCA",
+                "data": "2025-12-16"
+            },
+            {
+                "evento": "Prazo final para submissão de propostas às FAPs participantes (datas variáveis)",
+                "data": "A definir pelas FAPs"
+            },
+            {
+                "evento": "Prazo final para submissão da proposta geral à chamada MSCA Staff Exchanges 2026",
+                "data": "2026-04-16"
+            },
+            {
+                "evento": "Previsão de início dos projetos financiados",
+                "data": "2027-01"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_transnacional_conjunta_parceria_de_economia_azul_sustentável_sustainable_blue_economy_partnership_2025-2026.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Publicação da chamada",
+                "data": "2025-09-15"
+            },
+            {
+                "evento": "Prazo para envio de pré-propostas",
+                "data": "2025-11-17"
+            },
+            {
+                "evento": "Prazo para envio de propostas completas",
+                "data": "2026-06-17"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "diretrizes_da_fundação_de_amparo_à_pesquisa_e_inovação_do_estado_do_espírito_santo_-_fapes_para_participação_em_propostas_do_horizonte_europa.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Consulta de elegibilidade junto à FAPES (obrigatória antes da submissão da proposta)",
+                "data": "A qualquer momento, antes da submissão ao Horizonte Europa"
+            },
+            {
+                "evento": "Submissão da proposta ao Horizonte Europa (prazos específicos de cada chamada)",
+                "data": "Variável (conforme chamadas do Horizonte Europa)"
+            },
+            {
+                "evento": "Submissão da proposta à FAPES para avaliação",
+                "data": "A qualquer momento, após consulta de elegibilidade e antes da aprovação pelo Horizonte Europa"
+            },
+            {
+                "evento": "Avaliação e aprovação pela FAPES (condicionada à aprovação pelo Horizonte Europa)",
+                "data": "Após aprovação pelo Horizonte Europa"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "diretrizes_fapes_para_apoio_à_participação_de_proponente_do_estado_do_espírito_santo_como_co-pi_em_projetos_de_pesquisa_e_inovação_no_âmbito_970d2d.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Consulta de elegibilidade à FAPES (obrigatória antes da submissão da proposta)",
+                "data": "A qualquer momento, respeitando os prazos do Horizonte Europa"
+            },
+            {
+                "evento": "Submissão da proposta ao Horizonte Europa",
+                "data": "Conforme prazos específicos de cada chamada do Horizonte Europa"
+            },
+            {
+                "evento": "Submissão da proposta à FAPES para avaliação",
+                "data": "Após consulta de elegibilidade e antes da aprovação pelo Horizonte Europa"
+            },
+            {
+                "evento": "Aprovação e assinatura do Termo de Outorga pela FAPES",
+                "data": "Após aprovação da proposta pelo Horizonte Europa"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_052026__visita_técnico-científica.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "divulgação de conhecimento",
+        "cronograma": [
+            {
+                "evento": "Publicação do Edital",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "1ª Chamada - Período de submissão",
+                "data": "2026-02-09 a 2026-03-12"
+            },
+            {
+                "evento": "1ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-03-19"
+            },
+            {
+                "evento": "1ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "1ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-03-31"
+            },
+            {
+                "evento": "2ª Chamada - Período de submissão",
+                "data": "2026-03-17 a 2026-04-24"
+            },
+            {
+                "evento": "2ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-05-22"
+            },
+            {
+                "evento": "2ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "2ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-06-19"
+            },
+            {
+                "evento": "3ª Chamada - Período de submissão",
+                "data": "2026-07-01 a 2026-08-20"
+            },
+            {
+                "evento": "3ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-10-02"
+            },
+            {
+                "evento": "3ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "3ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-10-26"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_n_032026_-_organização_de_eventos_técnico-científicos.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "divulgação de conhecimento",
+        "cronograma": [
+            {
+                "evento": "Publicação do Edital",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "1ª Chamada - Período de submissão (eventos com início entre 01/05/2026 a 31/07/2026)",
+                "data": "2026-02-06 a 2026-03-09"
+            },
+            {
+                "evento": "1ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-03-19"
+            },
+            {
+                "evento": "1ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "1ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-03-31"
+            },
+            {
+                "evento": "2ª Chamada - Período de submissão (eventos com início entre 01/08/2026 a 31/12/2026)",
+                "data": "2026-03-17 a 2026-04-24"
+            },
+            {
+                "evento": "2ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-05-22"
+            },
+            {
+                "evento": "2ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "2ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-06-19"
+            },
+            {
+                "evento": "3ª Chamada - Período de submissão (eventos com início entre 04/01/2027 a 30/04/2027)",
+                "data": "2026-07-01 a 2026-08-20"
+            },
+            {
+                "evento": "3ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-10-02"
+            },
+            {
+                "evento": "3ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "3ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-10-26"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_n_072026_-_espaços_científicos_culturais_ecc.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "divulgação de conhecimento",
+        "cronograma": [],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_n_252025_-_participação_de_equipes_de_estudantes_em_mostras_e_competições_técnico-científicas.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "divulgação de conhecimento",
+        "cronograma": [
+            {
+                "evento": "Data de publicação do edital",
+                "data": "2025-11-10"
+            },
+            {
+                "evento": "Período de submissão (1ª Chamada)",
+                "data": "2025-11-10 a 2025-12-16"
+            },
+            {
+                "evento": "Previsão para divulgação do resultado preliminar (1ª Chamada)",
+                "data": "A partir de 2026-01-09"
+            },
+            {
+                "evento": "Prazo para interposição de recursos administrativos (1ª Chamada)",
+                "data": "5 dias úteis a partir da publicação do resultado preliminar"
+            },
+            {
+                "evento": "Previsão para divulgação do resultado homologado (1ª Chamada)",
+                "data": "A partir de 2026-01-30"
+            },
+            {
+                "evento": "Período de submissão (2ª Chamada)",
+                "data": "2026-03-04 a 2026-04-09"
+            },
+            {
+                "evento": "Previsão para divulgação do resultado preliminar (2ª Chamada)",
+                "data": "A partir de 2026-04-30"
+            },
+            {
+                "evento": "Prazo para interposição de recursos administrativos (2ª Chamada)",
+                "data": "5 dias úteis a partir da publicação do resultado preliminar"
+            },
+            {
+                "evento": "Previsão para divulgação do resultado homologado (2ª Chamada)",
+                "data": "A partir de 2026-05-29"
+            },
+            {
+                "evento": "Período de submissão (3ª Chamada)",
+                "data": "2026-08-04 a 2026-09-11"
+            },
+            {
+                "evento": "Previsão para divulgação do resultado preliminar (3ª Chamada)",
+                "data": "A partir de 2026-09-30"
+            },
+            {
+                "evento": "Prazo para interposição de recursos administrativos (3ª Chamada)",
+                "data": "5 dias úteis a partir da publicação do resultado preliminar"
+            },
+            {
+                "evento": "Previsão para divulgação do resultado homologado (3ª Chamada)",
+                "data": "A partir de 2026-10-30"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_nº_012026__tcc_empreendedor_inovador.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "extensão",
+        "cronograma": [
+            {
+                "evento": "Publicação do Edital",
+                "data": "2026-01-26"
+            },
+            {
+                "evento": "Primeira Chamada - Período de submissão das propostas",
+                "data": "2026-02-02 até 2026-03-30"
+            },
+            {
+                "evento": "Primeira Chamada - Divulgação do resultado preliminar da habilitação e mérito",
+                "data": "A partir de 2026-05-26"
+            },
+            {
+                "evento": "Primeira Chamada - Prazo para interposição de recursos administrativos",
+                "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            },
+            {
+                "evento": "Primeira Chamada - Divulgação da homologação da seleção",
+                "data": "A partir de 2026-06-22"
+            },
+            {
+                "evento": "Primeira Chamada - Prazo de contratação",
+                "data": "Até 5 dias úteis da publicação do resultado homologado"
+            },
+            {
+                "evento": "Segunda Chamada - Período de submissão das propostas",
+                "data": "2026-09-02 até 2026-10-27"
+            },
+            {
+                "evento": "Segunda Chamada - Divulgação do resultado preliminar da habilitação e mérito",
+                "data": "A partir de 2026-12-22"
+            },
+            {
+                "evento": "Segunda Chamada - Prazo para interposição de recursos administrativos",
+                "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            },
+            {
+                "evento": "Segunda Chamada - Divulgação da homologação da seleção",
+                "data": "A partir de 2027-01-27"
+            },
+            {
+                "evento": "Segunda Chamada - Prazo de contratação",
+                "data": "Até 5 dias úteis da publicação do resultado homologado"
+            },
+            {
+                "evento": "Terceira Chamada - Período de submissão das propostas",
+                "data": "2027-02-02 até 2027-03-30"
+            },
+            {
+                "evento": "Terceira Chamada - Divulgação do resultado preliminar da habilitação e mérito",
+                "data": "A partir de 2027-05-24"
+            },
+            {
+                "evento": "Terceira Chamada - Prazo para interposição de recursos administrativos",
+                "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            },
+            {
+                "evento": "Terceira Chamada - Divulgação da homologação da seleção",
+                "data": "A partir de 2027-06-22"
+            },
+            {
+                "evento": "Terceira Chamada - Prazo de contratação",
+                "data": "Até 5 dias úteis da publicação do resultado homologado"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_nº_022026_-_participação_em_eventos_técnico-científicos.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "divulgação de conhecimento",
+        "cronograma": [
+            {
+                "evento": "Publicação do Edital",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "1ª Chamada - Período de submissão (eventos de 01/05/2026 a 31/07/2026)",
+                "data": "2026-02-06 a 2026-03-09"
+            },
+            {
+                "evento": "1ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-03-19"
+            },
+            {
+                "evento": "1ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "1ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-03-31"
+            },
+            {
+                "evento": "2ª Chamada - Período de submissão (eventos de 01/08/2026 a 31/12/2026)",
+                "data": "2026-03-17 a 2026-04-24"
+            },
+            {
+                "evento": "2ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-05-22"
+            },
+            {
+                "evento": "2ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "2ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-06-19"
+            },
+            {
+                "evento": "3ª Chamada - Período de submissão (eventos de 04/01/2027 a 30/04/2027)",
+                "data": "2026-07-01 a 2026-08-20"
+            },
+            {
+                "evento": "3ª Chamada - Divulgação do resultado preliminar",
+                "data": "A partir de 2026-10-02"
+            },
+            {
+                "evento": "3ª Chamada - Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "3ª Chamada - Divulgação do resultado final",
+                "data": "A partir de 2026-10-26"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_nº_042026_-_estágio_técnico_científico.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "divulgação de conhecimento",
+        "cronograma": [
+            {
+                "evento": "Publicação do Edital",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "1ª Chamada: Período de submissão de propostas (estágios com início entre 01/05/2026 a 31/07/2026)",
+                "data": "2026-02-09 a 2026-03-12"
+            },
+            {
+                "evento": "1ª Chamada: Divulgação do resultado preliminar",
+                "data": "A partir de 2026-03-19"
+            },
+            {
+                "evento": "1ª Chamada: Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "1ª Chamada: Divulgação do resultado final",
+                "data": "A partir de 2026-03-31"
+            },
+            {
+                "evento": "2ª Chamada: Período de submissão de propostas (estágios com início entre 01/08/2026 a 31/12/2026)",
+                "data": "2026-03-17 a 2026-04-24"
+            },
+            {
+                "evento": "2ª Chamada: Divulgação do resultado preliminar",
+                "data": "A partir de 2026-05-22"
+            },
+            {
+                "evento": "2ª Chamada: Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "2ª Chamada: Divulgação do resultado final",
+                "data": "A partir de 2026-06-19"
+            },
+            {
+                "evento": "3ª Chamada: Período de submissão de propostas (estágios com início entre 04/01/2027 a 30/04/2027)",
+                "data": "2026-07-01 a 2026-08-20"
+            },
+            {
+                "evento": "3ª Chamada: Divulgação do resultado preliminar",
+                "data": "A partir de 2026-10-02"
+            },
+            {
+                "evento": "3ª Chamada: Prazo para interposição de recursos",
+                "data": "5 dias úteis após a publicação do resultado preliminar"
+            },
+            {
+                "evento": "3ª Chamada: Divulgação do resultado final",
+                "data": "A partir de 2026-10-26"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_fapes_nº_062026_-_apoio_aos_clusters_de_inovação_capixaba.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "inovação",
+        "cronograma": [],
+        "notificacoes_enviadas": []
+    },
+    "erc__confap__2025_call_research_opportunities_in_europe_for_active_phd_researchers_from_brazil_2025.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Submissão de propostas completas",
+                "data": "2025-11-24"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "erc_ia__confap__2025_call_research_opportunities_in_europe_for_active_phd_researchers_from_brazil.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Lançamento do edital",
+                "data": "2025-09-25"
+            },
+            {
+                "evento": "Prazo para submissão de propostas",
+                "data": "2025-11-03"
+            },
+            {
+                "evento": "Início previsto das atividades de intercâmbio",
+                "data": "2026-01 (primeiro semestre)"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "horizon_europe_-_cooperação_ue-brasil_em_pesquisa_desenvolvimento__inovação.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Assinatura do Arranjo Administrativo",
+                "data": "2021-11-19"
+            },
+            {
+                "evento": "Vigência do programa Horizon Europe",
+                "data": "2021-2027"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "horizon_europe_programme_2021-2027.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Lançamento do programa e início das chamadas para propostas",
+                "data": "2021-01"
+            },
+            {
+                "evento": "Período de implementação das ações financiadas",
+                "data": "2021-2027"
+            },
+            {
+                "evento": "Avaliações intermediárias e ajustes no programa",
+                "data": "Ao longo do período"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "msca_staff_exchanges_2026_call_horizon-msca-2026-se-01.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Lançamento do edital",
+                "data": "16 December 2025"
+            },
+            {
+                "evento": "Evento de intermediação (brokerage event)",
+                "data": "TBC (a definir)"
+            },
+            {
+                "evento": "Prazo final para submissão de propostas",
+                "data": "16 April 2026"
+            },
+            {
+                "evento": "Notificação dos resultados aos candidatos",
+                "data": "July 2026"
+            },
+            {
+                "evento": "Assinatura do acordo de concessão para projetos aprovados",
+                "data": "October 2026"
+            },
+            {
+                "evento": "Início dos primeiros projetos financiados pela UE",
+                "data": "January 2027"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "ocean_2_cra__towards_the_ocean_we_want_biodiversity_and_ecosystem_sustainability_for_nature_and_human_well-being.json": {
+        "data_entrada": "2026-03-11T03:16:59.171Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Abertura do edital",
+                "data": "2025-06-11"
+            },
+            {
+                "evento": "Prazo final para registro de propostas",
+                "data": "2026-04-30"
+            },
+            {
+                "evento": "Duração esperada dos projetos",
+                "data": "36 meses a partir da aprovação"
+            }
+        ],
+        "notificacoes_enviadas": []
+    }
 }

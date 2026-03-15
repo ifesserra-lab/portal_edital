@@ -3,6 +3,10 @@ name: Daily Data Sync and Deploy
 on:
   schedule:
     - cron: '0 0 * * *' # Every day at 00:00 UTC
+  push:
+    paths:
+      - 'data/*.json'
+      - 'registry/downloads_registry.json'
   workflow_dispatch: # Manual trigger
 
 permissions:
@@ -25,11 +29,13 @@ jobs:
           cp -r temp_data/data/output/*.json data/
           rm -rf temp_data
           
-      - name: Notify Telegram for New Editals
+      - name: Notify Telegram (New Editals & Daily Reminders)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
-        run: node scripts/notify-telegram.js
+        run: |
+          node scripts/notify-telegram.js
+          node scripts/schedule-reminders.js
 
       - name: Commit synced data and registry
         run: |
@@ -52,7 +58,10 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Validate Data
+      - name: Run Script Tests
+        run: npm run test:scripts
+
+      - name: Sync data from FAPES
         run: node scripts/validate-data.js
 
       - name: Build with Astro
