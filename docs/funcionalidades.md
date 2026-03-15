@@ -25,5 +25,11 @@ Este documento centraliza e descreve todas as funcionalidades (User Stories) imp
 *   **Acessibilidade Nativa (US4/US5)**: Suporte profundo a padrões WCAG. O usuário possui uma "Toolbar de Acessibilidade" discreta que permite a inversão de cores (Alto Contraste) e ajuste de tamanho das fontes (Escalonamento Dinâmico).
 *   **Dark Mode Nativo (US3)**: Alternância nativa e manual entre modo claro (Light Mode) e modo escuro (Dark Mode) baseada em Tailwind v4 e preservada localmente no navegador (`localStorage`), sem "Flashes" indesejados ao carregar a página.
 
+## 🔔 Notificações e Lembretes (Telegram)
+
+*   **Notificação de Novos Editais (US12):** Sempre que um novo arquivo JSON é adicionado em `data/` e ainda não consta no `registry/downloads_registry.json`, o script `notify-telegram.js` envia uma mensagem no Telegram com título, categoria, próximo evento, descrição e link. As mensagens são organizadas por **tópicos** no fórum do grupo, um tópico por categoria (ex.: Chamadas, Extensão, Inovação).
+*   **Lembretes Diários de Cronograma:** O script `schedule-reminders.js` roda diariamente (no CI ou manualmente) e envia um lembrete no Telegram para cada evento de cronograma cuja data é o dia atual, evitando reenvio pelo registro em `notificacoes_enviadas`.
+*   **Registry e Tópicos:** O diretório `registry/` mantém o histórico de editais já notificados e o mapeamento de categorias para IDs de tópicos no Telegram. O script `build-registry.js` permite (re)criar o registry a partir de `data/` sem enviar mensagens. Configuração local via `.env` e no CI via secrets; ver [Scripts e Registry](scripts-and-registry.md).
+
 ---
 > **Nota de Arquitetura**: Todas as funcionalidades são pensadas priorizando uma abordagem **estática** (SSG) via Astro e TailwindCSS, resultando em carregamentos sub-segundo, economia de banda e facilidade de deploy serverless (como o GitHub Pages).

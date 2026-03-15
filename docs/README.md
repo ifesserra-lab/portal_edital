@@ -14,6 +14,8 @@ Aqui você encontra a descrição do que cada arquivo e pasta base neste diretó
     *   **Descrição:** Catálogo de todas as features visuais, de filtro, busca e comportamentais disponíveis no portal para os usuários finais, referenciadas nativamente às suas User Stories originais (ex: US9, US10).
 *   🧪 **[Testes (BDD) (`features/`)](./features/)**
     *   **Descrição:** Diretório em que as especificações "Behavior-Driven Development" (BDD) são guardadas usando a linguagem Gherkin (`.feature`). Servem tanto de documentação de regras de negócio em português claro, quanto como guia estrito para a implementação dos testes de Interface e Integração no (Playwright).
+*   🔔 **[Scripts e Registry (`scripts-and-registry.md`)](./scripts-and-registry.md)**
+    *   **Descrição:** Guia dos scripts em `scripts/` (build-registry, notify-telegram, schedule-reminders, load-env, validate-data), formato do `registry/` (downloads_registry, topics_registry) e configuração local e no CI para notificações Telegram.
 
 ---
 > **Regra de Manutenção:** Ao projetar ou codificar novos escopos, este repertório documental deve crescer sincronamente como "Documentação Viva". Qualquer entrega de Pull Request em features ou mudanças de modelo deve atualizar no processo os documentos impactados aqui (Ex: Ao criar uma US, o BDD em `features/` precisa ser mapeado também).

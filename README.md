@@ -29,10 +29,10 @@ Plataforma unificada para publicação, consulta e acompanhamento de editais de 
 
 | Pasta | Descrição |
 |---|---|
-| `data/` | Fonte da verdade dos editais (Arquivos JSON). |
-| `registry/` | Registro de histórico e auditoria de downloads. |
-| `docs/` | Documentação técnica, arquitetura e backlog. |
-| `scripts/` | Utilitários de validação e automação (Notificações, etc). |
+| `data/` | Fonte da verdade dos editais (arquivos JSON). |
+| `registry/` | Registro de editais (`downloads_registry.json`) e tópicos Telegram (`topics_registry.json`). |
+| `docs/` | Documentação técnica, arquitetura, backlog e guia de scripts. |
+| `scripts/` | Build do registry, carregamento de `.env`, notificações e lembretes Telegram, validação de dados. |
 | `src/components/` | Componentes Astro de UI e Acessibilidade. |
 | `tests/e2e/` | Testes automatizados de ponta a ponta. |
 
@@ -56,10 +56,32 @@ npm run dev
 
 # 3. Rodar testes E2E
 npx playwright test
+
+# 4. Rodar testes unitários dos scripts
+npm run test:scripts
 ```
+
+## 🔔 Scripts e Notificações Telegram
+
+Os scripts de notificação usam variáveis de ambiente. Para rodar localmente, crie um arquivo `.env` na raiz (não versionado):
+
+```env
+TELEGRAM_BOT_TOKEN=seu_token_do_bot
+TELEGRAM_CHAT_ID=id_do_grupo_ou_canal
+```
+
+| Script | Descrição |
+|--------|-----------|
+| `node scripts/load-env.js` | Carregado automaticamente pelos outros scripts; lê `.env` e preenche `process.env`. |
+| `node scripts/build-registry.js` | (Re)cria `registry/downloads_registry.json` e `registry/topics_registry.json` a partir dos JSON em `data/`. Não envia mensagens. |
+| `node scripts/notify-telegram.js` | Envia no Telegram notificação de **novos editais** (arquivos ainda não presentes no registry). |
+| `node scripts/schedule-reminders.js` | Envia **lembretes** no Telegram para eventos do cronograma cuja data é hoje. |
+
+Detalhes: [Scripts e Registry](docs/scripts-and-registry.md).
 
 ## 📖 Documentação Adicional
 
 - [Arquitetura](docs/architecture.md)
 - [Backlog do Projeto](docs/backlog.md)
 - [Funcionalidades e Features](docs/funcionalidades.md)
+- [Scripts e Registry (Telegram)](docs/scripts-and-registry.md)
