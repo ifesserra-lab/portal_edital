@@ -44,6 +44,7 @@ Este backlog organiza as próximas evoluções do portal em níveis de Epics, Us
 - **[US5: Pipeline de CI/CD](https://github.com/ifesserra-lab/portal_edital/issues/12)**
   - [x] [Task: Configurar GitHub Actions para deploy no GitHub Pages](https://github.com/ifesserra-lab/portal_edital/issues/19).
   - [x] [Task: Adicionar step de execução de testes Playwright no CI](https://github.com/ifesserra-lab/portal_edital/issues/21).
+  - [x] [Task: Adicionar step de execução de testes unitários de Scripts no CI].
   - [x] [Task: Configurar linting automático no commit](https://github.com/ifesserra-lab/portal_edital/issues/31).
 - **[US6: Gestão de Projeto](https://github.com/ifesserra-lab/portal_edital/issues/13)**
   - [x] [Task: Integrar skill de Gitflow e GitHub Issues](https://github.com/ifesserra-lab/portal_edital/issues/32).
@@ -67,7 +68,9 @@ Este backlog organiza as próximas evoluções do portal em níveis de Epics, Us
 ## 🔔 [Epic 6: Comunicação e Engajamento](https://github.com/ifesserra-lab/portal_edital/issues/53) (Concluído ✅)
 *Foco em manter os usuários informados sobre novos editais.*
 
-- **[US12: Notificações via Telegram](https://github.com/ifesserra-lab/portal_edital/issues/53)**
+- **[US12: Notificações via Telegram](https://github.com/ifesserra-lab/portal_edital/issues/53)** (Concluído ✅)
   - [x] [Task: Criar script de integração com Telegram Bot API](https://github.com/ifesserra-lab/portal_edital/issues/54).
   - [x] [Task: Implementar lógica de registro de downloads/novos editais](https://github.com/ifesserra-lab/portal_edital/issues/55).
+  - [x] [Task: Desenvolver Robô de Lembretes do Cronograma (Daily Reminders)].
+  - [x] [Task: Implementar suíte de testes unitários para scripts do Telegram].
   - [x] [Task: Adicionar CTA de inscrição na Home Page](https://github.com/ifesserra-lab/portal_edital/issues/56).

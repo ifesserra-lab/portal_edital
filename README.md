@@ -10,7 +10,7 @@ Plataforma unificada para publicação, consulta e acompanhamento de editais de 
 | :--- | :--- | :--- |
 | **Acessibilidade WCAG** | Menu flutuante com alto contraste, fontes para dislexia e escala de texto. | ✅ Concluído |
 | **Modo Escuro** | Suporte nativo a temas Dark/Light com persistência em `localStorage`. | ✅ Concluído |
-| **Notificações Telegram** | Alertas automáticos via bot sempre que novos editais são detectados. | ✅ Concluído |
+| **Notificações Telegram** | Alertas automáticos e **Lembretes Diários** de cronograma via bot. | ✅ Concluído |
 | **Busca e Filtros** | Busca por texto e filtragem reativa por categorias e tags. | ✅ Concluído |
 | **Automação de Dados** | Sync diário via GitHub Actions com fontes externas (FAPES). | ✅ Concluído |
 | **Mobile Responsive** | Design otimizado para celulares, tablets e desktops. | ✅ Concluído |
@@ -21,8 +21,8 @@ Plataforma unificada para publicação, consulta e acompanhamento de editais de 
 
 - **Framework**: [Astro](https://astro.build/)
 - **Estilização**: [Tailwind CSS v4](https://tailwindcss.com/)
-- **Testes**: [Playwright](https://playwright.dev/)
-- **Notificações**: Telegram Bot API via Node.js scripts.
+- **Testes**: [Playwright](https://playwright.dev/) (E2E) e Node.js Test Runner (Unitário).
+- **Notificações**: Telegram Bot API com Robô de Lembretes inteligente.
 - **Gestão de Dados**: JSON + Registro de Auditoria (`registry/`).
 
 ## 📂 Organização do Projeto
