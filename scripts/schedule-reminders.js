@@ -69,11 +69,12 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
             const content = JSON.parse(readFileSync(filePath, 'utf-8'));
             const cronograma = content.cronograma || [];
             const editalName = content.nome || file;
+            const category = content.categoria || 'N/A';
             const editalLink = content.link || PORTAL_URL;
 
             // Initialize notification tracking if not present
             if (!registry[file]) {
-                registry[file] = { data_entrada: new Date().toISOString(), categoria: content.categoria || 'N/A', cronograma: cronograma };
+                registry[file] = { data_entrada: new Date().toISOString(), categoria: category, cronograma: cronograma };
             }
             if (!registry[file].notificacoes_enviadas) {
                 registry[file].notificacoes_enviadas = [];
@@ -93,6 +94,7 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                         
                         const message = `⏰ <b>Lembrete de Cronograma!</b>\n\n` +
                                         `<b>📌 Edital:</b> ${editalName}\n` +
+                                        `<b>📁 Categoria:</b> ${category}\n` +
                                         `<b>📅 Evento:</b> <i>${eventName}</i>\n` +
                                         `<b>ℹ️ Data prevista:</b> ${eventDate}\n\n` +
                                         `<b>🌐 Ver mais no portal:</b> <a href="${PORTAL_URL}">Acessar site</a>\n` +
