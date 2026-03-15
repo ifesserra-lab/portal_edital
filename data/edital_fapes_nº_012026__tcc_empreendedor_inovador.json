@@ -1,76 +1,76 @@
 {
     "nome": "EDITAL FAPES Nº 01/2026 – TCC EMPREENDEDOR INOVADOR",
-    "descrição": "O edital tem por objeto a concessão de bolsas de apoio a Trabalhos de Conclusão de Curso (TCC) para estudantes de graduação em Instituições de Ensino Superior (IES) no Espírito Santo. O foco é incentivar o desenvolvimento de TCCs com ênfase em inovação, empreendedorismo e aplicabilidade prática, alinhados aos Objetivos de Desenvolvimento Sustentável (ODS) da ONU e ao Plano ES 500 Anos. As propostas devem apresentar soluções inovadoras e empreendedoras com potencial de geração de valor, criação de negócios ou produtos inovadores, e impacto econômico, social e/ou ambiental no estado.",
+    "descrição": "O edital tem por objeto a concessão de bolsas de apoio a Trabalhos de Conclusão de Curso (TCC) para estudantes de graduação, com foco em inovação, empreendedorismo e aplicabilidade prática. Os TCCs devem apresentar soluções inovadoras e empreendedoras, com fundamentação teórico-metodológica consistente, voltadas para aplicação prática e impacto econômico, social e/ou ambiental no Estado do Espírito Santo. As propostas devem estar alinhadas aos Objetivos de Desenvolvimento Sustentável (ODS) da ONU, especialmente os ODS 4, 8, 9, 10 e 17, e ao Plano ES 500 Anos.",
     "orgão_fomento": "FAPES",
     "categoria": "extensão",
     "status": "aberto",
     "data_abertura": "2026-01-26",
     "data_encerramento": "2027-03-30",
-    "link": "https://fapes.es.gov.br/Media/fapes/Editais/1ª_retificação_-_Edital_01-2026_-_TCC_Empreendedor_Inovador.pdf",
+    "link": "https://fapes.es.gov.br/Media/fapes/Editais/EDITAL_FAPES_Nº_01.2026_TCC_EMPREENDEDOR_INOVADOR.pdf",
     "cronograma": [
         {
-            "evento": "Publicação do Edital",
+            "evento": "Data de publicação do Edital",
             "data": "2026-01-26"
         },
         {
-            "evento": "Primeira Chamada - Período de submissão das propostas",
-            "data": "2026-02-02 até 2026-03-30"
+            "evento": "Período de submissão das propostas - Primeira Chamada",
+            "data": "2026-02-02"
         },
         {
-            "evento": "Primeira Chamada - Divulgação do resultado preliminar da habilitação e mérito",
-            "data": "A partir de 2026-05-26"
+            "evento": "Divulgação do resultado preliminar da habilitação e mérito (seleção) - Primeira Chamada",
+            "data": "2026-05-26"
         },
         {
-            "evento": "Primeira Chamada - Prazo para interposição de recursos administrativos",
-            "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            "evento": "Prazo para interposição de recursos administrativos - Primeira Chamada",
+            "data": "2026-06-02"
         },
         {
-            "evento": "Primeira Chamada - Divulgação da homologação da seleção",
-            "data": "A partir de 2026-06-22"
+            "evento": "Divulgação da homologação da seleção - Primeira Chamada",
+            "data": "2026-06-22"
         },
         {
-            "evento": "Primeira Chamada - Prazo de contratação",
-            "data": "Até 5 dias úteis da publicação do resultado homologado"
+            "evento": "Prazo de contratação - Primeira Chamada",
+            "data": "2026-06-29"
         },
         {
-            "evento": "Segunda Chamada - Período de submissão das propostas",
-            "data": "2026-09-02 até 2026-10-27"
+            "evento": "Período de submissão das propostas - Segunda Chamada",
+            "data": "2026-09-02"
         },
         {
-            "evento": "Segunda Chamada - Divulgação do resultado preliminar da habilitação e mérito",
-            "data": "A partir de 2026-12-22"
+            "evento": "Divulgação do resultado preliminar da habilitação e mérito (seleção) - Segunda Chamada",
+            "data": "2026-12-22"
         },
         {
-            "evento": "Segunda Chamada - Prazo para interposição de recursos administrativos",
-            "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            "evento": "Prazo para interposição de recursos administrativos - Segunda Chamada",
+            "data": "2026-06-02"
         },
         {
-            "evento": "Segunda Chamada - Divulgação da homologação da seleção",
-            "data": "A partir de 2027-01-27"
+            "evento": "Divulgação da homologação da seleção - Segunda Chamada",
+            "data": "2027-01-27"
         },
         {
-            "evento": "Segunda Chamada - Prazo de contratação",
-            "data": "Até 5 dias úteis da publicação do resultado homologado"
+            "evento": "Prazo de contratação - Segunda Chamada",
+            "data": "2026-06-29"
         },
         {
-            "evento": "Terceira Chamada - Período de submissão das propostas",
-            "data": "2027-02-02 até 2027-03-30"
+            "evento": "Período de submissão das propostas - Terceira Chamada",
+            "data": "2027-02-02"
         },
         {
-            "evento": "Terceira Chamada - Divulgação do resultado preliminar da habilitação e mérito",
-            "data": "A partir de 2027-05-24"
+            "evento": "Divulgação do resultado preliminar da habilitação e mérito (seleção) - Terceira Chamada",
+            "data": "2027-05-24"
         },
         {
-            "evento": "Terceira Chamada - Prazo para interposição de recursos administrativos",
-            "data": "5 dias úteis a partir da publicação do resultado de seleção"
+            "evento": "Prazo para interposição de recursos administrativos - Terceira Chamada",
+            "data": "2026-06-02"
         },
         {
-            "evento": "Terceira Chamada - Divulgação da homologação da seleção",
-            "data": "A partir de 2027-06-22"
+            "evento": "Divulgação da homologação da seleção - Terceira Chamada",
+            "data": "2027-06-22"
         },
         {
-            "evento": "Terceira Chamada - Prazo de contratação",
-            "data": "Até 5 dias úteis da publicação do resultado homologado"
+            "evento": "Prazo de contratação - Terceira Chamada",
+            "data": "2026-06-29"
         }
     ],
     "tags": [
@@ -78,6 +78,23 @@
         "inovação",
         "empreendedorismo",
         "Espírito Santo",
-        "bolsas de estudo"
+        "bolsas"
+    ],
+    "anexos": [
+        {
+            "titulo": "EDITAL FAPES Nº 01/2026 - TCC EMPREENDEDOR INOVADOR (1ª ALTERAÇÃO)",
+            "link": "https://fapes.es.gov.br/Media/fapes/Editais/1ª_retificação_-_Edital_01-2026_-_TCC_Empreendedor_Inovador.pdf",
+            "tipo": "alteração"
+        },
+        {
+            "titulo": "ANEXO I - Formulário de Submissão TCC",
+            "link": "https://fapes.es.gov.br/Media/fapes/Editais/ANEXO%20I%20-%20Formulário%20de%20Submissão%20TCC.docx",
+            "tipo": "anexo"
+        },
+        {
+            "titulo": "ANEXO II - Declaração de Matrícula",
+            "link": "https://fapes.es.gov.br/Media/fapes/Editais/ANEXO%20II%20-%20Declaração%20de%20Matrícula.docx",
+            "tipo": "anexo"
+        }
     ]
 }

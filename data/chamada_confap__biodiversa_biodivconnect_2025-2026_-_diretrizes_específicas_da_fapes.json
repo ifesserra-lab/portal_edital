@@ -1,10 +1,10 @@
 {
     "nome": "CHAMADA CONFAP & BIODIVERSA+ (BIODIVCONNECT 2025-2026) - DIRETRIZES ESPECÍFICAS DA FAPES",
-    "descrição": "Apoiar projetos de pesquisa e inovação de alta qualidade focados na restauração do funcionamento, integridade e conectividade dos ecossistemas. A chamada financia pesquisas interdisciplinares e transnacionais voltadas para a restauração de ecossistemas funcionais, integrando perspectivas ecológicas, sociais, culturais e políticas, alinhadas ao Marco Global de Biodiversidade de Kunming-Montreal.",
+    "descrição": "Apoiar projetos de pesquisa e inovação de alta qualidade sobre 'Restauração do funcionamento, integridade e conectividade dos ecossistemas', com foco em pesquisas interdisciplinares e transnacionais. Os projetos devem integrar perspectivas ecológicas, sociais, culturais e políticas, alinhados ao Marco Global de Biodiversidade de Kunming-Montreal.",
     "orgão_fomento": "FAPES",
     "categoria": "chamadas",
     "status": "aberto",
-    "data_abertura": "2025-07-01",
+    "data_abertura": "2026-01-01",
     "data_encerramento": "2025-11-07",
     "link": "https://fapes.es.gov.br/Media/fapes/Editais/Diretrizes_Chamada_Biodiversa_20245-2026.pdf",
     "cronograma": [
@@ -18,7 +18,7 @@
         },
         {
             "evento": "Início dos projetos aprovados",
-            "data": "2026-12-01 a 2027-04-01"
+            "data": "2026-12-01"
         }
     ],
     "tags": [
@@ -27,5 +27,12 @@
         "pesquisa transnacional",
         "inovação",
         "Marco Global de Biodiversidade"
+    ],
+    "anexos": [
+        {
+            "titulo": "CHAMADA BIODIVERSA+ CALL TEXT",
+            "link": "https://fapes.es.gov.br/Media/fapes/Editais/BiodivConnect_CallText_FINAL.pdf",
+            "tipo": "edital"
+        }
     ]
 }

@@ -1,5 +1,8 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
-import { join } from 'path';
+import { join, dirname } from 'path';
+import { loadEnv } from './load-env.js';
+
+loadEnv();
 
 const DEFAULT_DATA_DIR = 'data';
 const DEFAULT_REGISTRY_FILE = join('registry', 'downloads_registry.json');
@@ -191,7 +194,6 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
 
 // Auto-run if executed directly
 import { fileURLToPath } from 'url';
-import { dirname } from 'path';
 if (process.argv[1] && (process.argv[1].endsWith('notify-telegram.js') || fileURLToPath(import.meta.url) === process.argv[1])) {
     run();
 }
