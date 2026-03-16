@@ -8,9 +8,12 @@ on:
       - 'data/**'
       - 'public/**'
       - 'scripts/**'
+      - 'tests/**'
       - 'astro.config.mjs'
       - 'package.json'
+      - 'package-lock.json'
       - 'tsconfig.json'
+      - 'playwright.config.ts'
   workflow_dispatch:
 
 permissions:

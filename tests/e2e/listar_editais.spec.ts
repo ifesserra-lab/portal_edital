@@ -12,7 +12,10 @@ test.describe('Portal de Editais - Listagem', () => {
         // Verifica se o primeiro card tem as informações básicas
         const firstCard = cards.first();
         await expect(firstCard.locator('[data-testid="edital-titulo"]')).toBeVisible();
-        await expect(firstCard.locator('[data-testid="edital-status"]')).toContainText('aberto', { ignoreCase: true });
+        // Status pode ser "aberto" ou "fechando" (quando data_encerramento já passou)
+        const statusEl = firstCard.locator('[data-testid="edital-status"]');
+        await expect(statusEl).toBeVisible();
+        await expect(statusEl).toHaveText(/aberto|fechando/i);
     });
 
     test('Detalhes do edital', async ({ page }) => {
