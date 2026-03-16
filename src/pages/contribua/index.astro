@@ -1,0 +1,142 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+
+const base = import.meta.env.BASE_URL;
+const repoIssues = "https://github.com/ifesserra-lab/portal_edital/issues/new";
+const repo = "https://github.com/ifesserra-lab/portal_edital";
+---
+
+<BaseLayout
+  title="Como contribuir — Portal de Editais"
+  description="Sugira fontes de editais, reporte problemas ou proponha novas funcionalidades via GitHub Issues."
+>
+  <Header />
+  <main id="main-content" class="flex-grow py-8 sm:py-16" tabindex="-1">
+    <div class="container max-w-4xl mx-auto px-4">
+      <section class="mb-16">
+        <div
+          class="inline-flex items-center space-x-2 bg-cta-500/10 border border-cta-500/20 rounded-full px-4 py-1.5 mb-6"
+        >
+          <span class="flex h-2 w-2 rounded-full bg-cta-500"></span>
+          <span class="text-xs font-bold text-cta-500 uppercase tracking-widest">
+            Comunidade
+          </span>
+        </div>
+        <h1
+          class="text-4xl sm:text-5xl font-black text-primary-900 dark:text-white mb-6 leading-tight"
+        >
+          Como <span class="text-transparent bg-clip-text bg-gradient-to-r from-cta-500 to-blue-400">contribuir</span>
+        </h1>
+        <p class="text-xl text-primary-600 dark:text-primary-300 font-medium mb-4">
+          Sua opinião e sugestões ajudam a melhorar o portal. Use o GitHub para sugerir fontes de editais, reportar problemas ou propor novas funcionalidades.
+        </p>
+        <p class="text-primary-500 dark:text-primary-400">
+          Não é necessário ter conta desenvolvedor: basta uma conta no GitHub (gratuita) para abrir uma issue.
+        </p>
+      </section>
+
+      <section class="mb-10">
+        <h2 class="text-xl font-bold text-primary-900 dark:text-white mb-6 uppercase tracking-wider">
+          Passo a passo
+        </h2>
+        <ol class="space-y-4 list-none">
+          <li class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cta-100 dark:bg-cta-500/20 text-sm font-bold text-cta-700 dark:text-cta-400">1</span>
+            <div>
+              <strong class="text-primary-900 dark:text-white">Acesse o repositório no GitHub.</strong>
+              <p class="text-primary-600 dark:text-primary-400 mt-1">Abra <a href={repo} target="_blank" rel="noopener noreferrer" class="text-cta-600 dark:text-cta-500 underline hover:no-underline">{repo}</a> no navegador.</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cta-100 dark:bg-cta-500/20 text-sm font-bold text-cta-700 dark:text-cta-400">2</span>
+            <div>
+              <strong class="text-primary-900 dark:text-white">Clique em &quot;Issues&quot; e depois em &quot;New issue&quot;.</strong>
+              <p class="text-primary-600 dark:text-primary-400 mt-1">Você verá os modelos disponíveis. Escolha o que melhor se encaixa no que você quer fazer.</p>
+            </div>
+          </li>
+          <li class="flex gap-4">
+            <span class="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-cta-100 dark:bg-cta-500/20 text-sm font-bold text-cta-700 dark:text-cta-400">3</span>
+            <div>
+              <strong class="text-primary-900 dark:text-white">Preencha o formulário e envie.</strong>
+              <p class="text-primary-600 dark:text-primary-400 mt-1">Cada modelo já vem com os campos sugeridos. Basta completar e clicar em &quot;Submit new issue&quot;.</p>
+            </div>
+          </li>
+        </ol>
+        <a
+          href={repoIssues}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-8 inline-flex items-center gap-2 rounded-xl bg-cta-600 hover:bg-cta-700 text-white font-semibold px-6 py-3 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cta-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        >
+          Abrir nova issue no GitHub
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+          </svg>
+        </a>
+      </section>
+
+      <div class="space-y-8">
+        <section class="glass p-6 sm:p-8 rounded-2xl border border-white/10">
+          <h2 class="text-lg font-black text-primary-900 dark:text-white mb-2 uppercase tracking-wider">
+            Sugestão de fonte de edital
+          </h2>
+          <p class="text-primary-600 dark:text-primary-400 mb-4">
+            Conhece uma instituição ou site que publica editais e ainda não está no portal? Use este modelo para indicar a fonte. Informe o nome da instituição, onde os editais são publicados (URL) e o tipo de oferta (pesquisa, extensão, inovação, bolsas). Quanto mais detalhes, mais fácil será avaliar a inclusão.
+          </p>
+          <a
+            href={`${repoIssues}?template=sugestao-fonte-edital.md`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-cta-600 dark:text-cta-500 font-semibold hover:underline"
+          >
+            Usar modelo Sugestão de fonte
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+          </a>
+        </section>
+
+        <section class="glass p-6 sm:p-8 rounded-2xl border border-white/10">
+          <h2 class="text-lg font-black text-primary-900 dark:text-white mb-2 uppercase tracking-wider">
+            Reportar problema ou dúvida
+          </h2>
+          <p class="text-primary-600 dark:text-primary-400 mb-4">
+            Encontrou um erro, algo que não funciona como esperado ou tem dúvida sobre o uso do portal? Use este modelo para descrever o que aconteceu, o que você esperava e em qual página ou dispositivo. Se possível, informe o navegador e os passos para reproduzir o problema.
+          </p>
+          <a
+            href={`${repoIssues}?template=reportar-problema.md`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-cta-600 dark:text-cta-500 font-semibold hover:underline"
+          >
+            Usar modelo Reportar problema
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+          </a>
+        </section>
+
+        <section class="glass p-6 sm:p-8 rounded-2xl border border-white/10">
+          <h2 class="text-lg font-black text-primary-900 dark:text-white mb-2 uppercase tracking-wider">
+            Nova funcionalidade
+          </h2>
+          <p class="text-primary-600 dark:text-primary-400 mb-4">
+            Tem uma ideia de melhoria ou nova funcionalidade? Use este modelo para descrever o problema ou necessidade, a solução que você imagina e, se quiser, critérios para saber quando a feature estiver pronta. Mockups ou exemplos de outros portais ajudam na discussão.
+          </p>
+          <a
+            href={`${repoIssues}?template=nova-funcionalidade.md`}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-flex items-center gap-2 text-cta-600 dark:text-cta-500 font-semibold hover:underline"
+          >
+            Usar modelo Nova funcionalidade
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" /></svg>
+          </a>
+        </section>
+      </div>
+
+      <p class="mt-12 text-sm text-primary-500 dark:text-primary-400">
+        Os modelos de issue estão definidos no repositório em <code class="px-1.5 py-0.5 rounded bg-primary-100 dark:bg-primary-800 font-mono">.github/ISSUE_TEMPLATE/</code>. Você também pode abrir uma issue em branco e escrever livremente.
+      </p>
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>
