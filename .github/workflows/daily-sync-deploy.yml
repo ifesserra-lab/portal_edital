@@ -28,7 +28,19 @@ jobs:
           git clone --depth 1 https://github.com/ifesserra-lab/retrieve_edital.git temp_data
           cp -r temp_data/data/output/*.json data/
           rm -rf temp_data
-          
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Generate dados-editais.zip
+        run: node scripts/zip-data.js
+
       - name: Notify Telegram (New Editals & Daily Reminders)
         env:
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
@@ -48,15 +60,6 @@ jobs:
             git commit -m "data: daily sync and registry update"
             git push origin main
           fi
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: 'npm'
-
-      - name: Install dependencies
-        run: npm install
 
       - name: Run Script Tests
         run: npm run test:scripts

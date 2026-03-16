@@ -1,0 +1,55 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import { getCollection } from "astro:content";
+
+const editais = await getCollection("editais");
+const base = import.meta.env.BASE_URL;
+const zipUrl = `${base}dados-editais.zip`;
+---
+
+<BaseLayout
+  title="Download dos Dados — Portal de Editais"
+  description="Baixe todos os editais em JSON (ZIP) ou acesse o repositório no GitHub."
+>
+  <Header />
+  <main id="main-content" class="flex-grow py-8 sm:py-16" tabindex="-1">
+    <div class="container max-w-2xl mx-auto px-4 text-center">
+      <section class="mb-10">
+        <div
+          class="inline-flex items-center space-x-2 bg-cta-500/10 border border-cta-500/20 rounded-full px-4 py-1.5 mb-6"
+        >
+          <span class="flex h-2 w-2 rounded-full bg-cta-500"></span>
+          <span class="text-xs font-bold text-cta-500 uppercase tracking-widest">
+            Dados Abertos
+          </span>
+        </div>
+        <h1
+          class="text-4xl sm:text-5xl font-black text-primary-900 dark:text-white mb-6 leading-tight"
+        >
+          Download dos <span class="text-transparent bg-clip-text bg-gradient-to-r from-cta-500 to-blue-400">dados</span>
+        </h1>
+        <p class="text-lg text-primary-600 dark:text-primary-300 font-medium mb-10">
+          Um único arquivo com todos os editais em JSON, atualizado a cada publicação do site.
+        </p>
+
+        <a
+          href={zipUrl}
+          download="dados-editais.zip"
+          class="inline-flex items-center justify-center gap-3 w-full sm:w-auto rounded-2xl bg-cta-600 hover:bg-cta-700 text-white font-bold text-lg px-8 py-4 shadow-lg shadow-cta-500/25 hover:shadow-cta-500/30 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-cta-500 focus-visible:ring-offset-2 dark:focus-visible:ring-offset-slate-900"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+          </svg>
+          Baixar todos os dados (ZIP)
+        </a>
+        <p class="text-sm text-primary-500 dark:text-primary-400 mt-4">
+          {editais.length} editais em JSON dentro do ZIP
+        </p>
+      </section>
+
+    </div>
+  </main>
+  <Footer />
+</BaseLayout>

@@ -622,5 +622,89 @@
             }
         ],
         "notificacoes_enviadas": []
+    },
+    "finep_mais_inovação_brasil_-_rodada_2_-_subvenção_econômica_regional.json": {
+        "data_entrada": "2026-03-16T00:28:06.576Z",
+        "categoria": "inovação",
+        "cronograma": [
+            {
+                "evento": "Data de publicação",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "Prazo de envio da proposta",
+                "data": "2026-04-07"
+            }
+        ]
+    },
+    "identidade_brasil__recuperação_e_preservação_de_acervos_2025.json": {
+        "data_entrada": "2026-03-16T00:28:06.576Z",
+        "categoria": "divulgação de conhecimento",
+        "cronograma": [
+            {
+                "evento": "Data de publicação",
+                "data": "2025-11-11"
+            },
+            {
+                "evento": "Prazo de envio da proposta",
+                "data": "2026-01-27"
+            }
+        ]
+    },
+    "processo_de_seleção_nº_012025_para_celebração_de_convênio_com_entidade_fechada_de_previdência_complementar_-_efpc.json": {
+        "data_entrada": "2026-03-16T00:28:06.576Z",
+        "categoria": "inovação",
+        "cronograma": [
+            {
+                "evento": "Data de publicação",
+                "data": "2025-12-05"
+            },
+            {
+                "evento": "Prazo de envio da proposta",
+                "data": "2026-01-08"
+            }
+        ]
+    },
+    "proinfra_2025_expansão.json": {
+        "data_entrada": "2026-03-16T00:28:06.576Z",
+        "categoria": "inovação",
+        "cronograma": [
+            {
+                "evento": "Data de publicação",
+                "data": "2025-12-23"
+            },
+            {
+                "evento": "Prazo de envio da proposta",
+                "data": "2026-03-27"
+            }
+        ]
+    },
+    "pró-amazônia_2025.json": {
+        "data_entrada": "2026-03-16T00:28:06.576Z",
+        "categoria": "inovação",
+        "cronograma": [
+            {
+                "evento": "Data de publicação",
+                "data": "2025-11-11"
+            },
+            {
+                "evento": "Prazo de envio da proposta",
+                "data": "2026-03-10"
+            }
+        ]
+    },
+    "seleção_pública_mctifinepfndct_-_subvenção_econômica_à_inovação_-_desafios_tecnológicos_para_agricultura_familiar.json": {
+        "data_entrada": "2026-03-16T00:28:06.576Z",
+        "categoria": "inovação",
+        "cronograma": [
+            {
+                "evento": "Data de publicação",
+                "data": "2025-12-23"
+            },
+            {
+                "evento": "Prazo de envio da proposta",
+                "data": "2026-03-13"
+            }
+        ]
     }
 }

@@ -22,3 +22,6 @@ pnpm-debug.log*
 
 # jetbrains setting folder
 .idea/
+
+# ZIP de dados gerado no build
+public/dados-editais.zip
