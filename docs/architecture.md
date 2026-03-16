@@ -47,11 +47,12 @@ edital_portal/
 │   ├── schedule-reminders.js  # Lembretes diários de eventos do cronograma
 │   └── validate-data.js  # Validação de integridade dos JSON em data/
 ├── src/
-│   ├── components/       # UI Components (Header, Footer, EditalCard, a11y)
+│   ├── components/       # UI Components (Header, Footer, EditalCard, FilterBar, a11y)
 │   ├── content/          # Configuração das Content Collections
-│   ├── layouts/          # Templates base (Header+Footer+a11y)
+│   ├── layouts/          # Templates base (BaseLayout com script de status "fechando", Header+Footer+a11y)
+│   ├── lib/              # Utilitários (ex.: editalStatus)
 │   ├── styles/           # Tailwind e CSS Global
-│   └── pages/            # Rotas e Páginas dinâmicas
+│   └── pages/            # Rotas: /, /categorias/, /orgaos-fomento/, /editais/[slug], /sobre/
 └── tests/
     ├── e2e/              # Testes Playwright baseados em BDD
     └── scripts/          # Testes unitários dos scripts (notify-telegram, schedule-reminders)
@@ -73,3 +74,9 @@ Implementamos um componente customizado `AccessibilityToolbar.astro` que injeta 
 
 ### 4. Registry e Notificações Telegram
 O diretório `registry/` mantém o estado das notificações: quais editais já foram anunciados e quais eventos de cronograma já tiveram lembrete enviado. O `topics_registry.json` mapeia cada categoria para o ID do tópico no fórum do grupo Telegram, evitando criar tópicos duplicados. Os scripts em `scripts/` carregam credenciais via `.env` (local) ou variáveis de ambiente (CI). Ver [Scripts e Registry](scripts-and-registry.md).
+
+### 5. Status "Fechando" no Cliente
+O status efetivo do edital (aberto vs. fechando) é calculado no carregamento da página: se `data_encerramento` já foi ultrapassada e o status nos dados é "aberto", um script inline no `BaseLayout.astro` atualiza o badge para "Fechando" e o atributo `data-status` do card/página. Assim, o build permanece estático e a exibição reflete a data real sem redeploy.
+
+### 6. CI e Testes E2E (Playwright)
+O workflow **Deploy to GitHub Pages** executa build (Astro + Pagefind), instalação dos browsers Playwright e `npx playwright test`. O workflow é disparado por push em `main` quando há alterações em `src/`, `data/`, `tests/`, `playwright.config.ts` ou `package-lock.json`. O teste de listagem ("Visualizar editais em aberto") aceita tanto o status **aberto** quanto **fechando** no badge, pois o primeiro card pode exibir "fechando" quando a data de encerramento já passou.

@@ -6,19 +6,21 @@ Este documento centraliza e descreve todas as funcionalidades (User Stories) imp
 
 *   **Busca Livre Integrada (US9)**: Pesquisa instantânea no lado do cliente por palavras-chave (título, descrição, instituição), combinada com filtros de categoria e status. Os resultados são atualizados em tempo real na interface sem necessidade de recarregar a página.
 *   **Filtros de Categoria (US2)**: Permite refinar a lista de oportunidades selecionando categorias temáticas específicas (ex: Pesquisa, Extensão, Inovação, Bolsas).
-*   **Filtros de Status (US8)**: Exibição segmentada de editais baseada no seu período de vigência (Abertos vs. Encerrados), facilitando a localização de oportunidades ativas.
+*   **Filtros de Status (US8)**: Exibição segmentada de editais baseada no seu período de vigência (Abertos, **Fechando** — prazo já ultrapassado — e Encerrados), facilitando a localização de oportunidades ativas.
 *   **Sincronização com URL (US8/US9)**: Todos os filtros (categoria, status e texto de busca) são automaticamente refletidos nos parâmetros da URL (ex: `?categoria=pesquisa&q=fapes`), permitindo o compartilhamento de buscas específicas.
 
 ## 🗂️ Navegação e Organização
 
 *   **Página Inicial Focada**: A listagem primária (`/`) exibe por padrão apenas os editais que possuem o status `"aberto"`, priorizando as oportunidades que realmente importam.
 *   **Catálogo por Categoria (US10)**: Nova visão (`/categorias`) que agrupa hierarquicamente todos os editais (abertos e encerrados) pelas suas respectivas categorias. Dentro de cada bloco, os editais são ordenados alfabeticamente (A-Z) para facilitar a leitura sistemática.
+*   **Listagem por Órgão de Fomento**: Página dedicada (`/orgaos-fomento/`) que agrupa os editais por instituição de fomento (FAPES, FINEP, CONFAP etc.), em ordem alfabética por órgão e depois por nome do edital. Acessível pelo menu principal.
 *   **Página Institucional "Sobre" (US11)**: Seção dedicada para explicar a missão do Portal de Editais, como ele consolida os dados de fomento e seu impacto na transparência e pesquisa no estado.
 
 ## 📄 Detalhamento de Oportunidades
 
 *   **Páginas de Edital Dinâmicas (US6)**: Cada edital possui uma página dedicada (slug gerado automaticamente) contendo todas as informações relevantes lidas diretamente de um arquivo JSON padronizado.
 *   **Apresentação Clara de Metadados (US7)**: O Layout do documento exibe claramente dados críticos como o **Órgão de Fomento**, **Valor Financiado** e o **Prazo de Submissão** em formato amigável e focado na conversão (Inscrição).
+*   **Status "Fechando" dinâmico**: Quando a data de encerramento do edital já foi ultrapassada (e o status nos dados ainda é "aberto"), o badge é atualizado no carregamento da página para **Fechando**, de forma dinâmica no cliente (script em `BaseLayout.astro`), sem alterar o JSON de origem. Isso evita inconsistência entre build e data real.
 
 ## ♿ Acessibilidade e Estilo
 

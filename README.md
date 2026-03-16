@@ -13,6 +13,8 @@ Plataforma unificada para publicação, consulta e acompanhamento de editais de 
 | **Notificações Telegram** | Alertas automáticos e **Lembretes Diários** de cronograma via bot. | ✅ Concluído |
 | **Busca e Filtros** | Busca por texto e filtragem reativa por categorias e tags. | ✅ Concluído |
 | **Automação de Dados** | Sync diário via GitHub Actions com fontes externas (FAPES). | ✅ Concluído |
+| **Listagem por Órgão de Fomento** | Página `/orgaos-fomento/` agrupando editais por instituição (FAPES, FINEP, etc.). | ✅ Concluído |
+| **Status "Fechando"** | Badge dinâmico no cliente quando o prazo de encerramento já foi ultrapassado. | ✅ Concluído |
 | **Mobile Responsive** | Design otimizado para celulares, tablets e desktops. | ✅ Concluído |
 | **Histórico de Downloads** | Registro em JSON (`registry/`) para auditoria de novas postagens. | ✅ Concluído |
 
@@ -61,14 +63,59 @@ npx playwright test
 npm run test:scripts
 ```
 
-## 🔔 Scripts e Notificações Telegram
+## 🔔 Configurar Telegram (variáveis de ambiente)
 
-Os scripts de notificação usam variáveis de ambiente. Para rodar localmente, crie um arquivo `.env` na raiz (não versionado):
+As notificações de novos editais e os lembretes de cronograma usam a **Telegram Bot API**. É necessário configurar duas variáveis de ambiente.
+
+### Variáveis obrigatórias
+
+| Variável | Descrição | Exemplo |
+|----------|-----------|---------|
+| `TELEGRAM_BOT_TOKEN` | Token do bot gerado pelo [@BotFather](https://t.me/BotFather). | `7123456789:AAH...` |
+| `TELEGRAM_CHAT_ID` | ID do grupo ou canal onde o bot envia as mensagens (número, pode ser negativo). | `-1001234567890` |
+
+### Passo a passo (uso local)
+
+1. **Criar o bot**
+   - Abra [@BotFather](https://t.me/BotFather) no Telegram.
+   - Envie `/newbot`, defina nome e username do bot.
+   - Copie o **token** que o BotFather devolver (ex.: `7123456789:AAHxxxxxxxxxxxx`).
+
+2. **Criar um grupo (ou canal) e adicionar o bot**
+   - Crie um grupo no Telegram ou use um existente.
+   - Adicione o bot como membro e torne-o **administrador** (necessário para enviar mensagens e, se for usar fórum, criar tópicos).
+
+3. **Obter o Chat ID**
+   - **Opção A:** Adicione [@userinfobot](https://t.me/userinfobot) ao grupo, envie qualquer mensagem e o bot responderá com o ID do grupo (ex.: `-1001234567890`). Depois pode remover o userinfobot.
+   - **Opção B:** Envie uma mensagem no grupo, abra no navegador `https://api.telegram.org/bot<SEU_TOKEN>/getUpdates` e procure `"chat":{"id":-100...}` na resposta.
+
+4. **Criar o arquivo `.env` na raiz do projeto**
+   - O arquivo `.env` **não é versionado** (está no `.gitignore`). Nunca commite o token.
+   - Crie na raiz do repositório (mesmo nível de `package.json`):
 
 ```env
-TELEGRAM_BOT_TOKEN=seu_token_do_bot
-TELEGRAM_CHAT_ID=id_do_grupo_ou_canal
+TELEGRAM_BOT_TOKEN=7123456789:AAHxxxxxxxxxxxxxxxxxxxxxxxx
+TELEGRAM_CHAT_ID=-1001234567890
 ```
+
+   - Substitua pelos seus valores (sem aspas).
+
+5. **Testar**
+   - Notificar novos editais: `node scripts/notify-telegram.js`
+   - Enviar lembretes de cronograma (eventos de hoje): `node scripts/schedule-reminders.js`
+
+### Uso no CI (GitHub Actions)
+
+No repositório: **Settings → Secrets and variables → Actions**. Cadastre os secrets:
+
+- `TELEGRAM_BOT_TOKEN` — mesmo token do bot.
+- `TELEGRAM_CHAT_ID` — mesmo ID do grupo/canal.
+
+O workflow **Daily Data Sync and Deploy** usa esses secrets para rodar `notify-telegram.js` e `schedule-reminders.js` no pipeline.
+
+---
+
+### Scripts disponíveis
 
 | Script | Descrição |
 |--------|-----------|

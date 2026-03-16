@@ -31,7 +31,7 @@ Todos os scripts estão em `scripts/` e são executados com Node.js (ESM).
 ### Notificação de Novos Editais (`notify-telegram.js`)
 
 - **Uso:** `node scripts/notify-telegram.js`
-- **Função:** Para cada arquivo em `data/` que **não** está em `downloads_registry.json`, monta uma mensagem de “Novo Edital Detectado!” e envia no Telegram. Usa o tópico da categoria (cria o tópico via API se ainda não existir em `topics_registry.json`). Após enviar, atualiza o registry.
+- **Função:** Para cada arquivo em `data/` que **não** está em `downloads_registry.json`, monta uma mensagem de “Novo Edital Detectado!” (título, **órgão de fomento**, categoria, próximo evento, descrição e link) e envia no Telegram. Usa o tópico da categoria (cria o tópico via API se ainda não existir em `topics_registry.json`). Após enviar, atualiza o registry.
 - **Requisitos:** `TELEGRAM_BOT_TOKEN` e `TELEGRAM_CHAT_ID` no `.env` (local) ou nas variáveis de ambiente (CI).
 
 ### Lembretes de Cronograma (`schedule-reminders.js`)
