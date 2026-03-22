@@ -718,5 +718,607 @@
             }
         ],
         "notificacoes_enviadas": []
+    },
+    "caminhos_amefricanos_programa_de_intercâmbios_sul-sul_-_edições_peru_angola_e_república_dominicana.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "extensão",
+        "cronograma": [
+            {
+                "evento": "Prazo para envio de dúvidas e questionamentos a respeito do Edital",
+                "data": "2025-02-24"
+            },
+            {
+                "evento": "Encerramento das inscrições das propostas",
+                "data": "2025-02-27"
+            },
+            {
+                "evento": "Disponibilização do link para o envio das inscrições",
+                "data": "2025-03-11"
+            },
+            {
+                "evento": "Publicação da relação das inscrições recebidas",
+                "data": "2025-03-20"
+            },
+            {
+                "evento": "Análise das propostas",
+                "data": "2025-06-30"
+            },
+            {
+                "evento": "Divulgação do Resultado Preliminar",
+                "data": "2025-06-13"
+            },
+            {
+                "evento": "Interposição do recurso administrativo",
+                "data": "Em até 5 (cinco) dias úteis após a comunicação ao candidato(a)"
+            },
+            {
+                "evento": "Divulgação da Decisão Final",
+                "data": "2025-08-29"
+            },
+            {
+                "evento": "Início das atividades previstas no edital",
+                "data": "2025-08-01"
+            }
+        ]
+    },
+    "chamada_cnpqmctimemp_nº_52026_programa_de_iniciação_ao_empreendedorismo_piemp.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "abertura das inscrições",
+                "data": "2026-02-25"
+            },
+            {
+                "evento": "encerramento das inscrições",
+                "data": "2026-04-13"
+            }
+        ]
+    },
+    "chamada_de_propostas_conjuntas_fapes_fapesp_anii_conacyt_e_conicet_2026_-_resistência_antimicrobiana_ram.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "chamadas",
+        "cronograma": [
+            {
+                "evento": "Lançamento da Chamada",
+                "data": "2026-02-01"
+            },
+            {
+                "evento": "Data limite de submissão de propostas",
+                "data": "2026-04-30"
+            },
+            {
+                "evento": "Divulgação dos resultados",
+                "data": "2026-08-01"
+            },
+            {
+                "evento": "Início dos projetos",
+                "data": "2026-12-01"
+            }
+        ]
+    },
+    "chamada_n_332025_-_pesquisa_extensão_e_formação_em_epidemiologia_e_vigilância_em_saúde.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa, extensão",
+        "cronograma": [
+            {
+                "evento": "Pré-seleção (atendimento aos critérios de elegibilidade e requisitos da chamada)",
+                "data": "Texto original não especificado"
+            },
+            {
+                "evento": "FASE 1 - Comitê Julgador – Análise de Mérito Técnico-Científico",
+                "data": "Texto original não especificado"
+            },
+            {
+                "evento": "Publicação no DOU da Análise de Mérito Técnico-Científico e atendimento aos critérios de elegibilidade",
+                "data": "Texto original não especificado"
+            },
+            {
+                "evento": "Interposição de Recurso Administrativo FASE 1 (10 dias corridos da publicação no DOU)",
+                "data": "10 dias corridos da publicação no DOU"
+            },
+            {
+                "evento": "Propostas recomendadas pelo Comitê Julgador (Nota igual ou superior a 7,00) passam para a FASE 2",
+                "data": "Texto original não especificado"
+            },
+            {
+                "evento": "FASE 2 – Comitê de Relevância Social – Classificação das propostas recomendadas",
+                "data": "Texto original não especificado"
+            },
+            {
+                "evento": "Publicação no DOU da avaliação do Comitê de Relevância Social",
+                "data": "Texto original não especificado"
+            },
+            {
+                "evento": "Interposição de Recurso Administrativo FASE 2 (10 dias corridos da publicação no DOU)",
+                "data": "10 dias corridos da publicação no DOU"
+            },
+            {
+                "evento": "Publicação do Resultado Final no DOU",
+                "data": "Texto original não especificado"
+            }
+        ]
+    },
+    "chamada_nº_282025_-_apoio_a_projetos_de_cooperação_cnpq-tubitak.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "abertura das inscrições",
+                "data": "2025-12-30"
+            },
+            {
+                "evento": "encerramento das inscrições",
+                "data": "2026-05-04"
+            }
+        ]
+    },
+    "chamada_pública_mcticnpq_n_022026_-_programa_de_cooperação_latino-americana_e_caribenha_em_ciência_tecnologia_e_inovação__prosul_pepe_mujica.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Submissão de propostas pela Plataforma Integrada Carlos Chagas (PICC)",
+                "data": "2026-01-30"
+            },
+            {
+                "evento": "Divulgação do resultado preliminar",
+                "data": "5 dias úteis após a análise das propostas"
+            },
+            {
+                "evento": "Fase recursal (após divulgação do resultado preliminar)",
+                "data": "Dentro do prazo estabelecido no edital"
+            }
+        ]
+    },
+    "chamada_pública_para_seleção_dos_coordenadores_coordenadores_adjuntos_dos_grupos_temáticos_e_do_grupo_transversal_de_formação_docente_no_âmb_4faab3.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Indicação de candidatos pelas IES e entidades",
+                "data": "2026-01-30"
+            },
+            {
+                "evento": "Envio de manifestação de aceite e currículo Lattes pelos indicados",
+                "data": "2026-02-09"
+            },
+            {
+                "evento": "Análise preliminar das indicações pela CGDOC/DEB/CAPES",
+                "data": "2026-02-09"
+            },
+            {
+                "evento": "Publicação da lista de candidatos habilitados",
+                "data": "A partir da conclusão da análise preliminar"
+            },
+            {
+                "evento": "Prazo para interposição de recurso administrativo",
+                "data": "5 dias corridos após divulgação da lista de habilitados"
+            },
+            {
+                "evento": "Início do mandato dos Coordenadores e Coordenadores Adjuntos",
+                "data": "2026-03-01"
+            }
+        ]
+    },
+    "declaração_de_reconhecimento_da_fluência_linguística_para_instituição_no_exterior.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "outros",
+        "cronograma": []
+    },
+    "edital_62026_-_programa_de_desenvolvimento_da_pós-graduação_pdpg__parcerias_estratégicas_nos_estados_v__rede_de_pesquisa_e_desenvolvimento_d_871b2d.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Prazo para apresentação pela FAP de manifestação de interesse e compromisso em participar do Edital",
+                "data": "2026-04-10"
+            },
+            {
+                "evento": "Início das inscrições",
+                "data": "2026-05-11"
+            },
+            {
+                "evento": "Data limite para submissão das propostas",
+                "data": "2026-10-02"
+            },
+            {
+                "evento": "Resultado Preliminar da Análise Técnica",
+                "data": "2026-10-16"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente à Análise Técnica",
+                "data": "5 (cinco) dias corridos após o recebimento da comunicação do indeferimento da análise técnica"
+            },
+            {
+                "evento": "Divulgação do Resultado Final da Análise Técnica",
+                "data": "2026-10-26"
+            },
+            {
+                "evento": "Divulgação do Resultado Preliminar das Propostas P1",
+                "data": "2026-12-07"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente ao Resultado Preliminar das Propostas P1",
+                "data": "5 (cinco) dias corridos após a divulgação do resultado preliminar no DOU"
+            },
+            {
+                "evento": "Divulgação da quantidade de vagas destinadas a Ampla Concorrência",
+                "data": "2026-12-21"
+            },
+            {
+                "evento": "Divulgação do Resultado Preliminar das propostas de Ampla Concorrência",
+                "data": "2027-01-25"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente ao Resultado Preliminar das propostas de Ampla Concorrência",
+                "data": "5 (cinco) dias corridos após a divulgação do resultado preliminar no DOU"
+            },
+            {
+                "evento": "Divulgação do Resultado Final no DOU",
+                "data": "2027-02-15"
+            },
+            {
+                "evento": "Assinatura dos Acordos de Cooperação Técnica",
+                "data": "2027-02-15"
+            },
+            {
+                "evento": "Início da implementação dos projetos",
+                "data": "2027-03-01"
+            }
+        ]
+    },
+    "edital_conifcontic_nº_02_de_06_de_fevereiro_de_2026_-_soluções_e_inovações_para_o_desenvolvimento_sustentável_com_uso_de_tecnologias_de_conectividade.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "inovação",
+        "cronograma": [
+            {
+                "evento": "Publicação e divulgação do edital",
+                "data": "2026-02-06"
+            },
+            {
+                "evento": "Prazo de impugnação",
+                "data": "2026-02-12"
+            },
+            {
+                "evento": "Webinar de lançamento e para esclarecimentos sobre o edital",
+                "data": "a definir"
+            },
+            {
+                "evento": "Período de inscrições",
+                "data": "2026-03-20"
+            },
+            {
+                "evento": "Divulgação de Resultado Parcial da Etapa I",
+                "data": "2026-04-08"
+            },
+            {
+                "evento": "Período de apresentação de recurso",
+                "data": "2026-04-10"
+            },
+            {
+                "evento": "Divulgação do Resultado Final da Etapa I após análise dos recursos",
+                "data": "2026-04-17"
+            },
+            {
+                "evento": "Envio do Anexo V, pelas equipes classificadas para a Etapa II",
+                "data": "2026-04-22"
+            },
+            {
+                "evento": "Etapa II: Apresentação das propostas classificadas e premiações (Evento Painel Telebrasil Summit)",
+                "data": "Evento Painel Telebrasil Summit (19 e 20 de maio de 2026)"
+            }
+        ]
+    },
+    "edital_conifdirinter_01_de_7_de_janeiro_de_2025_-_chamada_pública_para_seleção_de_estudantes_de_cursos_de_ensino_médio_da_rede_federal_de_ed_ce97d4.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "extensão",
+        "cronograma": [
+            {
+                "evento": "Prazo final para envio da documentação completa",
+                "data": "2025-02-08"
+            },
+            {
+                "evento": "Divulgação do resultado provisório",
+                "data": "2025-02-11"
+            },
+            {
+                "evento": "Prazo para recursos",
+                "data": "24 horas após a divulgação do resultado provisório"
+            },
+            {
+                "evento": "Divulgação do resultado final",
+                "data": "2025-02-13"
+            }
+        ]
+    },
+    "edital_conifdirinter_09_de_19_de_dezembro_de_2025_-_chamada_pública_para_seleção_de_estudantes_de_cursos_de_ensino_superior_da_rede_federal__f95eef.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Prazo final para envio da documentação completa",
+                "data": "2026-02-01"
+            },
+            {
+                "evento": "Divulgação do resultado provisório",
+                "data": "2026-02-04"
+            },
+            {
+                "evento": "Prazo para recursos",
+                "data": "24 horas após a divulgação do resultado provisório"
+            },
+            {
+                "evento": "Divulgação do resultado final",
+                "data": "2026-02-06"
+            }
+        ]
+    },
+    "edital_conjunto_n22026_-_apoio_a_pesquisas_jurídicas_constitucionais.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Impugnação do Edital",
+                "data": "2026-02-09"
+            },
+            {
+                "evento": "Início do prazo para submissão das propostas",
+                "data": "2026-02-19"
+            },
+            {
+                "evento": "Data limite para submissão das propostas",
+                "data": "2026-03-30"
+            },
+            {
+                "evento": "Resultado preliminar da Análise Técnica",
+                "data": "2026-04-01"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente ao resultado da Análise Técnica",
+                "data": "03 (três) dias úteis após o recebimento da comunicação do resultado da análise técnica"
+            },
+            {
+                "evento": "Divulgação do resultado preliminar da Análise de Mérito",
+                "data": "2026-05-04"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente à Análise de Mérito",
+                "data": "03 (três) dias úteis após a divulgação do resultado preliminar no Diário Oficial da União (DOU)"
+            },
+            {
+                "evento": "Divulgação do resultado final no DOU",
+                "data": "2026-05-25"
+            },
+            {
+                "evento": "Início da implementação dos projetos",
+                "data": "2026-06-01"
+            }
+        ]
+    },
+    "edital_conjunto_n_52025_-_programa_de_extensão_da_educação_superior_na_pós-graduação__proext-pg_cais_acadêmicos.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "extensão",
+        "cronograma": [
+            {
+                "evento": "Prazo para impugnação do edital",
+                "data": "Até 3 (três) dias úteis após a publicação do edital"
+            },
+            {
+                "evento": "Início das inscrições",
+                "data": "2025-12-10"
+            },
+            {
+                "evento": "Data limite para submissão das propostas",
+                "data": "2026-02-27"
+            },
+            {
+                "evento": "Resultado da Análise Técnica",
+                "data": "2026-03-10"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente ao resultado da Análise Técnica",
+                "data": "Até 3 (três) dias úteis após a comunicação do resultado"
+            },
+            {
+                "evento": "Divulgação do resultado preliminar",
+                "data": "2026-05-05"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente ao resultado preliminar",
+                "data": "Até 3 (três) dias úteis após a divulgação no DOU"
+            },
+            {
+                "evento": "Divulgação do resultado final no DOU",
+                "data": "2026-06-30"
+            },
+            {
+                "evento": "Início da implementação dos projetos",
+                "data": "2026-07-01"
+            }
+        ]
+    },
+    "edital_de_chamamento_público_projeto_de_estatueta_n_12026.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "outros",
+        "cronograma": [
+            {
+                "evento": "Publicação do Edital de Chamamento Público",
+                "data": "2026-03-11"
+            },
+            {
+                "evento": "Prazo para impugnação do Edital",
+                "data": "2026-03-18"
+            },
+            {
+                "evento": "Período de Inscrição e Envio de Projetos",
+                "data": "2026-03-23"
+            },
+            {
+                "evento": "Análise e Julgamento Técnico das propostas",
+                "data": "2026-04-23"
+            },
+            {
+                "evento": "Publicação do resultado preliminar",
+                "data": "2026-05-08"
+            },
+            {
+                "evento": "Período de Recurso",
+                "data": "2026-03-18"
+            },
+            {
+                "evento": "Publicação do Resultado",
+                "data": "2026-05-19"
+            },
+            {
+                "evento": "Formalização da doação (Fase de habilitação documental)",
+                "data": "Até 5 (cinco) dias corridos após a publicação do resultado"
+            }
+        ]
+    },
+    "edital_n_252025_-_programa_brics-nu_retificação.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Publicação do edital original",
+                "data": "2025-01-19"
+            },
+            {
+                "evento": "Retificação do edital",
+                "data": "2025-12-26"
+            },
+            {
+                "evento": "Avaliação intermediária dos projetos (após 2 anos de execução)",
+                "data": "2 anos após o início do projeto"
+            }
+        ]
+    },
+    "edital_n_62026_-_programa_de_desenvolvimento_da_pós-graduação_pdpg__parcerias_estratégicas_nos_estados_v__rede_de_pesquisa_e_desenvolvimento_47d60e.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Prazo para apresentação pela FAP de manifestação de interesse e compromisso em participar do Edital",
+                "data": "2026-04-10"
+            },
+            {
+                "evento": "Início das inscrições",
+                "data": "2026-05-11"
+            },
+            {
+                "evento": "Data limite para submissão das propostas",
+                "data": "2026-10-02"
+            },
+            {
+                "evento": "Resultado Preliminar da Análise Técnica",
+                "data": "2026-10-16"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente à Análise Técnica",
+                "data": "5 (cinco) dias corridos após o recebimento da comunicação do indeferimento da análise técnica"
+            },
+            {
+                "evento": "Divulgação do Resultado Final da Análise Técnica",
+                "data": "2026-10-26"
+            },
+            {
+                "evento": "Divulgação do Resultado Preliminar das Propostas P1",
+                "data": "2026-12-07"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente ao Resultado Preliminar das Propostas P1",
+                "data": "5 (cinco) dias corridos após a divulgação do resultado preliminar no DOU"
+            },
+            {
+                "evento": "Divulgação da quantidade de vagas destinadas a Ampla Concorrência",
+                "data": "2026-12-21"
+            },
+            {
+                "evento": "Divulgação do Resultado Preliminar das propostas de Ampla Concorrência",
+                "data": "2027-01-25"
+            },
+            {
+                "evento": "Prazo para envio de recurso referente ao Resultado Preliminar das propostas de Ampla Concorrência",
+                "data": "5 (cinco) dias corridos após a divulgação do resultado preliminar no DOU"
+            },
+            {
+                "evento": "Divulgação do Resultado Final no DOU",
+                "data": "2027-02-15"
+            },
+            {
+                "evento": "Assinatura dos Acordos de Cooperação Técnica",
+                "data": "2027-02-15"
+            },
+            {
+                "evento": "Início da implementação dos projetos",
+                "data": "2027-03-01"
+            }
+        ]
+    },
+    "programa_brasil-china_de_líderes_em_inovação_científica_e_tecnológica_-_edital_n_42026_-_alteração.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "inovação",
+        "cronograma": []
+    },
+    "programa_capesuniversidade_de_purdue_para_projetos_conjuntos_de_pesquisa.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Data-limite para solicitação do proponente para cadastramento de instituição brasileira ou estrangeira, caso esta não esteja cadastrada no Sistema de Inscrições da CAPES",
+                "data": "2026-06-03"
+            },
+            {
+                "evento": "Prazo para envio de dúvidas e questionamentos a respeito do Edital",
+                "data": "2026-06-08"
+            },
+            {
+                "evento": "Inscrição das propostas, incluindo preenchimento do formulário de inscrição de projetos online e envio da documentação obrigatória",
+                "data": "2026-06-10"
+            },
+            {
+                "evento": "Publicação da relação das inscrições recebidas",
+                "data": "15 (quinze) dias úteis após o encerramento das inscrições"
+            },
+            {
+                "evento": "Análise das propostas",
+                "data": "2026-11-30"
+            },
+            {
+                "evento": "Interposição do recurso administrativo nas etapas de análise das propostas",
+                "data": "3 (três) dias úteis após a comunicação realizada pela CAPES"
+            },
+            {
+                "evento": "Divulgação do resultado",
+                "data": "2026-12-31"
+            },
+            {
+                "evento": "Início das atividades dos projetos",
+                "data": "2027-01-01"
+            },
+            {
+                "evento": "Início da indicação das bolsas",
+                "data": "A partir de abril de cada ano"
+            },
+            {
+                "evento": "Prazo de impugnação ao Edital, caso necessário",
+                "data": "5 (cinco) dias úteis após a publicação do Edital no Diário Oficial da União (DOU)"
+            }
+        ]
+    },
+    "programa_de_bolsas_para_pesquisa_capeshumboldt_-_edital_n_142022_-_alteração.json": {
+        "data_entrada": "2026-03-22T21:45:52.419Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "Publicação da alteração do edital no Diário Oficial da União (DOU)",
+                "data": "2022-03-07"
+            },
+            {
+                "evento": "Assinatura eletrônica do documento de alteração do edital",
+                "data": "2026-02-06"
+            }
+        ]
     }
 }
