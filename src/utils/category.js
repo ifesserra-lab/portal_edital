@@ -45,7 +45,15 @@ function toTitleCase(value) {
 }
 
 function sanitizeCategoryId(value) {
-    const normalized = normalizeText(value);
+    if (typeof value !== 'string') {
+        return 'outros';
+    }
+
+    const normalized = value
+        .replace(/\s+/g, ' ')
+        .trim()
+        .toLowerCase();
+
     if (!normalized) {
         return 'outros';
     }
