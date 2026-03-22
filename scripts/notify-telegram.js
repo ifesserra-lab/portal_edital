@@ -1,6 +1,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { loadEnv } from './load-env.js';
+import { normalizeCategory } from '../src/utils/category.js';
 
 loadEnv();
 
@@ -137,7 +138,7 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                 const title = content.nome || file;
                 const link = content.link || '';
                 const description = content.descrição || 'Sem descrição disponível.';
-                const category = content.categoria || 'N/A';
+                const category = normalizeCategory(content.categoria);
                 const orgaoFomento = content.orgão_fomento || 'N/A';
 
                 // Get the first event if available
@@ -167,7 +168,7 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
                 if (success) {
                     registry[file] = {
                         data_entrada: now,
-                        categoria: content.categoria || 'N/A',
+                        categoria: category,
                         cronograma: content.cronograma || []
                     };
                     newItemsFound = true;

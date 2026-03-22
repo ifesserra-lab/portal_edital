@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 import { loadEnv } from './load-env.js';
+import { normalizeCategory } from '../src/utils/category.js';
 
 loadEnv();
 
@@ -136,7 +137,7 @@ export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REG
             const content = JSON.parse(readFileSync(filePath, 'utf-8'));
             const cronograma = content.cronograma || [];
             const editalName = content.nome || file;
-            const category = content.categoria || 'N/A';
+            const category = normalizeCategory(content.categoria);
             const editalLink = content.link || PORTAL_URL;
 
             // Initialize notification tracking if not present

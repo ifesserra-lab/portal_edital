@@ -4,6 +4,7 @@
  */
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
+import { normalizeCategory } from '../src/utils/category.js';
 
 const DEFAULT_DATA_DIR = 'data';
 const DEFAULT_REGISTRY_FILE = join('registry', 'downloads_registry.json');
@@ -39,7 +40,7 @@ export function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REGISTRY_
         const filePath = join(dataDir, file);
         try {
             const content = JSON.parse(readFileSync(filePath, 'utf-8'));
-            const category = content.categoria || 'N/A';
+            const category = normalizeCategory(content.categoria);
             const cronograma = content.cronograma || [];
 
             if (!registry[file]) {

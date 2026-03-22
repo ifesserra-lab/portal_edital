@@ -60,7 +60,7 @@ describe('notify-telegram.js Unit Tests', () => {
         assert.ok(existsSync(registryFile), 'Registry file should be created');
         const registry = JSON.parse(readFileSync(registryFile, 'utf-8'));
         assert.ok(registry['test.json'], 'test.json should be in registry');
-        assert.strictEqual(registry['test.json'].categoria, 'bolsas');
+        assert.strictEqual(registry['test.json'].categoria, 'bolsa');
     });
 
     test('Should skip already registered editais', async () => {

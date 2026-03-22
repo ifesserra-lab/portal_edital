@@ -1,5 +1,6 @@
 import { defineCollection, z } from 'astro:content';
 import { glob } from 'astro/loaders';
+import { CATEGORY_VALUES, normalizeCategory } from '../utils/category.js';
 
 const editais = defineCollection({
   loader: glob({ pattern: "**/*.json", base: "./data" }),
@@ -7,7 +8,7 @@ const editais = defineCollection({
     nome: z.string(),
     descrição: z.string(),
     orgão_fomento: z.string(),
-    categoria: z.enum(['pesquisa', 'extensão', 'inovação', 'bolsa', 'outro', 'outros', 'chamadas', 'divulgação de conhecimento', 'arranjo administrativo']),
+    categoria: z.preprocess((value) => normalizeCategory(value), z.enum(CATEGORY_VALUES)),
     status: z.enum(['aberto', 'encerrado', 'suspenso', 'resultado']),
     data_abertura: z.string().or(z.literal("")),
     data_encerramento: z.string().or(z.literal("")),
