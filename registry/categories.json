@@ -1,0 +1,81 @@
+[
+    {
+        "id": "pesquisa",
+        "label": "Pesquisa",
+        "order": 10,
+        "aliases": [
+            "pesquisa"
+        ]
+    },
+    {
+        "id": "extensão",
+        "label": "Extensão",
+        "order": 20,
+        "aliases": [
+            "extensão",
+            "extensao"
+        ]
+    },
+    {
+        "id": "inovação",
+        "label": "Inovação",
+        "order": 30,
+        "aliases": [
+            "inovação",
+            "inovacao"
+        ]
+    },
+    {
+        "id": "bolsa",
+        "label": "Bolsas",
+        "order": 40,
+        "aliases": [
+            "bolsa",
+            "bolsas"
+        ]
+    },
+    {
+        "id": "chamadas",
+        "label": "Chamadas",
+        "order": 50,
+        "aliases": [
+            "chamada",
+            "chamadas"
+        ]
+    },
+    {
+        "id": "divulgação de conhecimento",
+        "label": "Divulgação de Conhecimento",
+        "order": 60,
+        "aliases": [
+            "divulgação de conhecimento",
+            "divulgacao de conhecimento"
+        ]
+    },
+    {
+        "id": "arranjo administrativo",
+        "label": "Arranjo Administrativo",
+        "order": 70,
+        "aliases": [
+            "arranjo administrativo"
+        ]
+    },
+    {
+        "id": "outros",
+        "label": "Outros",
+        "order": 90,
+        "aliases": [
+            "outro",
+            "outros"
+        ]
+    },
+    {
+        "id": "pesquisa, extensão",
+        "label": "Pesquisa, Extensão",
+        "order": 999,
+        "aliases": [
+            "pesquisa, extensão",
+            "pesquisa, extensao"
+        ]
+    }
+]

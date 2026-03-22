@@ -4,17 +4,32 @@ import Header from "../../components/Header.astro";
 import Footer from "../../components/Footer.astro";
 import EditalCard from "../../components/EditalCard.astro";
 import { getCollection } from "astro:content";
+import { getCategoryLabel, getSiteCategories } from "../../utils/category.js";
 
 const editais = await getCollection("editais");
+const configuredCategories = getSiteCategories();
+const categoryOrder = new Map(
+    configuredCategories.map((category, index) => [category.id, category.order ?? index])
+);
 
 // Agrupar por categoria e ordenar
 const categoriasUnicas = [
     ...new Set(editais.map((e) => e.data.categoria)),
-].sort();
+].sort((left, right) => {
+    const leftOrder = categoryOrder.get(left) ?? 999;
+    const rightOrder = categoryOrder.get(right) ?? 999;
+
+    if (leftOrder !== rightOrder) {
+        return leftOrder - rightOrder;
+    }
+
+    return getCategoryLabel(left).localeCompare(getCategoryLabel(right), "pt-BR");
+});
 
 const editaisAgrupados = categoriasUnicas.map((categoria) => {
     return {
         categoria,
+        label: getCategoryLabel(categoria),
         editais: editais
             .filter((e) => e.data.categoria === categoria)
             .sort((a, b) => a.data.nome.localeCompare(b.data.nome)), // Ordem alfabética pelo nome
@@ -58,7 +73,7 @@ const editaisAgrupados = categoriasUnicas.map((categoria) => {
                         <section>
                             <div class="flex items-center gap-6 mb-10">
                                 <h2 class="text-2xl sm:text-3xl font-extrabold text-primary-900 dark:text-white uppercase tracking-[0.15em]">
-                                    {grupo.categoria}
+                                    {grupo.label}
                                 </h2>
                                 <div class="h-1 flex-grow bg-primary-100 dark:bg-white/10 rounded-full" />
                             </div>

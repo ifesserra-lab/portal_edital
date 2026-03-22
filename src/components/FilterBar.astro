@@ -1,17 +1,17 @@
 ---
+import { getSiteCategories } from "../utils/category.js";
+
 interface Props {
     hideStatus?: boolean;
 }
 
 const { hideStatus = false } = Astro.props;
-
 const categories = [
     { id: "all", label: "Todos" },
-    { id: "pesquisa", label: "Pesquisa" },
-    { id: "extensão", label: "Extensão" },
-    { id: "inovação", label: "Inovação" },
-    { id: "bolsa", label: "Bolsas" },
-    { id: "outros", label: "Outros" },
+    ...getSiteCategories().map((category) => ({
+        id: category.id,
+        label: category.label
+    })),
 ];
 
 const statuses = [

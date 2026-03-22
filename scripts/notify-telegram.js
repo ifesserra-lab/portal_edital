@@ -2,6 +2,7 @@ import { readFileSync, writeFileSync, readdirSync, existsSync } from 'fs';
 import { join, dirname } from 'path';
 import { loadEnv } from './load-env.js';
 import { normalizeCategory } from '../src/utils/category.js';
+import { run as syncCategories } from './sync-categories.js';
 
 loadEnv();
 
@@ -120,6 +121,7 @@ function getRegistry(registryPath) {
 }
 
 export async function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REGISTRY_FILE) {
+    syncCategories(dataDir);
     const registry = getRegistry(registryFile);
     const files = existsSync(dataDir) ? readdirSync(dataDir).filter(file =>
         file.endsWith('.json') &&

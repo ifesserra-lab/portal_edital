@@ -5,6 +5,7 @@
 import { readFileSync, writeFileSync, readdirSync, existsSync, mkdirSync } from 'fs';
 import { join, dirname } from 'path';
 import { normalizeCategory } from '../src/utils/category.js';
+import { run as syncCategories } from './sync-categories.js';
 
 const DEFAULT_DATA_DIR = 'data';
 const DEFAULT_REGISTRY_FILE = join('registry', 'downloads_registry.json');
@@ -23,6 +24,7 @@ function getRegistry(registryPath) {
 }
 
 export function run(dataDir = DEFAULT_DATA_DIR, registryFile = DEFAULT_REGISTRY_FILE) {
+    syncCategories(dataDir);
     const registry = getRegistry(registryFile);
     const files = existsSync(dataDir)
         ? readdirSync(dataDir).filter(

@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { getCategoryLabel } from "../utils/category.js";
 
 interface Props {
     edital: CollectionEntry<"editais">;
@@ -7,6 +8,7 @@ interface Props {
 
 const { edital } = Astro.props;
 const { data, id } = edital;
+const categoryLabel = getCategoryLabel(data.categoria);
 
 const statusColors: Record<string, string> = {
     aberto: "bg-emerald-100 text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-400 border-emerald-200 dark:border-emerald-500/20",
@@ -41,7 +43,7 @@ const statusColors: Record<string, string> = {
         <span
             class="text-[10px] font-medium text-primary-500 uppercase tracking-widest bg-primary-100 dark:bg-white/5 px-2 py-0.5 rounded"
         >
-            {data.categoria}
+            {categoryLabel}
         </span>
     </div>
 
