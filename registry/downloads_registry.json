@@ -759,7 +759,8 @@
                 "evento": "Início das atividades previstas no edital",
                 "data": "2025-08-01"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "chamada_cnpqmctimemp_nº_52026_programa_de_iniciação_ao_empreendedorismo_piemp.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -773,7 +774,8 @@
                 "evento": "encerramento das inscrições",
                 "data": "2026-04-13"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "chamada_de_propostas_conjuntas_fapes_fapesp_anii_conacyt_e_conicet_2026_-_resistência_antimicrobiana_ram.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -795,7 +797,8 @@
                 "evento": "Início dos projetos",
                 "data": "2026-12-01"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "chamada_n_332025_-_pesquisa_extensão_e_formação_em_epidemiologia_e_vigilância_em_saúde.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -837,7 +840,8 @@
                 "evento": "Publicação do Resultado Final no DOU",
                 "data": "Texto original não especificado"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "chamada_nº_282025_-_apoio_a_projetos_de_cooperação_cnpq-tubitak.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -851,7 +855,8 @@
                 "evento": "encerramento das inscrições",
                 "data": "2026-05-04"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "chamada_pública_mcticnpq_n_022026_-_programa_de_cooperação_latino-americana_e_caribenha_em_ciência_tecnologia_e_inovação__prosul_pepe_mujica.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -869,7 +874,8 @@
                 "evento": "Fase recursal (após divulgação do resultado preliminar)",
                 "data": "Dentro do prazo estabelecido no edital"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "chamada_pública_para_seleção_dos_coordenadores_coordenadores_adjuntos_dos_grupos_temáticos_e_do_grupo_transversal_de_formação_docente_no_âmb_4faab3.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -899,12 +905,14 @@
                 "evento": "Início do mandato dos Coordenadores e Coordenadores Adjuntos",
                 "data": "2026-03-01"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "declaração_de_reconhecimento_da_fluência_linguística_para_instituição_no_exterior.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
         "categoria": "outros",
-        "cronograma": []
+        "cronograma": [],
+        "notificacoes_enviadas": []
     },
     "edital_62026_-_programa_de_desenvolvimento_da_pós-graduação_pdpg__parcerias_estratégicas_nos_estados_v__rede_de_pesquisa_e_desenvolvimento_d_871b2d.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -966,7 +974,8 @@
                 "evento": "Início da implementação dos projetos",
                 "data": "2027-03-01"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "edital_conifcontic_nº_02_de_06_de_fevereiro_de_2026_-_soluções_e_inovações_para_o_desenvolvimento_sustentável_com_uso_de_tecnologias_de_conectividade.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1008,7 +1017,8 @@
                 "evento": "Etapa II: Apresentação das propostas classificadas e premiações (Evento Painel Telebrasil Summit)",
                 "data": "Evento Painel Telebrasil Summit (19 e 20 de maio de 2026)"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "edital_conifdirinter_01_de_7_de_janeiro_de_2025_-_chamada_pública_para_seleção_de_estudantes_de_cursos_de_ensino_médio_da_rede_federal_de_ed_ce97d4.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1030,7 +1040,8 @@
                 "evento": "Divulgação do resultado final",
                 "data": "2025-02-13"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "edital_conifdirinter_09_de_19_de_dezembro_de_2025_-_chamada_pública_para_seleção_de_estudantes_de_cursos_de_ensino_superior_da_rede_federal__f95eef.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1052,7 +1063,8 @@
                 "evento": "Divulgação do resultado final",
                 "data": "2026-02-06"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "edital_conjunto_n22026_-_apoio_a_pesquisas_jurídicas_constitucionais.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1094,7 +1106,8 @@
                 "evento": "Início da implementação dos projetos",
                 "data": "2026-06-01"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "edital_conjunto_n_52025_-_programa_de_extensão_da_educação_superior_na_pós-graduação__proext-pg_cais_acadêmicos.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1136,7 +1149,8 @@
                 "evento": "Início da implementação dos projetos",
                 "data": "2026-07-01"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "edital_de_chamamento_público_projeto_de_estatueta_n_12026.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1174,6 +1188,9 @@
                 "evento": "Formalização da doação (Fase de habilitação documental)",
                 "data": "Até 5 (cinco) dias corridos após a publicação do resultado"
             }
+        ],
+        "notificacoes_enviadas": [
+            "Período de Inscrição e Envio de Projetos_2026-03-23"
         ]
     },
     "edital_n_252025_-_programa_brics-nu_retificação.json": {
@@ -1192,7 +1209,8 @@
                 "evento": "Avaliação intermediária dos projetos (após 2 anos de execução)",
                 "data": "2 anos após o início do projeto"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "edital_n_62026_-_programa_de_desenvolvimento_da_pós-graduação_pdpg__parcerias_estratégicas_nos_estados_v__rede_de_pesquisa_e_desenvolvimento_47d60e.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1254,12 +1272,14 @@
                 "evento": "Início da implementação dos projetos",
                 "data": "2027-03-01"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "programa_brasil-china_de_líderes_em_inovação_científica_e_tecnológica_-_edital_n_42026_-_alteração.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
         "categoria": "inovação",
-        "cronograma": []
+        "cronograma": [],
+        "notificacoes_enviadas": []
     },
     "programa_capesuniversidade_de_purdue_para_projetos_conjuntos_de_pesquisa.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1305,7 +1325,8 @@
                 "evento": "Prazo de impugnação ao Edital, caso necessário",
                 "data": "5 (cinco) dias úteis após a publicação do Edital no Diário Oficial da União (DOU)"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     },
     "programa_de_bolsas_para_pesquisa_capeshumboldt_-_edital_n_142022_-_alteração.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
@@ -1319,6 +1340,7 @@
                 "evento": "Assinatura eletrônica do documento de alteração do edital",
                 "data": "2026-02-06"
             }
-        ]
+        ],
+        "notificacoes_enviadas": []
     }
 }
