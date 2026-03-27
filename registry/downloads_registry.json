@@ -693,7 +693,9 @@
                 "data": "2026-03-27"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [
+            "Prazo de envio da proposta_2026-03-27"
+        ]
     },
     "pró-amazônia_2025.json": {
         "data_entrada": "2026-03-16T00:28:06.576Z",
