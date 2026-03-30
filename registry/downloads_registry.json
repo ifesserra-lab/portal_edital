@@ -1115,7 +1115,9 @@
                 "data": "2026-06-01"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [
+            "Data limite para submissão das propostas_2026-03-30"
+        ]
     },
     "edital_conjunto_n_52025_-_programa_de_extensão_da_educação_superior_na_pós-graduação__proext-pg_cais_acadêmicos.json": {
         "data_entrada": "2026-03-22T21:45:52.419Z",
