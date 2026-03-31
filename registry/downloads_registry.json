@@ -175,7 +175,8 @@
             "1ª Chamada - Divulgação do resultado preliminar_2026-03-19",
             "1ª Chamada - Prazo para interposição de recursos_2026-03-26",
             "2ª Chamada - Prazo para interposição de recursos_2026-03-26",
-            "3ª Chamada - Prazo para interposição de recursos_2026-03-26"
+            "3ª Chamada - Prazo para interposição de recursos_2026-03-26",
+            "1ª Chamada - Divulgação do resultado final_2026-03-31"
         ]
     },
     "edital_fapes_n_072026_espaços_científicos_culturais.json": {
@@ -401,7 +402,8 @@
             "Divulgação do resultado preliminar - 1ª Chamada_2026-03-19",
             "1ª Chamada - Prazo para interposição de recursos_2026-03-26",
             "2ª Chamada - Prazo para interposição de recursos_2026-03-26",
-            "3ª Chamada - Prazo para interposição de recursos_2026-03-26"
+            "3ª Chamada - Prazo para interposição de recursos_2026-03-26",
+            "1ª Chamada - Divulgação do resultado final_2026-03-31"
         ]
     },
     "edital_fapes_nº_062026_-_apoio_aos_clusters_de_inovação_capixaba.json": {
@@ -1349,6 +1351,253 @@
             {
                 "evento": "Assinatura eletrônica do documento de alteração do edital",
                 "data": "2026-02-06"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "chamada_pública_prppgifes_nº_012026_-_manifestação_de_interesse_para_composição_da_proposta_institucional_chamada_mctifinepfndct__infraestru_b55fb0.json": {
+        "data_entrada": "2026-03-31T02:38:54.275Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "início do período do edital",
+                "data": "2026-02-24"
+            },
+            {
+                "evento": "fim do período do edital",
+                "data": "2026-03-02"
+            },
+            {
+                "evento": "Publicação da Chamada Interna PRPPG/Ifes",
+                "data": "2026-02-24"
+            },
+            {
+                "evento": "Período de Manifestação de Interesse (1ª Etapa - item 5.1)",
+                "data": "2026-02-24"
+            },
+            {
+                "evento": "Reunião de alinhamento com proponentes (2ª Etapa - item 5.2)",
+                "data": "2026-03-03"
+            },
+            {
+                "evento": "Publicação da Ata da reunião de alinhamento (site do Ifes)",
+                "data": "2026-03-04"
+            },
+            {
+                "evento": "Divulgação do Formulário 2 via e-mail (3ª Etapa - item 5.3)",
+                "data": "2026-03-04"
+            },
+            {
+                "evento": "Prazo para envio do Formulário 2 pelos participantes selecionados",
+                "data": "2026-03-04"
+            },
+            {
+                "evento": "Avaliação",
+                "data": "2026-03-10"
+            },
+            {
+                "evento": "Divulgação do resultado (site do Ifes)",
+                "data": "2026-03-13"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_prppg_012026_-_programa_de_estágio_docente_ped.json": {
+        "data_entrada": "2026-03-31T02:38:54.275Z",
+        "categoria": "extensão",
+        "cronograma": [
+            {
+                "evento": "início do período do edital",
+                "data": "2026-02-27"
+            },
+            {
+                "evento": "fim do período do edital",
+                "data": "2026-03-10"
+            },
+            {
+                "evento": "Lançamento do Edital",
+                "data": "2026-02-27"
+            },
+            {
+                "evento": "Inscrições pelo link:\r\nhttps://forms.gle/nVfuEACwpVACUswb7",
+                "data": "2026-02-27"
+            },
+            {
+                "evento": "Análise das Inscrições",
+                "data": "2026-03-11"
+            },
+            {
+                "evento": "Divulgação do Resultado Parcial",
+                "data": "2026-03-13"
+            },
+            {
+                "evento": "Recursos à Coordenadoria do PED",
+                "data": "2026-03-14"
+            },
+            {
+                "evento": "Divulgação do Resultado Final após Recursos",
+                "data": "2026-03-17"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_prppg_n_022026_-_cadastro_de_reserva_-_novos_pesquisadores_pibicpivic_pibitipiviti__pibic-jrpivic-jr.json": {
+        "data_entrada": "2026-03-31T02:38:54.275Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "início do período do edital",
+                "data": "2026-03-23"
+            },
+            {
+                "evento": "fim do período do edital",
+                "data": "2026-04-24"
+            },
+            {
+                "evento": "Lançamento do Edital PRPPG 02/2026 - Novos Pesquisadores",
+                "data": "2026-03-23"
+            },
+            {
+                "evento": "Período de submissão das propostas (conforme item 6.2 deste Edital)",
+                "data": "2026-03-23"
+            },
+            {
+                "evento": "Período de avaliação e aprovação dos projetos submetidos a esse edital via Sigpesq pelos Diretores de Pesquisa dos Campi do IFES.",
+                "data": "2026-04-27"
+            },
+            {
+                "evento": "Avaliações das propostas pelo Cicti",
+                "data": "2026-05-01"
+            },
+            {
+                "evento": "Divulgação do resultado preliminar. A partir de",
+                "data": "2026-06-05"
+            },
+            {
+                "evento": "Pedidos de Recurso",
+                "data": "2026-06-08"
+            },
+            {
+                "evento": "Avaliação dos Recursos, até dia",
+                "data": "2026-06-15"
+            },
+            {
+                "evento": "Divulgação da Classificação Final. A partir de",
+                "data": "2026-06-19"
+            },
+            {
+                "evento": "Divulgação da distribuição das bolsas. A partir de",
+                "data": "2026-07-31"
+            },
+            {
+                "evento": "Período de Contratação: Cadastramento do aluno bolsista ou voluntário; alimentação do sistema com os dados bancários para implementação da bolsa, quando contemplado; e aceite dos termos de compromisso no SIGPESq – Etapas de responsabilidade do proponente",
+                "data": "2026-08-01"
+            },
+            {
+                "evento": "Início de execução das bolsas",
+                "data": "2026-09-01"
+            },
+            {
+                "evento": "Data limite para envio, via SigFapes, do relatório técnico do bolsista Fapes (ver item 15.1).",
+                "data": "2027-08-31"
+            },
+            {
+                "evento": "Data limite para anexação no SIGPESq do Relatório Final",
+                "data": "2027-08-31"
+            },
+            {
+                "evento": "Envio do resumo/outros documentos e apresentação na Jornada de Iniciação Científica, Desenvolvimento Tecnológico e Inovação do Ifes. A partir de",
+                "data": "2027-09-01"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_prppg_n_032026_-_cadastro_de_reserva_pibicpivic_pibitipiviti__pibic-jrpivic-jr.json": {
+        "data_entrada": "2026-03-31T02:38:54.275Z",
+        "categoria": "pesquisa",
+        "cronograma": [
+            {
+                "evento": "início do período do edital",
+                "data": "2026-03-23"
+            },
+            {
+                "evento": "fim do período do edital",
+                "data": "2026-04-24"
+            },
+            {
+                "evento": "Lançamento do Edital PRPPG 03/2026",
+                "data": "2026-03-23"
+            },
+            {
+                "evento": "Período de submissão das propostas (conforme item 6.2 deste Edital)",
+                "data": "2026-03-23"
+            },
+            {
+                "evento": "Período de avaliação e aprovação dos projetos submetidos a esse edital via Sigpesq pelos Diretores de Pesquisa dos Campi do IFES.",
+                "data": "2026-04-27"
+            },
+            {
+                "evento": "Avaliações das propostas pelo Cicti",
+                "data": "2026-05-01"
+            },
+            {
+                "evento": "Divulgação do resultado preliminar. A partir de",
+                "data": "2026-06-05"
+            },
+            {
+                "evento": "Pedidos de Recurso.",
+                "data": "2026-06-08"
+            },
+            {
+                "evento": "Avaliação dos Recursos, até dia",
+                "data": "2026-06-15"
+            },
+            {
+                "evento": "Divulgação da Classificação Final. A partir de",
+                "data": "2026-06-19"
+            },
+            {
+                "evento": "Divulgação da distribuição das bolsas. A partir de",
+                "data": "2026-07-31"
+            },
+            {
+                "evento": "Período de Contratação: Cadastramento do aluno bolsista ou voluntário; alimentação do sistema com os dados bancários para implementação da bolsa, quando contemplado; e aceite dos termos de compromisso no SIGPESq – Etapas de responsabilidade do proponente",
+                "data": "2026-08-01"
+            },
+            {
+                "evento": "Início de execução das bolsas",
+                "data": "2026-09-01"
+            },
+            {
+                "evento": "Data limite para envio, via SigFapes, do relatório técnico do bolsista Fapes (ver item 15.1).",
+                "data": "2027-08-31"
+            },
+            {
+                "evento": "Data limite para anexação no SIGPESq do Relatório Final",
+                "data": "2027-08-31"
+            },
+            {
+                "evento": "Envio do resumo/outros documentos e apresentação na Jornada de Iniciação Científica, Desenvolvimento Tecnológico e Inovação do Ifes. A partir de",
+                "data": "2027-09-01"
+            }
+        ],
+        "notificacoes_enviadas": []
+    },
+    "edital_prppg_nº_042026_-_apoio_à_participação_de_alunos_do_ensino_médio_do_instituto_federal_do_espírito_santo_ifes_e_seus_orientadores_em_f_1832b8.json": {
+        "data_entrada": "2026-03-31T02:38:54.275Z",
+        "categoria": "extensão",
+        "cronograma": [
+            {
+                "evento": "início do período do edital",
+                "data": "2026-03-30"
+            },
+            {
+                "evento": "fim do período do edital",
+                "data": "2026-11-01"
+            },
+            {
+                "evento": "Inscrição no SIGPesq - fluxo contínuo",
+                "data": "2026-03-30"
             }
         ],
         "notificacoes_enviadas": []
