@@ -12,7 +12,6 @@
         "label": "Extensão",
         "order": 20,
         "aliases": [
-            "extensão",
             "extensao"
         ]
     },
@@ -21,7 +20,6 @@
         "label": "Inovação",
         "order": 30,
         "aliases": [
-            "inovação",
             "inovacao"
         ]
     },
@@ -48,7 +46,6 @@
         "label": "Divulgação de Conhecimento",
         "order": 60,
         "aliases": [
-            "divulgação de conhecimento",
             "divulgacao de conhecimento"
         ]
     },
@@ -70,11 +67,19 @@
         ]
     },
     {
+        "id": "pesquisa e inovação",
+        "label": "Pesquisa E Inovação",
+        "order": 999,
+        "aliases": [
+            "pesquisa e inovacao",
+            "pesquisa e inovação"
+        ]
+    },
+    {
         "id": "pesquisa, extensão",
         "label": "Pesquisa, Extensão",
         "order": 999,
         "aliases": [
-            "pesquisa, extensão",
             "pesquisa, extensao"
         ]
     }

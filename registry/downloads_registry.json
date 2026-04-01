@@ -98,7 +98,8 @@
             }
         ],
         "notificacoes_enviadas": [
-            "Comunicação dos resultados das pré-propostas e convite para submissão de propostas completas_2026-03-15"
+            "Comunicação dos resultados das pré-propostas e convite para submissão de propostas completas_2026-03-15",
+            "Avaliação dos pedidos de reconsideração e comunicação das decisões aos candidatos_2026-04-01"
         ]
     },
     "edital_fapes_052026__visita_técnico-científica.json": {
@@ -1118,7 +1119,8 @@
             }
         ],
         "notificacoes_enviadas": [
-            "Data limite para submissão das propostas_2026-03-30"
+            "Data limite para submissão das propostas_2026-03-30",
+            "Resultado preliminar da Análise Técnica_2026-04-01"
         ]
     },
     "edital_conjunto_n_52025_-_programa_de_extensão_da_educação_superior_na_pós-graduação__proext-pg_cais_acadêmicos.json": {
@@ -1600,6 +1602,36 @@
                 "data": "2026-03-30"
             }
         ],
+        "notificacoes_enviadas": []
+    },
+    "edital_0012026_-_seleção_de_estudantes_para_o_curso_de_extensão_partiu_if_curso_preparatório_para_o_ensino_médio_integrado_do_instituto_fede_3ff8c5.json": {
+        "data_entrada": "2026-04-01T02:50:39.977Z",
+        "categoria": "extensão",
+        "cronograma": [],
+        "notificacoes_enviadas": []
+    },
+    "edital_nº_022026__mapaenagro__ifes_-_seleção_de_bolsistas_para_compor_equipe_de_apoio_ao_projeto_de_desenvolvimento_de_ações_estratégicas_de_66e8e4.json": {
+        "data_entrada": "2026-04-01T02:50:39.977Z",
+        "categoria": "pesquisa e inovação",
+        "cronograma": [],
+        "notificacoes_enviadas": []
+    },
+    "edital_nº_032026_-_chamamento_público_para_seleção_de_boas_práticas_em_ações_de_inovação_e_empreendedorismo_desenvolvidos_na_rfepct_ou_na_re_df1116.json": {
+        "data_entrada": "2026-04-01T02:50:39.977Z",
+        "categoria": "inovação",
+        "cronograma": [],
+        "notificacoes_enviadas": []
+    },
+    "prêmio_assistec_inova_de_pesquisas_em_inovação_e_empreendedorismo_no_âmbito_da_pós-graduação_stricto_sensu_da_rede_federal_de_educação_profi_0ba207.json": {
+        "data_entrada": "2026-04-01T02:50:39.977Z",
+        "categoria": "pesquisa e inovação",
+        "cronograma": [],
+        "notificacoes_enviadas": []
+    },
+    "prêmio_projetos_inovadores_na_educação_profissional_e_tecnológica.json": {
+        "data_entrada": "2026-04-01T02:50:39.977Z",
+        "categoria": "inovação",
+        "cronograma": [],
         "notificacoes_enviadas": []
     }
 }
