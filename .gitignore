@@ -23,5 +23,8 @@ pnpm-debug.log*
 # jetbrains setting folder
 .idea/
 
+# local Codex state
+.codex
+
 # ZIP de dados gerado no build
 public/dados-editais.zip
