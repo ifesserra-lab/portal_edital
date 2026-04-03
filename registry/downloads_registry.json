@@ -209,7 +209,9 @@
                 "data": "2026-05-25"
             }
         ],
-        "notificacoes_enviadas": []
+        "notificacoes_enviadas": [
+            "Envio da proposta e documentos_2026-04-03"
+        ]
     },
     "edital_fapes_n_252025_-_participação_de_equipes_de_estudantes_em_mostras_e_competições_técnico-científicas.json": {
         "data_entrada": "2026-03-15T23:33:49.521Z",
